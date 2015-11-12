@@ -1,0 +1,15 @@
+defaults: &defaults
+    collection_pids:
+        'changeme:1':
+            controller: digital_collections
+            collection: blake
+            item_id_field: local_id
+            thumbnail_image: "changeme:3"
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

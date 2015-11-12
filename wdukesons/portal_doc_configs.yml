@@ -1,0 +1,16 @@
+defaults: &defaults
+    collection_pids:
+        'changeme:330':
+            controller: digital_collections
+            collection: wdukesons
+            item_id_field: local_id
+            thumbnail_image: "changeme:338"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

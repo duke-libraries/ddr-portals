@@ -1,0 +1,13 @@
+defaults: &defaults
+    includes:
+        admin_policy_pids:
+            - 'changeme:1'
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  
