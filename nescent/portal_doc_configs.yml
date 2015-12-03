@@ -1,7 +1,8 @@
 defaults: &defaults
-    includes:
-        local_ids:
-           - 'blake'
+    admin_sets:
+        'nescent':
+            controller: catalog
+            item_id_field: id
 development:
   <<: *defaults
 

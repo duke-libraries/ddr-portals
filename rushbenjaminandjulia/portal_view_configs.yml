@@ -1,0 +1,59 @@
+defaults: &defaults
+    includes:
+        local_ids:
+           - 'rushbenjaminandjulia'
+    showcase_images:
+      local_ids:
+         - brpst002001
+         - brpst008001
+      layout: portrait
+    highlight_images:
+      local_ids:
+        - brpst002001
+        - brpst016023
+        - brpst012001
+        - brpst008001
+        - brpst011001
+        - brpst015008
+        - brpst031001
+        - brpst027001
+    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
+    alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
+    configure_blacklight:
+        add_facet_fields:
+          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+            label: Browse
+            show: false
+          - field: "Ddr::Index::Fields::SERIES_FACET"
+            label: Series
+            collapse: false
+            limit: 5
+        add_show_fields:
+          - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
+            separator: "; "
+            label: "Title"
+          - field: "Ddr::Index::Fields::PERMANENT_URL"
+            label: "Permalink"
+            helper_method: permalink
+          - field: "Ddr::Index::Fields::IS_PART_OF"
+            label: "Part of"
+            helper_method: descendant_of
+          - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+            label: "Collection"
+            helper_method: descendant_of
+          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
+            separator: "; "
+            label: "Series"
+            link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+          - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
+            separator: "; "
+            label: "Extent"
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  

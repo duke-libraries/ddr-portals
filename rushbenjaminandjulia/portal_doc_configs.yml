@@ -1,10 +1,10 @@
 defaults: &defaults
     collection_local_id:
-        'wdukesons':
+        'rushbenjaminandjulia':
             controller: digital_collections
-            collection: wdukesons
+            collection: rushbenjaminandjulia
             item_id_field: local_id
-            thumbnail_image: "dscsi03005"
+            thumbnail_image: "brpst031001"
 
 development:
   <<: *defaults

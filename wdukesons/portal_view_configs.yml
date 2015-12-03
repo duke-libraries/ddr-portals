@@ -1,15 +1,76 @@
 defaults: &defaults
     includes:
-        admin_policy_pids:
-            - 'changeme:330'
+        local_ids:
+           - 'wdukesons'
     showcase_images:
-        - "changeme:333"
-        - "changeme:336"
+      local_ids:
+         - dscsi02223
+         - dscsi02230
+         - dscsi02371
+         - dscsi02373
+         - dscsi04049
+         - dscsi04079
+         - dscsi05010
+         - dscsi05013
+         - dscsi03002
+         - dscsi03005
+         - dscsi03013
+         - dscsi03212
+         - dscsi03254
+         - dscsi03255
+         - dscsi03304
+         - dscsi03312
+         - dscsi03367
+         - dscsi03375
+         - dscsi03582
+         - dscsi03589
+         - dscsi01026
+         - dscsi01234
+         - dscsi01517
+         - dscsi02375
+         - dscsi02429
+         - dscsi02549
+         - dscsi02551
+         - dscsi02578
+         - dscsi01092
+         - dscsi02123
+         - dscsi02200
+         - dscsi02205
+      layout: portrait
     highlight_images:
-        - "changeme:337"
-        - "changeme:343"
-        - "changeme:340"
-        - "changeme:342"
+      local_ids:
+        - dscsi02317
+        - dscsi02331
+        - dscsi04001
+        - dscsi04016
+        - dscsi04044
+        - dscsi04084
+        - dscsi04144
+        - dscsi05004
+        - dscsi05002
+        - dscsi05001
+        - dscsi05009
+        - dscsi05008
+        - dscsi06004
+        - dscsi03004
+        - dscsi03008
+        - dscsi03031
+        - dscsi03033
+        - dscsi03043
+        - dscsi03285
+        - dscsi03299
+        - dscsi03423
+        - dscsi03508
+        - dscsi03510
+        - dscsi02404
+        - dscsi02060
+        - dscsi02072
+        - dscsi02616
+        - dscsi02627
+        - dscsi02127
+        - dscsi02126
+        - dscsi02137
+        - dscsi02176
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wdukesons
     alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
     configure_blacklight:

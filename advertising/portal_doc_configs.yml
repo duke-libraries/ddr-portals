@@ -1,7 +1,5 @@
 defaults: &defaults
-    includes:
-        local_ids:
-           - 'blake'
+
 development:
   <<: *defaults
 
@@ -10,4 +8,3 @@ test:
 
 production:
   <<: *defaults
-  
