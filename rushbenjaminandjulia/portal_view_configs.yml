@@ -4,21 +4,17 @@ defaults: &defaults
            - 'rushbenjaminandjulia'
     showcase_images:
       local_ids:
-         - brpst002001
          - brpst008001
+         - brpst009001
+         - brpst011001
+         - brpst012001
+         - brpst019017
+         - brpst021001
+         - brpst024001
+         - brpst023001
+         - brpst026001 
       layout: portrait
-    highlight_images:
-      local_ids:
-        - brpst002001
-        - brpst016023
-        - brpst012001
-        - brpst008001
-        - brpst011001
-        - brpst015008
-        - brpst031001
-        - brpst027001
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
-    alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
     configure_blacklight:
         add_facet_fields:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
@@ -28,23 +24,56 @@ defaults: &defaults
             label: Series
             collapse: false
             limit: 5
+          - field: "Ddr::Index::Fields::CREATOR_FACET"
+            label: Author
+            collapse: false
+            limit: 5            
+          - field: "Ddr::Index::Fields::YEAR_FACET"
+            label: Year
+            limit: 9999
+            collapse: false
+            range:
+                num_segments: 6
+                segments: true
+          - field: "Ddr::Index::Fields::SPATIAL_FACET"
+            label: Location
+            limit: 5
         add_show_fields:
           - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
             separator: "; "
             label: "Title"
+          - field: "ActiveFedora::SolrService.solr_name(:description, :stored_searchable)"
+            separator: "; "
+            label: "Description"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
+          - field: "ActiveFedora::SolrService.solr_name(:creator, :stored_searchable)"
+            separator: "; "
+            label: "Author"
+            link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
           - field: "Ddr::Index::Fields::IS_PART_OF"
             label: "Part of"
             helper_method: descendant_of
           - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Collection"
+            label: "Digital Collection"
             helper_method: descendant_of
           - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
             separator: "; "
             label: "Series"
             link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
+            separator: "; "
+            label: "Year"
+            helper_method: year_ranges
+          - field: "ActiveFedora::SolrService.solr_name(:language, :stored_searchable)"
+            separator: "; "
+            label: "Language"
+            helper_method: language_display
+          - field: "Ddr::Index::Fields::EAD_ID"
+            separator: "; "
+            label: "Source Collection"
+            helper_method: source_collection
           - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
             separator: "; "
             label: "Extent"
