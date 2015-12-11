@@ -35,7 +35,7 @@ ddr-portals/
 
 ### portal_doc_configs.yml
 
-This configuration file contains settings that pertain to the collection and defines what controller should own the collection, the id that should be used for items in the collection (local_id or id) and the thumbnail image that should be used for the collection document.
+This configuration file contains settings that pertain to the collection and defines what controller should own the collection, the id that should be used for items in the collection (local_id or id) and the thumbnail image that should be used for the collection document. This file is required but may not contain configurations if the portal does not coorespond with a collection document, such as in the case of the Digital Collections portal.
 
 ```yml
 defaults: &defaults
