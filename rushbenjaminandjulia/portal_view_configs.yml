@@ -48,35 +48,45 @@ defaults: &defaults
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
+          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
+            separator: "; "
+            label: "Date"
+            helper_method: year_ranges
           - field: "ActiveFedora::SolrService.solr_name(:creator, :stored_searchable)"
             separator: "; "
             label: "Author"
             link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+          - field: "ActiveFedora::SolrService.solr_name(:contributor, :stored_searchable)"
+            separator: "; "
+            label: "Recipient"
           - field: "Ddr::Index::Fields::IS_PART_OF"
             label: "Part of"
             helper_method: descendant_of
           - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
             label: "Digital Collection"
             helper_method: descendant_of
-          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
-            separator: "; "
-            label: "Series"
-            link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
-            separator: "; "
-            label: "Year"
-            helper_method: year_ranges
-          - field: "ActiveFedora::SolrService.solr_name(:language, :stored_searchable)"
-            separator: "; "
-            label: "Language"
-            helper_method: language_display
           - field: "Ddr::Index::Fields::EAD_ID"
             separator: "; "
             label: "Source Collection"
             helper_method: source_collection
+          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
+            separator: "; "
+            label: "Series"
+            link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+          - field: "ActiveFedora::SolrService.solr_name(:language, :stored_searchable)"
+            separator: "; "
+            label: "Language"
+            helper_method: language_display
           - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
             separator: "; "
             label: "Extent"
+          - field: "ActiveFedora::SolrService.solr_name(:spatial, :stored_searchable)"
+            separator: "; "
+            label: "Location"
+            link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+          - field: "ActiveFedora::SolrService.solr_name(:subject, :stored_searchable)"
+            separator: "; "
+            label: "Subject"
 development:
   <<: *defaults
 
