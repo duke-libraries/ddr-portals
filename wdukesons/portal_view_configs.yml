@@ -106,6 +106,9 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
             separator: "; "
             label: "Title"
+          - field: "ActiveFedora::SolrService.solr_name(:description, :stored_searchable)"
+            separator: "; "
+            label: "Description"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
@@ -113,7 +116,7 @@ defaults: &defaults
             label: "Part of"
             helper_method: descendant_of
           - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Collection"
+            label: "Digital Collection"
             helper_method: descendant_of
           - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
             separator: "; "
