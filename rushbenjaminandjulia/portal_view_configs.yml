@@ -85,6 +85,15 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:subject, :stored_searchable)"
             separator: "; "
             label: "Subject"
+          - field: "ActiveFedora::SolrService.solr_name(:format, :stored_searchable)"
+            separator: "; "
+            label: "Format"
+          - field: "ActiveFedora::SolrService.solr_name(:type, :stored_searchable)"
+            separator: "; "
+            label: "Type"
+          - field: "ActiveFedora::SolrService.solr_name(:provenance, :stored_searchable)"
+            separator: "; "
+            label: "Provenance" 
 development:
   <<: *defaults
 
