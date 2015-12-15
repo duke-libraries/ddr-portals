@@ -4,15 +4,13 @@ defaults: &defaults
            - 'rushbenjaminandjulia'
     showcase_images:
       local_ids:
+         - brpst021001
          - brpst008001
          - brpst009001
-         - brpst011001
-         - brpst012001
-         - brpst019017
-         - brpst021001
-         - brpst024001
+         - brpst016015
          - brpst023001
-         - brpst026001 
+         - brpst001001
+         - brpst024001 
       layout: portrait
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
     configure_blacklight:
