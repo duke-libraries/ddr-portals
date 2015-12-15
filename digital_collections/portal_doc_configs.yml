@@ -1,8 +1,5 @@
 defaults: &defaults
-    admin_sets:
-        'dc':
-            controller: digital_collections
-            item_id_field: id
+
 development:
   <<: *defaults
 

@@ -1,7 +1,7 @@
 defaults: &defaults
     includes:
-        admin_policy_pids:
-            - 'changeme:1'
+        local_ids:
+           - 'blake'
 development:
   <<: *defaults
 
