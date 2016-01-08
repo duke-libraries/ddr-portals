@@ -8,7 +8,11 @@ defaults: &defaults
             label: 'Collection'
             helper_method: 'collection_title'
             limit: 9999
-            collapse: false 
+            collapse: false
+          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+            label: Browse
+            show: false
+
 development:
   <<: *defaults
 

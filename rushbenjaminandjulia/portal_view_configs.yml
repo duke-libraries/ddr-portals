@@ -25,7 +25,11 @@ defaults: &defaults
           - field: "Ddr::Index::Fields::CREATOR_FACET"
             label: Author
             collapse: false
-            limit: 5            
+            limit: 5
+          - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+            label: Recipient
+            collapse: false
+            limit: 5
           - field: "Ddr::Index::Fields::YEAR_FACET"
             label: Year
             limit: 9999
@@ -33,6 +37,9 @@ defaults: &defaults
             range:
                 num_segments: 6
                 segments: true
+          - field: "Ddr::Index::Fields::SUBJECT_FACET"
+            label: Subject
+            limit: 5
           - field: "Ddr::Index::Fields::SPATIAL_FACET"
             label: Location
             limit: 5
@@ -57,6 +64,10 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:contributor, :stored_searchable)"
             separator: "; "
             label: "Recipient"
+            link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+          - field: "Ddr::Index::Fields::LOCAL_ID"
+            separator: "; "
+            label: "Identifier"
           - field: "Ddr::Index::Fields::IS_PART_OF"
             label: "Part of"
             helper_method: descendant_of
@@ -85,6 +96,7 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:subject, :stored_searchable)"
             separator: "; "
             label: "Subject"
+            link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
           - field: "ActiveFedora::SolrService.solr_name(:format, :stored_searchable)"
             separator: "; "
             label: "Format"
