@@ -142,6 +142,9 @@ defaults: &defaults
             separator: "; "
             label: "Language"
             helper_method: language_display
+          - field: "Ddr::Index::Fields::LOCAL_ID"
+            separator: "; "
+            label: "Identifier"
           - field: "Ddr::Index::Fields::EAD_ID"
             separator: "; "
             label: "Source Collection"
