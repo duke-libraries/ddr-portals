@@ -1,39 +1,45 @@
 defaults: &defaults
     includes:
-      local_ids:
-        - 'blake'
+        local_ids:
+           - 'hmp'
     showcase_images:
       local_ids:
-        - mfb001
-        - mfb015
-        - mfb017
-        - mfb042
-        - mfb043
-        - mfb075
-        - mfb080
-        - mfb091
-        - mfb099
-        - mfb102
-        - mfb109
+        - hmpgp01368
+        - hmpgp10266
+        - hmpgp10270
+        - hmpgp11295
+        - hmpgp12331
+        - hmpgp13344
+        - hmpgp14408
+        - hmpgp15433
+        - hmpgp21653
+        - hmpgp21653
+        - hmpgp22673
       layout: portrait
     highlight_images:
       local_ids:
-        - mfb002
-        - mfb010
-        - mfb018
-        - mfb030
-        - mfb038
-        - mfb041
-        - mfb044
-        - mfb049
-        - mfb061
-        - mfb083
-        - mfb084
-        - mfb088
-        - mfb095
-        - mfb101
-        - mfb106
-    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=blake
+        - hmpgp01104
+        - hmpgp01333
+        - hmpgp01404
+        - hmpgp01406
+        - hmpgp02004
+        - hmpgp02010
+        - hmpgp03042
+        - hmpgp10259
+        - hmpgp12314
+        - hmpgp13359
+        - hmpgp13374
+        - hmpgp14402
+        - hmpgp17528
+        - hmpgp19566
+        - hmpgp19570
+        - hmpgp19574
+        - hmpgp19576
+        - hmpgp21654
+        - hmpgp21657
+        - hmpgp23470
+        - hmpgp23472
+    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hmp
     configure_blacklight:
         add_facet_fields:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
@@ -46,6 +52,12 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
             separator: "; "
             label: "Title"
+          - field: "ActiveFedora::SolrService.solr_name(:description, :stored_searchable)"
+            separator: "; "
+            label: "Description"
+          - field: "ActiveFedora::SolrService.solr_name(:print_number, :stored_searchable)"
+            separator: "; "
+            label: "Print Number"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
@@ -76,9 +88,6 @@ defaults: &defaults
             separator: "; "
             label: "Subject"
             link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
-            separator: "; "
-            label: "Extent"
           - field: "ActiveFedora::SolrService.solr_name(:format, :stored_searchable)"
             separator: "; "
             label: "Format"
