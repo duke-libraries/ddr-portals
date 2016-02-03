@@ -42,6 +42,7 @@ defaults: &defaults
           - field: "Ddr::Index::Fields::SUBJECT_FACET"
             label: Subject
             limit: 5
+            collapse: false
         add_show_fields:
           - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
             separator: "; "
