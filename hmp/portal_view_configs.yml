@@ -13,7 +13,6 @@ defaults: &defaults
         - hmpgp14408
         - hmpgp15433
         - hmpgp21653
-        - hmpgp21653
         - hmpgp22673
       layout: portrait
     highlight_images:
