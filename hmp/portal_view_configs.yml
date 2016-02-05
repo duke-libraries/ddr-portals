@@ -38,6 +38,7 @@ defaults: &defaults
         - hmpgp21657
         - hmpgp23470
         - hmpgp23472
+      display: 4
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hmp
     configure_blacklight:
         add_facet_fields:
