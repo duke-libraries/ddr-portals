@@ -13,7 +13,7 @@ defaults: &defaults
       max_download: 1200
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=alexharris
     configure_blacklight:
-        add_facet_fields:
+        add_facet_field:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
             label: Browse
             show: false
@@ -21,18 +21,22 @@ defaults: &defaults
             label: Location
             limit: 5
             collapse: false
-        add_show_fields:
-          - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
+        add_show_field:
+          - field: "Ddr::Index::Fields::TITLE"
             separator: "; "
             label: "Title"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
-          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
+          - field:
+            - :date
+            - :stored_searchable
             separator: "; "
             label: "Date"
             helper_method: display_edtf_date
-          - field: "ActiveFedora::SolrService.solr_name(:creator, :stored_searchable)"
+          - field:
+            - :creator
+            - :stored_searchable
             separator: "; "
             label: "Creator"
           - field: "Ddr::Index::Fields::LOCAL_ID"
@@ -48,21 +52,31 @@ defaults: &defaults
             separator: "; "
             label: "Source Collection"
             helper_method: source_collection
-          - field: "ActiveFedora::SolrService.solr_name(:spatial, :stored_searchable)"
+          - field:
+            - :spatial
+            - :stored_searchable
             separator: "; "
             label: "Location"
             link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:subject, :stored_searchable)"
+          - field:
+            - :subject
+            - :stored_searchable
             separator: "; "
             label: "Subject"
             link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:format, :stored_searchable)"
+          - field:
+            - :format
+            - :stored_searchable
             separator: "; "
             label: "Format"
-          - field: "ActiveFedora::SolrService.solr_name(:type, :stored_searchable)"
+          - field:
+            - :type
+            - :stored_searchable
             separator: "; "
             label: "Type"
-          - field: "ActiveFedora::SolrService.solr_name(:provenance, :stored_searchable)"
+          - field:
+            - :provenance
+            - :stored_searchable
             separator: "; "
             label: "Provenance" 
 
