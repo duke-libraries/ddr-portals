@@ -56,7 +56,7 @@ defaults: &defaults
           - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
             separator: "; "
             label: "Date"
-            helper_method: year_ranges
+            helper_method: display_edtf_date
           - field: "ActiveFedora::SolrService.solr_name(:creator, :stored_searchable)"
             separator: "; "
             label: "Author"
