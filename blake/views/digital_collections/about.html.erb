@@ -1,0 +1,15 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+
+  <div id="content" class="col-md-9 col-sm-8">
+    <h2>About the Digital Collection</h2>
+    <p>Please note that the information in the “Descriptive Title” field has been supplied by Library staff. There is no known record of titles assigned to these images by the photographer.</p>
+  </div>
+
+  <div id="sidebar" class="col-md-3 col-sm-4">
+    <% if @collection_document %>
+      <%= render partial: 'show_research_help', locals: { document: @collection_document }  %>
+      <%= render partial: 'show_collection_context', locals: { document: @collection_document } %>
+      <%= render partial: 'show_finding_aid', locals: { document: @collection_document } %>
+    <% end %>
+  </div>
+<% end %>

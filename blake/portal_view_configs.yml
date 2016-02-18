@@ -46,7 +46,7 @@ defaults: &defaults
         add_show_field:
           - field: "Ddr::Index::Fields::TITLE"
             separator: "; "
-            label: "Title"
+            label: "Descriptive Title"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink

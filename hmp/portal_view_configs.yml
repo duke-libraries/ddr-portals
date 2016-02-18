@@ -51,7 +51,7 @@ defaults: &defaults
         add_show_field:
           - field: "Ddr::Index::Fields::TITLE"
             separator: "; "
-            label: "Title"
+            label: "Descriptive Title"
           - field:
             - :description
             - :stored_searchable
