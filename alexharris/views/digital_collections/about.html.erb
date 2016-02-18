@@ -1,0 +1,15 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+
+  <div id="content" class="col-md-9 col-sm-8">
+    <h2>About the Digital Collection</h2>
+    <p>Duke University Libraries digitized the Alex Harris Photographs using federal digitization guidelines, which dictate including the edge of an item in the resulting digital image.  Therefore the edge of each photographic print is displayed in these images as well as the grey background behind the image at the time of digitization.</p>
+  </div>
+
+  <div id="sidebar" class="col-md-3 col-sm-4">
+    <% if @collection_document %>
+      <%= render partial: 'show_research_help', locals: { document: @collection_document }  %>
+      <%= render partial: 'show_collection_context', locals: { document: @collection_document } %>
+      <%= render partial: 'show_finding_aid', locals: { document: @collection_document } %>
+    <% end %>
+  </div>
+<% end %>
