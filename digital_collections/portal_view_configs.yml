@@ -3,7 +3,7 @@ defaults: &defaults
         admin_sets:
             - dc
     configure_blacklight:
-        add_facet_fields:
+        add_facet_field:
           - field: "Ddr::Index::Fields::COLLECTION_FACET"
             label: 'Collection'
             helper_method: 'collection_title'

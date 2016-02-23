@@ -71,10 +71,11 @@ defaults: &defaults
         - dscsi02126
         - dscsi02137
         - dscsi02176
+      display: 8
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wdukesons
     alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
     configure_blacklight:
-        add_facet_fields:
+        add_facet_field:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
             label: Browse
             show: false
@@ -102,11 +103,13 @@ defaults: &defaults
             label: Box Number
             limit: 5
             sort: index
-        add_show_fields:
-          - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
+        add_show_field:
+          - field: "Ddr::Index::Fields::TITLE"
             separator: "; "
             label: "Title"
-          - field: "ActiveFedora::SolrService.solr_name(:description, :stored_searchable)"
+          - field:
+            - :description
+            - :stored_searchable
             separator: "; "
             label: "Description"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
@@ -118,27 +121,39 @@ defaults: &defaults
           - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
             label: "Digital Collection"
             helper_method: descendant_of
-          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
+          - field:
+            - :series
+            - :stored_searchable
             separator: "; "
             label: "Card Series"
             link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:type, :stored_searchable)"
+          - field:
+            - :type
+            - :stored_searchable
             separator: "; "
             label: "Type"
             link_to_search: "Ddr::Index::Fields::TYPE_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:spatial, :stored_searchable)"
+          - field:
+            - :spatial
+            - :stored_searchable
             separator: "; "
             label: "Location"
             link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:publisher, :stored_searchable)"
+          - field:
+            - :publisher
+            - :stored_searchable
             separator: "; "
             label: "Publisher"
             link_to_search: "Ddr::Index::Fields::PUBLISHER_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
+          - field:
+            - :date
+            - :stored_searchable
             separator: "; "
             label: "Year"
             helper_method: year_ranges
-          - field: "ActiveFedora::SolrService.solr_name(:language, :stored_searchable)"
+          - field:
+            - :language
+            - :stored_searchable
             separator: "; "
             label: "Language"
             helper_method: language_display
@@ -149,10 +164,14 @@ defaults: &defaults
             separator: "; "
             label: "Source Collection"
             helper_method: source_collection
-          - field: "ActiveFedora::SolrService.solr_name(:box_number, :stored_searchable)"
+          - field:
+            - :box_number
+            - :stored_searchable
             separator: "; "
             label: "Box Number"
-          - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
+          - field:
+            - :extent
+            - :stored_searchable
             separator: "; "
             label: "Extent"
 development:

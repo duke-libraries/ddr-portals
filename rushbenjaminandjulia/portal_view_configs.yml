@@ -14,7 +14,7 @@ defaults: &defaults
       layout: portrait
     blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
     configure_blacklight:
-        add_facet_fields:
+        add_facet_field:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
             label: Browse
             show: false
@@ -43,25 +43,33 @@ defaults: &defaults
           - field: "Ddr::Index::Fields::SPATIAL_FACET"
             label: Location
             limit: 5
-        add_show_fields:
-          - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
+        add_show_field:
+          - field: "Ddr::Index::Fields::TITLE"
             separator: "; "
             label: "Title"
-          - field: "ActiveFedora::SolrService.solr_name(:description, :stored_searchable)"
+          - field:
+            - :description
+            - :stored_searchable
             separator: "; "
             label: "Description"
           - field: "Ddr::Index::Fields::PERMANENT_URL"
             label: "Permalink"
             helper_method: permalink
-          - field: "ActiveFedora::SolrService.solr_name(:date, :stored_searchable)"
+          - field:
+            - :date
+            - :stored_searchable
             separator: "; "
             label: "Date"
-            helper_method: year_ranges
-          - field: "ActiveFedora::SolrService.solr_name(:creator, :stored_searchable)"
+            helper_method: display_edtf_date
+          - field:
+            - :creator
+            - :stored_searchable
             separator: "; "
             label: "Author"
             link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:contributor, :stored_searchable)"
+          - field:
+            - :contributor
+            - :stored_searchable
             separator: "; "
             label: "Recipient"
             link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
@@ -78,32 +86,48 @@ defaults: &defaults
             separator: "; "
             label: "Source Collection"
             helper_method: source_collection
-          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
+          - field:
+            - :series
+            - :stored_searchable
             separator: "; "
             label: "Series"
             link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:language, :stored_searchable)"
+          - field:
+            - :language
+            - :stored_searchable
             separator: "; "
             label: "Language"
             helper_method: language_display
-          - field: "ActiveFedora::SolrService.solr_name(:extent, :stored_searchable)"
+          - field:
+            - :extent
+            - :stored_searchable
             separator: "; "
             label: "Extent"
-          - field: "ActiveFedora::SolrService.solr_name(:spatial, :stored_searchable)"
+          - field:
+            - :spatial
+            - :stored_searchable
             separator: "; "
             label: "Location"
             link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:subject, :stored_searchable)"
+          - field:
+            - :subject
+            - :stored_searchable
             separator: "; "
             label: "Subject"
             link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field: "ActiveFedora::SolrService.solr_name(:format, :stored_searchable)"
+          - field:
+            - :format
+            - :stored_searchable
             separator: "; "
             label: "Format"
-          - field: "ActiveFedora::SolrService.solr_name(:type, :stored_searchable)"
+          - field:
+            - :type
+            - :stored_searchable
             separator: "; "
             label: "Type"
-          - field: "ActiveFedora::SolrService.solr_name(:provenance, :stored_searchable)"
+          - field:
+            - :provenance
+            - :stored_searchable
             separator: "; "
             label: "Provenance" 
 development:

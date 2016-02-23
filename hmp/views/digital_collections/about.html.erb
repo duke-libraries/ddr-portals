@@ -1,0 +1,127 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+
+    <div id="content" class="col-md-9 col-sm-8">
+
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active"><a href="#about-text" role="tab" data-toggle="tab">About</a></li>
+              <li><a href="#history-text" role="tab" data-toggle="tab">History &amp; Context</a></li>
+              <li><a href="#related" role="tab" data-toggle="tab">Related Material</a></li>
+            </ul>
+
+
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="about-text">
+
+                    <h2>About the Digital Collection</h2>
+
+                    <div class="col-md-6 pull-right">
+
+                        <div class="well">
+
+                            <div class="embed-responsive embed-responsive-4by3">
+                              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ul7j7inExsY?feature=player_embedded"></iframe>
+                            </div>
+
+                            <div class="caption">
+                                <p>Exhibit commentary by visual materials archivist Karen Glynn. <a href="http://news.duke.edu/mmedia/flash/libraries/">Original feature</a> by Tam Ferguson, Duke Office of News &amp; Communications</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p>Hugh Mangum, an itinerant photographer from a prominent Durham, North Carolina, family, traveled a rail circuit through North Carolina, Virginia, and West Virginia. Along this route he took portraits of a remarkable variety of people, rendering a rich and diverse pictorial history of the region at the turn of the 20th century. At the beginning of his photographic career in the early 1890s, Mangum maintained a darkroom in a tobacco pack house on the Mangum farm at West Point on the Eno River in Durham. Over the years, he moved to Virginia and partnered with colleagues to operate photography studios in Roanoke, Pulaski, and East Radford, Virginia.</p>
+
+                    <p>The Friends of West Point and other organizations, individuals, and Mangum family members worked together to restore Hugh Mangum&#8217;s darkroom and to open the "Hugh Mangum Museum of Photography" at West Point Park on the Eno River in 1986. That same year, the Association for the Preservation of the Eno River Valley gave Hugh Mangum&#8217;s glass plate negatives to the Rare Book, Manuscript, and Special Collections Library at Duke University.</p>
+
+                    <p>The Hugh Mangum Photographs Collection consists of approximately 688 negatives made from the early 1890s through 1922.</p>
+                    
+                    <p>Please note that the information in the "Descriptive Title" field has been supplied by Library staff. There is no known record of titles assigned to these images by the photographer.</p>
+                </div>
+
+
+                <div class="tab-pane" id="history-text">
+
+                    <h2>History &amp; Context</h2>
+
+                    <p>A self-taught photographer from Durham, North Carolina, Hugh Mangum made pictures on glass plate negatives from the early 1890s until his death in Roanoke, Virginia, in 1922. As a young man, Mangum built and maintained a darkroom in a tobacco pack house on his family&#8217;s farm in Durham, NC. He used Durham as his base and rode the trains to small towns in North Carolina, Virginia, and West Virginia to take pictures. The photographer set up temporary studios for a few days to a few months in each town, buying advertisements in the local newspapers to promote his business.</p>
+
+                    <div class="row">
+
+                        <div class="well col-md-6 col-md-offset-3">
+
+                            <%= image_tag("ddr-portals/hmp/hmp-notes.jpg", class: "img-responsive", alt: "HMP-Notes") %>
+                            <div class="caption">
+                                <p>Photograph courtesy of David Page</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>He kept a handwritten ledger on the inside lid of his traveling trunk noting the names of the towns he visited and the dates that he was there. This rough ledger reveals his routes through North Carolina, Virginia, and West Virginia with a solitary excursion to Texas from 1899-1912. While the towns listed on the trunk lid identify Mangum&#8217;s field trips, only a handful of the 688 pictures in the collection have specific subject or geographic identification. Eventually, Mangum partnered with other photographers to operate at least three studios in Virginia: one in East Radford, one in Pulaski, and the "Photography Station" in Roanoke.</p>
+
+                    <p>Mangum photographs are distinctive for the level of comfort exhibited by his subjects in front of the camera. This ease in front of the camera is readily noted due to the large quantity of "penny picture camera" negatives in the collection that contain multiple images of numerous subjects.</p>
+
+                    <div class="row">
+
+                        <div class="well col-md-6 col-md-offset-3">
+                            
+                            <%= item_image_embed({local_id: 'hmpgp02018', size: '!600,600', class: 'img-responsive'}) %>
+                            
+                            <div class="caption">
+                                <%= item_title_link({local_id: 'hmpgp02018'}) %>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p>Often the first picture of a subject appears rather stiff and formal as in traditional nineteenth century photographs. In the second and subsequent pictures, the subject often visibly relaxes, assumes different poses, uses props, removes or adds a hat, and may smile broadly at the camera. This progressive transition in poses from formal to very informal is a hallmark of the Mangum collection. Perhaps the low cost of the penny pictures freed subjects to respond to Mangum&#8217;s spirited direction in a like manner.</p>
+
+                    <p>Mangum&#8217;s original darkroom, a tobacco pack house on the Mangum farm at West Point on the Eno, was saved and restored by The Friends of West Point and opened in 1986 as The Hugh Mangum Museum of Photography. In addition to his darkroom, the museum contains Hugh Mangum&#8217;s traveling trunk, a selection of vintage prints, prints made from Mangum original negatives in the 1980s by photographer David Page, and period photography equipment.</p>
+
+
+                </div>
+
+                <div class="tab-pane" id="related">
+
+                    <h2>Related Material</h2>
+
+                    <p>For related material, see <a href="http://www.enoriver.org/what-we-protect/parks/west-point-on-the-eno/hugh-mangum/">Hugh Mangum Museum of Photography</a>.</p>
+
+                    <h3>Bibliography</h3>
+
+                    <p>Massengill, Stephen E., and Jones, H.G. <i>Photographers in North Carolina: The First Century, 1842-1941</i>. Raleigh [N.C.]: Office of Archives and History, North Carolina Department of Cultural Resources; Chapel Hill [NC]: North Caroliniana Society, 2004.</p>
+
+                    <p><i>The Hugh Mangum Museum of Photography: The Packhouse at West Point on the Eno</i>. The Association for the Preservation of the Eno River Valley: Durham, [NC], 1986 (brochure).</p>
+
+                    <p>"Hugh Mangum Museum Opens." <i>The Durham Sun</i>, 22 May 1986, p. 3-D.</p>
+
+                    <p>"Remembering Hugh Mangum." <i>Durham Morning Herald</i>, 23 May 1986, p. 1-D.</p>
+
+                </div>
+
+            </div>
+
+
+    </div>
+
+    <div id="sidebar" class="col-md-3 col-sm-4">
+
+        <!-- how to include this? -->
+
+        <% if @collection_document %>
+          <%= render partial: 'show_research_help', locals: { document: @collection_document }  %>
+          <%= render partial: 'show_collection_context', locals: { document: @collection_document } %>
+          <%= render partial: 'show_finding_aid', locals: { document: @collection_document } %>
+        <% end %>
+
+    </div>
+<% end %>

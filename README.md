@@ -91,7 +91,7 @@ defaults: &defaults
     alert: 'Welcome to the W. Duke & Sons collection...</a>'
     # The blacklight configurations that should be applied to the controller for this collection.
     configure_blacklight:
-        add_facet_fields:
+        add_facet_field:
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
             label: Browse
             show: false
@@ -102,14 +102,18 @@ defaults: &defaults
             range:
                 num_segments: 6
                 segments: true
-        add_show_fields:
-          - field: "ActiveFedora::SolrService.solr_name(:title, :stored_searchable)"
+        add_show_field:
+          - field:
+              - :title
+              - :stored_searchable
             separator: "; "
             label: "Title"
           - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
             label: "Collection"
             helper_method: descendant_of
-          - field: "ActiveFedora::SolrService.solr_name(:series, :stored_searchable)"
+          - field:
+            - :series
+            - :stored_searchable
             separator: "; "
             label: "Card Series"
             link_to_search: "Ddr::Index::Fields::SERIES_FACET"
