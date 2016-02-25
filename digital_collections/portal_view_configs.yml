@@ -2,13 +2,69 @@ defaults: &defaults
     includes:
         admin_sets:
             - dc
+    showcase_images:
+      local_ids:
+        - brpst008001
+        - brpst002001
+        - dscsi03269
+        - dscsi03271
+        - ahpst002028
+        - ahpst001024
+        - ahpst001005
+        - ahpst001015
+        - dscsi05004
+        - dscsi03033
+        - dscsi05008
+      layout: landscape
+    highlight_images:
+      local_ids:
+        - brpst008001
+        - brpst002001
+        - dscsi03002
+        - dscsi03005
+        - dscsi03268
+        - dscsi03269
+        - dscsi03271
+        - ahpst002028
+        - ahpst001024
+        - ahpst001009
+        - ahpst002004
+        - ahpst002005
+        - ahpst002026
+        - dscsi02551
+        - dscsi03304
+    featured_collections:
+      local_ids:
+        - wdukesons
+        - rushbenjaminandjulia
+        - alexharris
+    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
     configure_blacklight:
-        add_facet_field:
+        add_facet_field:          
+          - field: "Ddr::Index::Fields::YEAR_FACET"
+            label: Year
+            limit: 9999
+            collapse: false
+            range:
+                num_segments: 6
+                segments: true
+          - field: "Ddr::Index::Fields::TYPE_FACET"
+            label: Type
+            limit: 5
+            collapse: false
+          - field: "Ddr::Index::Fields::SUBJECT_FACET"
+            label: Subject
+            limit: 5
+          - field: "Ddr::Index::Fields::SPATIAL_FACET"
+            label: Location
+            limit: 5
+          - field: "Ddr::Index::Fields::CREATOR_FACET"
+            label: Creator
+            limit: 5
           - field: "Ddr::Index::Fields::COLLECTION_FACET"
             label: 'Collection'
             helper_method: 'collection_title'
-            limit: 9999
-            collapse: false
+            limit: 5
           - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
             label: Browse
             show: false
@@ -21,4 +77,3 @@ test:
 
 production:
   <<: *defaults
-  
