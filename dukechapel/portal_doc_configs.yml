@@ -1,0 +1,17 @@
+defaults: &defaults
+    collection_local_id:
+        'dukechapel':
+            controller: digital_collections
+            collection: dukechapel
+            item_id_field: local_id
+            #Uncomment when ddr-public can use either local_id or custom_image
+            #thumbnail_image:
+            #  custom_image: dukechapel-thumb.jpg
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
