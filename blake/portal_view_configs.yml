@@ -1,116 +1,106 @@
-defaults: &defaults
-    includes:
-      local_ids:
-        - 'blake'
-    showcase_images:
-      local_ids:
-        - mfb001
-        - mfb015
-        - mfb017
-        - mfb042
-        - mfb043
-        - mfb075
-        - mfb080
-        - mfb091
-        - mfb099
-        - mfb102
-        - mfb109
-      layout: portrait
-    highlight_images:
-      local_ids:
-        - mfb002
-        - mfb010
-        - mfb018
-        - mfb030
-        - mfb038
-        - mfb041
-        - mfb044
-        - mfb049
-        - mfb061
-        - mfb083
-        - mfb084
-        - mfb088
-        - mfb095
-        - mfb101
-        - mfb106
-    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=blake
-    configure_blacklight:
-        add_facet_field:
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-            label: Browse
-            show: false
-          - field: "Ddr::Index::Fields::SUBJECT_FACET"
-            label: Subject
-            limit: 5
-            collapse: false
-        add_show_field:
-          - field: "Ddr::Index::Fields::TITLE"
-            separator: "; "
-            label: "Descriptive Title"
-          - field: "Ddr::Index::Fields::PERMANENT_URL"
-            label: "Permalink"
-            helper_method: permalink
-          - field:
-            - :date
-            - :stored_searchable
-            separator: "; "
-            label: "Date"
-            helper_method: display_edtf_date
-          - field:
-            - :creator
-            - :stored_searchable
-            separator: "; "
-            label: "Creator"
-          - field: "Ddr::Index::Fields::LOCAL_ID"
-            separator: "; "
-            label: "Identifier"
-          - field: "Ddr::Index::Fields::IS_PART_OF"
-            label: "Part of"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Digital Collection"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::EAD_ID"
-            separator: "; "
-            label: "Source Collection"
-            helper_method: source_collection
-          - field:
-            - :spatial
-            - :stored_searchable
-            separator: "; "
-            label: "Location"
-          - field:
-            - :subject
-            - :stored_searchable
-            separator: "; "
-            label: "Subject"
-            link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field:
-            - :extent
-            - :stored_searchable
-            separator: "; "
-            label: "Extent"
-          - field:
-            - :format
-            - :stored_searchable
-            separator: "; "
-            label: "Format"
-          - field:
-            - :type
-            - :stored_searchable
-            separator: "; "
-            label: "Type"
-          - field:
-            - :provenance
-            - :stored_searchable
-            separator: "; "
-            label: "Provenance" 
-
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
+includes:
+  local_ids:
+    - 'blake'
+showcase_images:
+  local_ids:
+    - mfb001
+    - mfb015
+    - mfb017
+    - mfb042
+    - mfb043
+    - mfb075
+    - mfb080
+    - mfb091
+    - mfb099
+    - mfb102
+    - mfb109
+  layout: portrait
+highlight_images:
+  local_ids:
+    - mfb002
+    - mfb010
+    - mfb018
+    - mfb030
+    - mfb038
+    - mfb041
+    - mfb044
+    - mfb049
+    - mfb061
+    - mfb083
+    - mfb084
+    - mfb088
+    - mfb095
+    - mfb101
+    - mfb106
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=blake
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+      collapse: false
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Descriptive Title"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"

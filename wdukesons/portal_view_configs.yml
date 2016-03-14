@@ -1,185 +1,175 @@
-defaults: &defaults
-    includes:
-        local_ids:
-           - 'wdukesons'
-    showcase_images:
-      local_ids:
-         - dscsi02223
-         - dscsi02230
-         - dscsi02371
-         - dscsi02373
-         - dscsi04049
-         - dscsi04079
-         - dscsi05010
-         - dscsi05013
-         - dscsi03002
-         - dscsi03005
-         - dscsi03013
-         - dscsi03212
-         - dscsi03254
-         - dscsi03255
-         - dscsi03304
-         - dscsi03312
-         - dscsi03367
-         - dscsi03375
-         - dscsi03582
-         - dscsi03589
-         - dscsi01026
-         - dscsi01234
-         - dscsi01517
-         - dscsi02375
-         - dscsi02429
-         - dscsi02549
-         - dscsi02551
-         - dscsi02578
-         - dscsi01092
-         - dscsi02123
-         - dscsi02200
-         - dscsi02205
-      layout: portrait
-    highlight_images:
-      local_ids:
-        - dscsi02317
-        - dscsi02331
-        - dscsi04001
-        - dscsi04016
-        - dscsi04044
-        - dscsi04084
-        - dscsi04144
-        - dscsi05004
-        - dscsi05002
-        - dscsi05001
-        - dscsi05009
-        - dscsi05008
-        - dscsi06004
-        - dscsi03004
-        - dscsi03008
-        - dscsi03031
-        - dscsi03033
-        - dscsi03043
-        - dscsi03285
-        - dscsi03299
-        - dscsi03423
-        - dscsi03508
-        - dscsi03510
-        - dscsi02404
-        - dscsi02060
-        - dscsi02072
-        - dscsi02616
-        - dscsi02627
-        - dscsi02127
-        - dscsi02126
-        - dscsi02137
-        - dscsi02176
-      display: 8
-    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wdukesons
-    alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
-    configure_blacklight:
-        add_facet_field:
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-            label: Browse
-            show: false
-          - field: "Ddr::Index::Fields::SERIES_FACET"
-            label: Card Series
-            collapse: false
-            limit: 5
-          - field: "Ddr::Index::Fields::YEAR_FACET"
-            label: Year
-            limit: 9999
-            collapse: false
-            range:
-                num_segments: 6
-                segments: true
-          - field: "Ddr::Index::Fields::TYPE_FACET"
-            label: Type
-            limit: 5
-          - field: "Ddr::Index::Fields::PUBLISHER_FACET"
-            label: Publisher
-            limit: 5
-          - field: "Ddr::Index::Fields::SPATIAL_FACET"
-            label: Location
-            limit: 5
-          - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
-            label: Box Number
-            limit: 5
-            sort: index
-        add_show_field:
-          - field: "Ddr::Index::Fields::TITLE"
-            separator: "; "
-            label: "Title"
-          - field:
-            - :description
-            - :stored_searchable
-            separator: "; "
-            label: "Description"
-          - field: "Ddr::Index::Fields::PERMANENT_URL"
-            label: "Permalink"
-            helper_method: permalink
-          - field: "Ddr::Index::Fields::IS_PART_OF"
-            label: "Part of"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Digital Collection"
-            helper_method: descendant_of
-          - field:
-            - :series
-            - :stored_searchable
-            separator: "; "
-            label: "Card Series"
-            link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-          - field:
-            - :type
-            - :stored_searchable
-            separator: "; "
-            label: "Type"
-            link_to_search: "Ddr::Index::Fields::TYPE_FACET"
-          - field:
-            - :spatial
-            - :stored_searchable
-            separator: "; "
-            label: "Location"
-            link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
-          - field:
-            - :publisher
-            - :stored_searchable
-            separator: "; "
-            label: "Publisher"
-            link_to_search: "Ddr::Index::Fields::PUBLISHER_FACET"
-          - field:
-            - :date
-            - :stored_searchable
-            separator: "; "
-            label: "Year"
-            helper_method: year_ranges
-          - field:
-            - :language
-            - :stored_searchable
-            separator: "; "
-            label: "Language"
-            helper_method: language_display
-          - field: "Ddr::Index::Fields::LOCAL_ID"
-            separator: "; "
-            label: "Identifier"
-          - field: "Ddr::Index::Fields::EAD_ID"
-            separator: "; "
-            label: "Source Collection"
-            helper_method: source_collection
-          - field:
-            - :box_number
-            - :stored_searchable
-            separator: "; "
-            label: "Box Number"
-          - field:
-            - :extent
-            - :stored_searchable
-            separator: "; "
-            label: "Extent"
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
-  
+includes:
+  local_ids:
+    - 'wdukesons'
+showcase_images:
+  local_ids:
+    - dscsi02223
+    - dscsi02230
+    - dscsi02371
+    - dscsi02373
+    - dscsi04049
+    - dscsi04079
+    - dscsi05010
+    - dscsi05013
+    - dscsi03002
+    - dscsi03005
+    - dscsi03013
+    - dscsi03212
+    - dscsi03254
+    - dscsi03255
+    - dscsi03304
+    - dscsi03312
+    - dscsi03367
+    - dscsi03375
+    - dscsi03582
+    - dscsi03589
+    - dscsi01026
+    - dscsi01234
+    - dscsi01517
+    - dscsi02375
+    - dscsi02429
+    - dscsi02549
+    - dscsi02551
+    - dscsi02578
+    - dscsi01092
+    - dscsi02123
+    - dscsi02200
+    - dscsi02205
+  layout: portrait
+highlight_images:
+  local_ids:
+    - dscsi02317
+    - dscsi02331
+    - dscsi04001
+    - dscsi04016
+    - dscsi04044
+    - dscsi04084
+    - dscsi04144
+    - dscsi05004
+    - dscsi05002
+    - dscsi05001
+    - dscsi05009
+    - dscsi05008
+    - dscsi06004
+    - dscsi03004
+    - dscsi03008
+    - dscsi03031
+    - dscsi03033
+    - dscsi03043
+    - dscsi03285
+    - dscsi03299
+    - dscsi03423
+    - dscsi03508
+    - dscsi03510
+    - dscsi02404
+    - dscsi02060
+    - dscsi02072
+    - dscsi02616
+    - dscsi02627
+    - dscsi02127
+    - dscsi02126
+    - dscsi02137
+    - dscsi02176
+  display: 8
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wdukesons
+alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Card Series
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::TYPE_FACET"
+      label: Type
+      limit: 5
+    - field: "Ddr::Index::Fields::PUBLISHER_FACET"
+      label: Publisher
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+      label: Box Number
+      limit: 5
+      sort: index
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :description
+        - :stored_searchable
+      separator: "; "
+      label: "Description"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field:
+        - :series
+        - :stored_searchable
+      separator: "; "
+      label: "Card Series"
+      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
+      link_to_search: "Ddr::Index::Fields::TYPE_FACET"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :publisher
+        - :stored_searchable
+      separator: "; "
+      label: "Publisher"
+      link_to_search: "Ddr::Index::Fields::PUBLISHER_FACET"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Year"
+      helper_method: year_ranges
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :box_number
+        - :stored_searchable
+      separator: "; "
+      label: "Box Number"
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
