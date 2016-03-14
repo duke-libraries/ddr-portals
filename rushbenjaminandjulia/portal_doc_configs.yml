@@ -4,7 +4,8 @@ defaults: &defaults
             controller: digital_collections
             collection: rushbenjaminandjulia
             item_id_field: local_id
-            thumbnail_image: "brpst008001"
+            thumbnail_image:
+                local_id: "brpst008001"
 
 development:
   <<: *defaults

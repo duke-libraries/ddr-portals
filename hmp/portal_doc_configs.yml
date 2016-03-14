@@ -4,7 +4,8 @@ defaults: &defaults
             controller: digital_collections
             collection: hmp
             item_id_field: local_id
-            thumbnail_image: "hmpgp12314"
+            thumbnail_image:
+                local_id: "hmpgp12314"
 
 development:
   <<: *defaults

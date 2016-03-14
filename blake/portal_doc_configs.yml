@@ -4,7 +4,8 @@ defaults: &defaults
             controller: digital_collections
             collection: blake
             item_id_field: local_id
-            thumbnail_image: "mfb001"
+            thumbnail_image:
+                local_id: "mfb001"
 development:
   <<: *defaults
 
