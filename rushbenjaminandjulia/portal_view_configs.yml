@@ -1,141 +1,131 @@
-defaults: &defaults
-    includes:
-        local_ids:
-           - 'rushbenjaminandjulia'
-    showcase_images:
-      local_ids:
-         - brpst021001
-         - brpst008001
-         - brpst009001
-         - brpst016015
-         - brpst023001
-         - brpst001001
-         - brpst024001 
-      layout: portrait
-    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
-    configure_blacklight:
-        add_facet_field:
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-            label: Browse
-            show: false
-          - field: "Ddr::Index::Fields::SERIES_FACET"
-            label: Series
-            collapse: false
-            limit: 5
-          - field: "Ddr::Index::Fields::CREATOR_FACET"
-            label: Author
-            collapse: false
-            limit: 5
-          - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
-            label: Recipient
-            collapse: false
-            limit: 5
-          - field: "Ddr::Index::Fields::YEAR_FACET"
-            label: Year
-            limit: 9999
-            collapse: false
-            range:
-                num_segments: 6
-                segments: true
-          - field: "Ddr::Index::Fields::SUBJECT_FACET"
-            label: Subject
-            limit: 5
-          - field: "Ddr::Index::Fields::SPATIAL_FACET"
-            label: Location
-            limit: 5
-        add_show_field:
-          - field: "Ddr::Index::Fields::TITLE"
-            separator: "; "
-            label: "Title"
-          - field:
-            - :description
-            - :stored_searchable
-            separator: "; "
-            label: "Description"
-          - field: "Ddr::Index::Fields::PERMANENT_URL"
-            label: "Permalink"
-            helper_method: permalink
-          - field:
-            - :date
-            - :stored_searchable
-            separator: "; "
-            label: "Date"
-            helper_method: display_edtf_date
-          - field:
-            - :creator
-            - :stored_searchable
-            separator: "; "
-            label: "Author"
-            link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
-          - field:
-            - :contributor
-            - :stored_searchable
-            separator: "; "
-            label: "Recipient"
-            link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
-          - field: "Ddr::Index::Fields::LOCAL_ID"
-            separator: "; "
-            label: "Identifier"
-          - field: "Ddr::Index::Fields::IS_PART_OF"
-            label: "Part of"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Digital Collection"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::EAD_ID"
-            separator: "; "
-            label: "Source Collection"
-            helper_method: source_collection
-          - field:
-            - :series
-            - :stored_searchable
-            separator: "; "
-            label: "Series"
-            link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-          - field:
-            - :language
-            - :stored_searchable
-            separator: "; "
-            label: "Language"
-            helper_method: language_display
-          - field:
-            - :extent
-            - :stored_searchable
-            separator: "; "
-            label: "Extent"
-          - field:
-            - :spatial
-            - :stored_searchable
-            separator: "; "
-            label: "Location"
-            link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
-          - field:
-            - :subject
-            - :stored_searchable
-            separator: "; "
-            label: "Subject"
-            link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field:
-            - :format
-            - :stored_searchable
-            separator: "; "
-            label: "Format"
-          - field:
-            - :type
-            - :stored_searchable
-            separator: "; "
-            label: "Type"
-          - field:
-            - :provenance
-            - :stored_searchable
-            separator: "; "
-            label: "Provenance" 
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
-  
+includes:
+  local_ids:
+    - 'rushbenjaminandjulia'
+showcase_images:
+  local_ids:
+    - brpst021001
+    - brpst008001
+    - brpst009001
+    - brpst016015
+    - brpst023001
+    - brpst001001
+    - brpst024001 
+  layout: portrait
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Series
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Author
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+      label: Recipient
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :description
+        - :stored_searchable
+      separator: "; "
+      label: "Description"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Author"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :contributor
+        - :stored_searchable
+      separator: "; "
+      label: "Recipient"
+      link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :series
+        - :stored_searchable
+      separator: "; "
+      label: "Series"
+      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field:
+      - :type
+      - :stored_searchable
+      separator: "; "
+      label: "Type"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"
