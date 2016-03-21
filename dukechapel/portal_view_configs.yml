@@ -10,6 +10,15 @@ derivative_url_prefixes:
   video: http://library.duke.edu/digitalcollections/media/mp4/dukechapel/
   audio: http://library.duke.edu/digitalcollections/media/mp3/dukechapel/
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dukechapel
+item_relators:
+  - name: "Related Items"
+    field:
+      - :series_facet
+      - :facetable
+  - name: "Even More Stuff"
+    field:
+      - :series_facet
+      - :facetable
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
