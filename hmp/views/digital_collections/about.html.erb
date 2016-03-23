@@ -40,7 +40,7 @@
                     <p>The Friends of West Point and other organizations, individuals, and Mangum family members worked together to restore Hugh Mangum&#8217;s darkroom and to open the "Hugh Mangum Museum of Photography" at West Point Park on the Eno River in 1986. That same year, the Association for the Preservation of the Eno River Valley gave Hugh Mangum&#8217;s glass plate negatives to the Rare Book, Manuscript, and Special Collections Library at Duke University.</p>
 
                     <p>The Hugh Mangum Photographs Collection consists of approximately 688 negatives made from the early 1890s through 1922.</p>
-                    
+
                     <p>Please note that the information in the "Descriptive Title" field has been supplied by Library staff. There is no known record of titles assigned to these images by the photographer.</p>
                 </div>
 
@@ -72,9 +72,9 @@
                     <div class="row">
 
                         <div class="well col-md-6 col-md-offset-3">
-                            
+
                             <%= item_image_embed({local_id: 'hmpgp02018', size: '!600,600', class: 'img-responsive'}) %>
-                            
+
                             <div class="caption">
                                 <%= item_title_link({local_id: 'hmpgp02018'}) %>
                             </div>
@@ -115,13 +115,7 @@
 
     <div id="sidebar" class="col-md-3 col-sm-4">
 
-        <!-- how to include this? -->
-
-        <% if @collection_document %>
-          <%= render partial: 'show_research_help', locals: { document: @collection_document }  %>
-          <%= render partial: 'show_collection_context', locals: { document: @collection_document } %>
-          <%= render partial: 'show_finding_aid', locals: { document: @collection_document } %>
-        <% end %>
+        <%= render 'shared/about_sidebar' %>
 
     </div>
 <% end %>
