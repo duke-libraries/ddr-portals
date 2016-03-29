@@ -31,10 +31,10 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    # Uncomment when format is facetable in ddr-models
-    # - field: "Ddr::Index::Fields::FORMAT_FACET"
-    #   separator: "; "
-    #   label: "Format"
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: "Format"
+      collapse: false
+      limit: 5
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
@@ -88,7 +88,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Format"
-      # link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
         - :provenance
         - :stored_searchable
