@@ -1,8 +1,9 @@
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::ADMIN_SET_FACET"
+    - field: "Ddr::Index::Fields::ADMIN_SET"
       label: Collection Group
-      helper_method: admin_set_full_name
+      # TODO: helper needs update to work with ddr-aux
+      # helper_method: admin_set_full_name
       collapse: false
       limit: 5
     - field: "Ddr::Index::Fields::COLLECTION_FACET"
