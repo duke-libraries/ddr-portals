@@ -22,6 +22,7 @@ configure_blacklight:
       show: false
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Speaker
+      sort: index
       collapse: false
       limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
