@@ -1,24 +1,101 @@
-defaults: &defaults
-    includes:
-        admin_sets:
-            - dc
-    configure_blacklight:
-        add_facet_field:
-          - field: "Ddr::Index::Fields::COLLECTION_FACET"
-            label: 'Collection'
-            helper_method: 'collection_title'
-            limit: 9999
-            collapse: false
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-            label: Browse
-            show: false
-
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
-  
+includes:
+  admin_sets:
+    - dc
+showcase_images:
+  local_ids:
+    - brpst008001
+    - brpst002001
+    - dscsi03269
+    - dscsi03271
+    - ahpst002028
+    - ahpst001024
+    - ahpst001005
+    - ahpst001015
+    - dscsi05004
+    - dscsi03033
+    - dscsi05008
+  layout: landscape
+highlight_images:
+  local_ids:
+    - brpst008001
+    - brpst002001
+    - dscsi03002
+    - dscsi03005
+    - dscsi03268
+    - dscsi03269
+    - dscsi03271
+    - ahpst002028
+    - ahpst001024
+    - ahpst001009
+    - ahpst002004
+    - ahpst002005
+    - ahpst002026
+    - dscsi02551
+    - dscsi03304
+featured_collections:
+  local_ids:
+    - wdukesons
+    - rushbenjaminandjulia
+    - alexharris
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
+configure_blacklight:
+  add_facet_field:          
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::TYPE_FACET"
+      label: Type
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Creator
+      limit: 5
+    - field: "Ddr::Index::Fields::COLLECTION_FACET"
+      label: 'Collection'
+      helper_method: 'collection_title'
+      limit: 5
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :type
+        - :stored_searchable
+      separator: ";"
+      label: "Type"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: "file_info"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"

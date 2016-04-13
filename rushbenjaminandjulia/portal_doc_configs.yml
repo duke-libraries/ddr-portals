@@ -1,16 +1,7 @@
-defaults: &defaults
-    collection_local_id:
-        'rushbenjaminandjulia':
-            controller: digital_collections
-            collection: rushbenjaminandjulia
-            item_id_field: local_id
-            thumbnail_image: "brpst008001"
-
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
+collection_local_id:
+  'rushbenjaminandjulia':
+    controller: digital_collections
+    collection: rushbenjaminandjulia
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: "brpst008001"

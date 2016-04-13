@@ -1,126 +1,116 @@
-defaults: &defaults
-    includes:
-        local_ids:
-           - 'hmp'
-    showcase_images:
-      local_ids:
-        - hmpgp01368
-        - hmpgp10266
-        - hmpgp10270
-        - hmpgp11295
-        - hmpgp12331
-        - hmpgp13344
-        - hmpgp14408
-        - hmpgp15433
-        - hmpgp21653
-        - hmpgp22673
-      layout: portrait
-    highlight_images:
-      local_ids:
-        - hmpgp01104
-        - hmpgp01333
-        - hmpgp01404
-        - hmpgp01406
-        - hmpgp02004
-        - hmpgp02010
-        - hmpgp03042
-        - hmpgp10259
-        - hmpgp12314
-        - hmpgp13359
-        - hmpgp13374
-        - hmpgp14402
-        - hmpgp17528
-        - hmpgp19566
-        - hmpgp19570
-        - hmpgp19574
-        - hmpgp19576
-        - hmpgp21654
-        - hmpgp21657
-        - hmpgp23470
-        - hmpgp23472
-    blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hmp
-    configure_blacklight:
-        add_facet_field:
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-            label: Browse
-            show: false
-          - field: "Ddr::Index::Fields::SUBJECT_FACET"
-            label: Subject
-            limit: 5
-            collapse: false
-        add_show_field:
-          - field: "Ddr::Index::Fields::TITLE"
-            separator: "; "
-            label: "Descriptive Title"
-          - field:
-            - :description
-            - :stored_searchable
-            separator: "; "
-            label: "Description"
-          - field:
-            - :print_number
-            - :stored_searchable
-            separator: "; "
-            label: "Print Number"
-          - field: "Ddr::Index::Fields::PERMANENT_URL"
-            label: "Permalink"
-            helper_method: permalink
-          - field:
-            - :date
-            - :stored_searchable
-            separator: "; "
-            label: "Date"
-            helper_method: display_edtf_date
-          - field:
-            - :creator
-            - :stored_searchable
-            separator: "; "
-            label: "Creator"
-          - field: "Ddr::Index::Fields::LOCAL_ID"
-            separator: "; "
-            label: "Identifier"
-          - field: "Ddr::Index::Fields::IS_PART_OF"
-            label: "Part of"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-            label: "Digital Collection"
-            helper_method: descendant_of
-          - field: "Ddr::Index::Fields::EAD_ID"
-            separator: "; "
-            label: "Source Collection"
-            helper_method: source_collection
-          - field:
-            - :spatial
-            - :stored_searchable
-            separator: "; "
-            label: "Location"
-          - field:
-            - :subject
-            - :stored_searchable
-            separator: "; "
-            label: "Subject"
-            link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-          - field:
-            - :format
-            - :stored_searchable
-            separator: "; "
-            label: "Format"
-          - field:
-            - :type
-            - :stored_searchable
-            separator: "; "
-            label: "Type"
-          - field:
-            - :provenance
-            - :stored_searchable
-            separator: "; "
-            label: "Provenance" 
-
-development:
-  <<: *defaults
-
-test:
-  <<: *defaults
-
-production:
-  <<: *defaults
+includes:
+  local_ids:
+    - 'hmp'
+showcase_images:
+  local_ids:
+    - hmpgp01368
+    - hmpgp10266
+    - hmpgp10270
+    - hmpgp11295
+    - hmpgp12331
+    - hmpgp13344
+    - hmpgp14408
+    - hmpgp15433
+    - hmpgp21653
+    - hmpgp22673
+  layout: portrait
+highlight_images:
+  local_ids:
+    - hmpgp01104
+    - hmpgp01333
+    - hmpgp01404
+    - hmpgp01406
+    - hmpgp02004
+    - hmpgp02010
+    - hmpgp03042
+    - hmpgp10259
+    - hmpgp12314
+    - hmpgp13359
+    - hmpgp13374
+    - hmpgp14402
+    - hmpgp17528
+    - hmpgp19566
+    - hmpgp19570
+    - hmpgp19574
+    - hmpgp19576
+    - hmpgp21654
+    - hmpgp21657
+    - hmpgp23470
+    - hmpgp23472
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hmp
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+      collapse: false
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Descriptive Title"
+    - field:
+        - :description
+        - :stored_searchable
+      separator: "; "
+      label: "Description"
+    - field:
+        - :print_number
+        - :stored_searchable
+      separator: "; "
+      label: "Print Number"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"
