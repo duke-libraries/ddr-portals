@@ -95,12 +95,36 @@ configure_blacklight:
       separator: "; "
       label: "Format"
     - field:
-        - :type
-        - :stored_searchable
-      separator: "; "
-      label: "Type"
-    - field:
         - :provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :format
+        - :stored_searchable
+      separator: ";"
+      label: "Format"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
