@@ -148,8 +148,8 @@ configure_blacklight:
         - :date
         - :stored_searchable
       separator: "; "
-      label: "Year"
-      helper_method: year_ranges
+      label: "Date"
+      helper_method: display_edtf_date
     - field:
         - :language
         - :stored_searchable
