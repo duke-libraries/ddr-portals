@@ -1,7 +1,7 @@
 collection_local_id:
-  hmp:
+  caribbeansea:
     controller: digital_collections
-    collection: hmp
+    collection: caribbeansea
     item_id_field: local_id
     thumbnail_image:
-      local_id: hmpgp12314
+      local_id: csmep03156

@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'blake'
+    - blake
 showcase_images:
   local_ids:
     - mfb001

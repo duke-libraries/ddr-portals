@@ -1,0 +1,20 @@
+includes:
+  local_ids:
+    - friedrichcarlpeetz
+showcase_images:
+  local_ids:
+    - fcpph02009003
+    - fcpph02018003
+    - fcpph03005005
+    - fcpph03014005
+  layout: landscape
+highlight_images:
+  local_ids:
+    - fcpph02001002
+    - fcpph02002005
+    - fcpph02024003
+    - fcpph02026003
+    - fcpph03008004
+    - fcpph03009002
+    - fcpph03010003
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=friedrichcarlpeetz

@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'dukechapel'
+    - dukechapel
 showcase_images:
   custom_images:
     - dukechapel-causeway.jpg

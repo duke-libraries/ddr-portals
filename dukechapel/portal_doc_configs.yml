@@ -1,5 +1,5 @@
 collection_local_id:
-  'dukechapel':
+  dukechapel:
     controller: digital_collections
     collection: dukechapel
     item_id_field: local_id
