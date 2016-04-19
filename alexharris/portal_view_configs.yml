@@ -8,6 +8,7 @@ showcase_images:
     - ahpst001001
     - ahpst001017
   layout: landscape
+show_items: 0
 restrictions:
   max_download: 1200
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=alexharris

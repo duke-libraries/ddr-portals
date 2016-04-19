@@ -11,6 +11,7 @@ showcase_images:
     - brpst001001
     - brpst024001 
   layout: portrait
+show_items: 0
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=rushbenjaminandjulia
 configure_blacklight:
   add_facet_field:
