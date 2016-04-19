@@ -7,10 +7,8 @@ showcase_images:
     - kfpst0010070010
     - kfpst0010230010
     - kfpst0020130010
-    - kfpst0030100010
     - kfpst0030140010
     - kfpst0040090010
-    - kfpst0040120010
     - kfpst0040190010
     - kfpst0050090010
     - kfpst0050110010
@@ -32,6 +30,7 @@ highlight_images:
     - kfpst0010500010
     - kfpst0020270010
     - kfpst0030070010
+    - kfpst0030100010
     - kfpst0030120010
     - kfpst0040020010
     - kfpst0050030010

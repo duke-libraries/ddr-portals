@@ -3,28 +3,28 @@ includes:
     - esr
 showcase_images:
   local_ids:
-    - esrph02058
-    - esrph08432
-    - esrph08472
-    - esrph08488
-    - esrph09561
-    - esrph09591
-    - esrph10670
+    - esrph020010580
+    - esrph080014320
+    - esrph080014720
+    - esrph080014880
+    - esrph090015610
+    - esrph090015910
+    - esrph100016700
   layout: landscape
 highlight_images:
   local_ids:
-    - esrph02040
-    - esrph04107
-    - esrph04111
-    - esrph04156
-    - esrph04211
-    - esrph04238
-    - esrph08339
-    - esrph08359
-    - esrph08483
-    - esrph08496
-    - esrph09574
-    - esrph09583
-    - esrph09584
-    - esrsc12055
+    - esrph020010400
+    - esrph040011070
+    - esrph040011110
+    - esrph040011560
+    - esrph040012110
+    - esrph040012380
+    - esrph080013390
+    - esrph080013590
+    - esrph080014830
+    - esrph080014960
+    - esrph090015740
+    - esrph090015830
+    - esrph090015840
+    - esrsc120010550
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=esr

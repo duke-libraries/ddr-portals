@@ -3,28 +3,28 @@ includes:
     - strong
 showcase_images:
   local_ids:
-    - strph15003
-    - strph28002
-    - strph29001
-    - strph36003
-    - strph40001
-    - strph44002
-    - strph47004
-    - strph48001
-    - strph49001
+    - strst001001059
+    - strst001001110
+    - strst001001113
+    - strst001001143
+    - strst001001157
+    - strst001001174
+    - strst001001188
+    - strst001001189
+    - strst001001193
   layout: portrait
 highlight_images:
   local_ids:
-    - strph01002
-    - strph02001
-    - strph02004
-    - strph07001
-    - strph09002
-    - strph10003
-    - strph19001
-    - strph36002
-    - strph41003
-    - strph41004
-    - strph50003
-    - strph50004
+    - strst001001002
+    - strst001001005
+    - strst001001008
+    - strst001001025
+    - strst001001034
+    - strst001001039
+    - strst001001073
+    - strst001001142
+    - strst001001163
+    - strst001001164
+    - strst001001199
+    - strst001001200
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=strong
