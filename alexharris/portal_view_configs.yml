@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'alexharris'
+    - alexharris
 showcase_images:
   local_ids:
     - ahpst002028
@@ -73,6 +73,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
   add_index_field:
     - field:
         - :creator
@@ -102,4 +107,3 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
       helper_method: "descendant_of"
-

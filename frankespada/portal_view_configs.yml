@@ -1,0 +1,19 @@
+includes:
+  local_ids:
+    - frankespada
+showcase_images:
+  local_ids:
+    - espph010010010
+    - espph010010020
+    - espph010010160
+    - espph010010220
+  layout: landscape
+highlight_images:
+  local_ids:
+    - espph010010040
+    - espph010010100
+    - espph010010110
+    - espph010010120
+    - espph010010130
+    - espph010010190
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=frankespada

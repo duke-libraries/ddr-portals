@@ -1,0 +1,30 @@
+includes:
+  local_ids:
+    - esr
+showcase_images:
+  local_ids:
+    - esrph02058
+    - esrph08432
+    - esrph08472
+    - esrph08488
+    - esrph09561
+    - esrph09591
+    - esrph10670
+  layout: landscape
+highlight_images:
+  local_ids:
+    - esrph02040
+    - esrph04107
+    - esrph04111
+    - esrph04156
+    - esrph04211
+    - esrph04238
+    - esrph08339
+    - esrph08359
+    - esrph08483
+    - esrph08496
+    - esrph09574
+    - esrph09583
+    - esrph09584
+    - esrsc12055
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=esr

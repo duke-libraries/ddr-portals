@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'hmp'
+    - hmp
 showcase_images:
   local_ids:
     - hmpgp01368

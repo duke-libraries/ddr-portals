@@ -1,0 +1,30 @@
+includes:
+  local_ids:
+    - strong
+showcase_images:
+  local_ids:
+    - strph15003
+    - strph28002
+    - strph29001
+    - strph36003
+    - strph40001
+    - strph44002
+    - strph47004
+    - strph48001
+    - strph49001
+  layout: portrait
+highlight_images:
+  local_ids:
+    - strph01002
+    - strph02001
+    - strph02004
+    - strph07001
+    - strph09002
+    - strph10003
+    - strph19001
+    - strph36002
+    - strph41003
+    - strph41004
+    - strph50003
+    - strph50004
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=strong

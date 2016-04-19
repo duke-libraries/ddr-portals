@@ -1,0 +1,31 @@
+includes:
+  local_ids:
+    - kwilecki
+showcase_images:
+  local_ids:
+    - kwlph030010270
+    - kwlph040010500
+    - kwlph050010060
+    - kwlph060010020
+    - kwlph090010450
+    - kwlph110010140
+  layout: landscape
+highlight_images:
+  local_ids:
+    - kwlph010010010
+    - kwlph010010290
+    - kwlph020010170
+    - kwlph030010530
+    - kwlph040010160
+    - kwlph040010400
+    - kwlph060010220
+    - kwlph060010320
+    - kwlph070010140
+    - kwlph070010170
+    - kwlph080010060
+    - kwlph090010370
+    - kwlph100010550
+    - kwlph110010390
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=kwilecki

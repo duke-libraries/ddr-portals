@@ -1,0 +1,28 @@
+includes:
+  local_ids:
+    - jesseandrews
+showcase_images:
+  local_ids:
+    - japph010010010
+    - japph020040010
+    - japph030060010
+    - japph040130010
+  layout: landscape
+highlight_images:
+  local_ids:
+    - japph010070010
+    - japph010100010
+    - japph020070010
+    - japph020160010
+    - japph030010010
+    - japph030030010
+    - japph030140010
+    - japph040030010
+    - japph040190010
+    - japph040280010
+    - japph050040010
+    - japph060050010
+    - japph070110010
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=jesseandrews

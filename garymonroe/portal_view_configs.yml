@@ -1,0 +1,29 @@
+includes:
+  local_ids:
+    - garymonroe
+showcase_images:
+  local_ids:
+    - gmpph010010030
+    - gmpph010010040
+    - gmpph010010080
+    - gmpph010020010
+    - gmpph010020020
+    - gmpph010020070
+    - gmpph010020130
+    - gmpph010020150
+    - gmpph040010050
+  layout: landscape
+highlight_images:
+  local_ids:
+    - gmpph010010010
+    - gmpph010010020
+    - gmpph010010090
+    - gmpph010010110
+    - gmpph010010130
+    - gmpph020010060
+    - gmpph020010070
+    - gmpph030010040
+    - gmpph030010100
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=garymonroe

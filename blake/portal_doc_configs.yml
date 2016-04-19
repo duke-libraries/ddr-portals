@@ -1,7 +1,7 @@
 collection_local_id:
-  'blake':
+  blake:
     controller: digital_collections
     collection: blake
     item_id_field: local_id
     thumbnail_image:
-      local_id: "mfb001"
+      local_id: mfb001
