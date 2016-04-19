@@ -109,6 +109,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
   add_index_field:
     - field:
         - :creator

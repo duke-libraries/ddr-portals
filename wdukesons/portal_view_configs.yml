@@ -173,6 +173,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Extent"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
   add_index_field:
     - field:
         - :creator
