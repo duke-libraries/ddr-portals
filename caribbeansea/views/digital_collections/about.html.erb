@@ -1,0 +1,98 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+
+    <div id="content" class="col-md-9 col-sm-8">
+
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active"><a href="#about-english" role="tab" data-toggle="tab">English</a></li>
+              <li><a href="#about-espanol" role="tab" data-toggle="tab">Espa&ntilde;ol</a></li>
+              <li><a href="#about-francais" role="tab" data-toggle="tab">Fran&ccedil;ais</a></li>
+              <li><a href="#about-kreyol" role="tab" data-toggle="tab">Kreyol</a></li>
+            </ul>
+
+
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="about-english">
+
+                    <h2>About the Caribbean Sea Migration Collection</h2>
+
+                    <p>Between 1982 and 2012, the United States Coast Guard interdicted 222,315 persons on the Caribbean Sea or the adjacent Florida Straits and Mona Passage. This number includes 69,355 Cubans; 36,536 Dominicans and 116,424 Haitians.<sup><a href="#footnote1">1</a></sup> Tens of thousands more reached Florida or Puerto Rico without being intercepted. Add to that the tens of thousands who died en route.</p>
+
+                    <p>Since the early 1960s these sea farers have been setting out in a slow trickle that sometimes becomes a surging wave when political conditions in their home countries grow violent or unusually unstable. They travel in boats that are dangerously overloaded, poorly equipped and unfit for travel on the high seas.</p>
+
+                    <p>When large numbers of Cubans were permitted by their government to set out in 1965 and 1980, they were brought directly to the United States. Following that, in the 1990s, tens of thousands of Haitians and Cubans were detained in three separate incidents at the United States Naval Station, Guant&aacute;namo Bay, Cuba.</p>
+
+                    <p>The Caribbean Sea Migration Collection documents the history of these mariners. The David M. Rubenstein Rare Book &amp; Manuscript Library wishes to thank the individuals who have donated materials to the Collection including Holly Ackerman, Stephen Brown, Dr. Elizabeth Campisi, Siro del Castillo, Guarion&eacute; D&iacute;az, Mariela Ferrer Jewett, and Lourdes Zayas-Baz&aacute;n.</p>
+
+                </div>
+
+
+
+                <div class="tab-pane" id="about-espanol">
+
+                    <h2>Acerca de la migraci&oacute;n Colecci&oacute;n mar Caribe</h2>
+
+                    <p>Entre 1982 y 2012, Las Guardacostas de los Estados Unidos interceptaron 222.315 personas en el Caribe o en los adyacentes aguas del Estrecho de la Florida y el Canal de la Mona. Esta cifra incluye a 69.355 cubanos, 36.536 dominicanos y 116.424 haitianos.<sup><a href="#footnote1">1</a></sup> Adem&aacute;s, decenas de miles de personas llegaron a la Florida o Puerto Rico sin ser interceptado. Añadir a esta cifra las decenas de miles que murieron en el camino.</p>
+
+                    <p>Desde la d&eacute;cada de los 1960 estos marineros han salido en un lento hilo que a veces se convierte en una fuerte ola cuando las condiciones pol&iacute;ticas en sus pa&iacute;ses de origen est&aacute;n inusualmente violentas o inestables. Ellos viajan en barcos que est&aacute;n peligrosamente sobrecargados, mal equipados e inadecuados para viajes en alta mar.</p>
+
+                    <p>Cuando el gobierno cubano permiti&oacute; la salida por mar en 1965 y 1980, mas que 129,000 cubanos fueron llevados directamente a Estados Unidos. Despu&eacute;s de eso, en la d&eacute;cada de 1990, decenas de miles de haitianos y cubanos fueron detenidos en tres incidentes separados en la Estaci&oacute;n Naval de Estados Unidos en Guant&aacute;namo Bay, Cuba.</p>
+
+                    <p>Caribbean Sea Migration Collection documenta la hist&oacute;ria de estos marineros. The David M. Rubenstein Rare Book &amp; Manuscript Library desea agradecer a las personas que han donado materiales para la Colecci&oacute;n incluyendo Holly Ackerman, Stephen Brown, Elizabeth Campisi, Siro del Castillo, Guarion&eacute; D&iacute;az, Mariela Ferrer Jewett, y Lourdes Zayas-Baz&aacute;n.</p>
+
+                </div>
+
+
+
+                <div class="tab-pane" id="about-francais">
+
+                    <h2>A propos de la mer des Cara&iuml;bes Migration Collection</h2>
+
+                    <p>Entre 1982 et 2012, la garde côti&egrave;re des Etats-Unis a intercept&eacute; 222.315 personnes sur la mer des Cara&iuml;bes ou les d&eacute;troits adjacents de la Floride et Passage Mona. Ce nombre inclut 69.355 Cubains; 36.536 Dominicains et 116.424 Ha&iuml;tiens<sup><a href="#footnote1">1</a></sup>. Les dizaines de milliers de plus ont atteint la Floride ou le Porto Rico sans être arrêt&eacute;e. Ajoutez &agrave; cela les dizaines de milliers qui sont morts en cours de route.</p>
+
+                    <p>Depuis le d&eacute;but des ann&eacute;es 1960, ces marins ont navigu&eacute; en chiffres stables, mais maigres, qui deviennent parfois une grande vague quand les conditions politiques dans leur pays d'origine deviennent violentes ou exceptionnellement instable. Ils voyagent dans des bateaux sont dangereusement surcharg&eacute;, mal &eacute;quip&eacute;s et impropre pour le d&eacute;placement sur la haute mer.</p>
+
+                    <p>Quand un grand nombre de Cubains ont &eacute;t&eacute; autoris&eacute;s par leur gouvernement pour partir en 1965et 1980, ils ont &eacute;t&eacute; amen&eacute;s directement aux Etats-Unis. Suivant que, pendant les ann&eacute;es 1990, des dizaines de milliers de Ha&iuml;tiens et Cubains ont &eacute;t&eacute; d&eacute;tenus dans trois incidents distincts &agrave; la Station Navale des Etats-Unis, Baie de Guant&aacute;namo, Cuba.</p>
+
+                    <p>La Collection de Migration de Mer des Cara&iuml;bes documente l'histoire de ces marins. La Biblioth&egrave;que de Livres et Manuscrit Rares David M. Rubenstein tient &agrave; remercier les personnes qui ont donn&eacute; des mat&eacute;riaux &agrave; la collection, parmi lesquels sont Holly Ackerman, Stephen Brown, Dr. Elizabeth Campisi, Siro del Castillo, Guarion&eacute; D&iacute;az, Mariela Ferrer Jewett, et Lourdes Zayas-Baz&aacute;n.</p>
+
+                </div>
+
+
+
+                <div class="tab-pane" id="about-kreyol">
+
+                    <h2>Sou Lanm&egrave; Migrasyon Koleksyon Karayib la</h2>
+
+                    <p>Soti lane 1982 rive 2012, gad k&ograve;t Ameriken kenbe 222 315 moun sou lanm&egrave; Karayib la, oubyen nan z&ograve;n Detwa la Florid ak kanal la Mona. Pami moun sa a yo te gen 69 355 Kiben, 36 536 Dominiken, ak 116 424 Ayisyen<sup><a href="#footnote1">1</a></sup>. Gen anpil milye l&ograve;t ki rive la Florid oubyen P&ograve;toriko san yo pa kenbe yo. Mete sou sa milye l&ograve;t ank&ograve; ki p&egrave;di lavi yo nan wout.</p>
+
+                    <p>Depi nan komansman ane swasant yo, moun te k&ograve;manse kite peyi yo piti piti, oubyen pa bann ak pa pak&egrave;t l&egrave; move lavi oubyen vyolans politik mete yo dey&ograve;. Yo pran lanm&egrave; nan move kondisyon sou bato ki tw&ograve; chaje e ki pa f&egrave;t pou pran gwo dlo.</p>
+
+                    <p>An 1965 ak 1980, l&egrave; gouv&egrave;nman Kiben an te bay moun p&egrave;misyon kite peyi a, yo tout ale Etazini dir&egrave;kteman. An twa fwa nan ane 90 yo, te gen plis pase 10 000 Kiben ak Ayisyen ki f&egrave; tan nan prizon nan baz naval Gwanntanamo.</p>
+
+                    <p>Se istwa moun sa a yo ke Koleksyon Migrasyon Lanm&egrave; nan Karayib la (Caribbean Sea Migration Collection) rakonte. Biblyot&egrave;k David M. Rubenstein ta renmen voye yon gwo kout chapo bay tout moun ki f&egrave; yon don bay Koleksyon an, pami yo Holly Ackerman, Stephen Brown, Dr. Elizabeth Campisi, Siro del Castillo, Guarion&eacute; Diaz, Mariela Ferrer Jewett, ak Lourdes Zayas-Baz&aacute;n.</p>
+
+                </div>
+
+
+            <hr />
+
+            <ol>
+                <li id="footnote1">Statistics include fiscal years 1982&ndash;2012 see Alien Migration Interdiction Statistics <a href="http://www.uscg.mil/hq/cg5/cg531/AMIO/FlowStats/FY.asp">http://www.uscg.mil/hq/cg5/cg531/AMIO/FlowStats/FY.asp</a>.</li>
+            </ol>
+
+            </div>
+
+
+    </div>
+
+    <div id="sidebar" class="col-md-3 col-sm-4">
+
+        <%= render 'shared/about_sidebar' %>
+
+    </div>
+<% end %>
