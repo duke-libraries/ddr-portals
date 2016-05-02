@@ -99,7 +99,7 @@ configure_blacklight:
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
-      label: "Descriptive Title"
+      label: "Title"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
@@ -119,7 +119,7 @@ configure_blacklight:
         - :description
         - :stored_searchable
       separator: "; "
-      label: Descripion
+      label: Description
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
