@@ -2,7 +2,7 @@ configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::ADMIN_SET_FACET"
       label: Collection Group
-      helper_method: admin_set_full_name
+      helper_method: admin_set_title
       collapse: false
       limit: 5
     - field: "Ddr::Index::Fields::COLLECTION_FACET"
