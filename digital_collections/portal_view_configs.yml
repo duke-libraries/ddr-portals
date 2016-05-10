@@ -54,6 +54,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Series
+      limit: 5
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
       limit: 5
