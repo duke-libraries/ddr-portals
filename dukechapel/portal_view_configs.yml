@@ -37,6 +37,10 @@ configure_blacklight:
       label: "Format"
       collapse: false
       limit: 5
+    - field: "Ddr::Index::Fields::EAD_ID"
+      label: "Source Collection"
+      limit: 5
+      helper_method: 'ead_id_title'
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
