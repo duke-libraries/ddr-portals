@@ -39,7 +39,7 @@ featured_collections:
     - alexharris
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
 configure_blacklight:
-  add_facet_field:          
+  add_facet_field:
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
