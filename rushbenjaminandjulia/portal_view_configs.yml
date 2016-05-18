@@ -48,7 +48,7 @@ configure_blacklight:
       separator: "; "
       label: "Title"
     - field:
-        - :description
+        - :dc_description
         - :stored_searchable
       separator: "; "
       label: "Description"
@@ -56,19 +56,19 @@ configure_blacklight:
       label: "Permalink"
       helper_method: permalink
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Author"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
-        - :contributor
+        - :dc_contributor
         - :stored_searchable
       separator: "; "
       label: "Recipient"
@@ -87,63 +87,63 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :series
+        - :duketerms_series
         - :stored_searchable
       separator: "; "
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :language
+        - :dc_language
         - :stored_searchable
       separator: "; "
       label: "Language"
       helper_method: language_display
     - field:
-        - :extent
+        - :dc_extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
     - field:
-        - :spatial
+        - :dc_spatial
         - :stored_searchable
       separator: "; "
       label: "Location"
       link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
-        - :subject
+        - :dc_subject
         - :stored_searchable
       separator: "; "
       label: "Subject"
       link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: "; "
       label: "Format"
     - field:
-        - :provenance
+        - :dc_provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
     - field:
-        - :rights
+        - :dc_rights
         - :stored_searchable
       separator: "; "
       label: Rights
   add_index_field:
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: ";"
       label: "Format"

@@ -59,18 +59,18 @@ configure_blacklight:
       helper_method: 'ead_id_title'
   add_index_field:
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: ";"
       label: "Format"
@@ -94,19 +94,19 @@ configure_blacklight:
       label: "Permalink"
       helper_method: permalink
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
-        - :description
+        - :dc_description
         - :stored_searchable
       separator: "; "
       label: Description
@@ -124,62 +124,62 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :spatial
+        - :dc_spatial
         - :stored_searchable
       separator: "; "
       label: "Location"
       link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
-        - :subject
+        - :dc_subject
         - :stored_searchable
       separator: "; "
       label: "Subject"
       link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: "; "
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
-        - :extent
+        - :dc_extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
     - field:
-        - :series
+        - :duketerms_series
         - :stored_searchable
       separator: "; "
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :sub_series
+        - :duketerms_sub_series
         - :stored_searchable
       separator: "; "
       label: "Sub Series"
     - field:
-        - :box_number
+        - :duketerms_box_number
         - :stored_searchable
       separator: "; "
       label: "Box Number"
       link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
     - field:
-        - :folder
+        - :duketerms_folder
         - :stored_searchable
       separator: "; "
       label: "Folder"
     - field:
-        - :print_number
+        - :duketerms_print_number
         - :stored_searchable
       separator: "; "
       label: "Print Number"
     - field:
-        - :provenance
+        - :dc_provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
     - field:
-        - :rights
+        - :dc_rights
         - :stored_searchable
       separator: "; "
       label: Rights

@@ -49,19 +49,19 @@ configure_blacklight:
       label: "Permalink"
       helper_method: permalink
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Speaker"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
-        - :contributor
+        - :dc_contributor
         - :stored_searchable
       separator: "; "
       label: "Contributor"
@@ -79,46 +79,46 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :language
+        - :dc_language
         - :stored_searchable
       separator: "; "
       label: "Language"
       helper_method: language_display
     - field:
-        - :spatial
+        - :dc_spatial
         - :stored_searchable
       separator: "; "
       label: "Location"
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: "; "
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
-        - :provenance
+        - :dc_provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
     - field:
-        - :rights
+        - :dc_rights
         - :stored_searchable
       separator: "; "
       label: Rights
   add_index_field:
     - field:
-        - :creator
+        - :dc_creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
     - field:
-        - :date
+        - :dc_date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :format
+        - :dc_format
         - :stored_searchable
       separator: ";"
       label: "Format"
