@@ -1,0 +1,24 @@
+includes:
+  local_ids:
+    - karales
+showcase_images:
+  local_ids:
+    - kfpst0010010010
+    - kfpst0010230010
+    - kfpst0040070010
+    - kfpst0040190010
+    - kfpst0060070010
+  layout: landscape
+highlight_images:
+  local_ids:
+    - kfpst0020080010
+    - kfpst0020210010
+    - kfpst0020240010
+    - kfpst0030100010
+    - kfpst0040110010
+    - kfpst0050010010
+    - kfpst0050060010
+    - kfpst0060050010
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=karales
