@@ -1,0 +1,31 @@
+includes:
+  local_ids:
+    - strong
+showcase_images:
+  local_ids:
+    - strst001001001
+    - strst001001059
+    - strst001001110
+    - strst001001113
+    - strst001001143
+    - strst001001157
+    - strst001001174
+    - strst001001188
+    - strst001001189
+    - strst001001193
+  layout: portrait
+highlight_images:
+  local_ids:
+    - strst001001002
+    - strst001001005
+    - strst001001008
+    - strst001001025
+    - strst001001034
+    - strst001001039
+    - strst001001073
+    - strst001001142
+    - strst001001163
+    - strst001001164
+    - strst001001199
+    - strst001001200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=strong

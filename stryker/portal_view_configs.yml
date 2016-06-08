@@ -1,0 +1,26 @@
+includes:
+  local_ids:
+    - stryker
+showcase_images:
+  local_ids:
+    - 1092513-R2-E286
+    - 1092513-R3-E311
+    - 1092513-R4-E402
+    - 1092513-R4-E428
+    - 1092531-R1-E009
+  layout: landscape
+highlight_images:
+  local_ids:
+    - 1092513-R2-E209
+    - 1092513-R2-E237
+    - 1092513-R2-E246
+    - 1092513-R3-E331
+    - 1092513-R4-E438
+    - 1092531-R3-E429
+    - 1092531-R3-E471
+    - 1092531-R3-E448
+    - 1092531-R3-E542
+    - 6666663-R3-E351
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=stryker

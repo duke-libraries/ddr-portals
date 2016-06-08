@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'dukechapel'
+    - dukechapel
 showcase_images:
   custom_images:
     - dukechapel-causeway.jpg
@@ -9,6 +9,7 @@ showcase_images:
 derivative_url_prefixes:
   video: http://library.duke.edu/digitalcollections/media/mp4/dukechapel/
   audio: http://library.duke.edu/digitalcollections/media/mp3/dukechapel/
+show_items: 0
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dukechapel
 item_relators:
   - name: "Related Items"
@@ -36,6 +37,10 @@ configure_blacklight:
       label: "Format"
       collapse: false
       limit: 5
+    - field: "Ddr::Index::Fields::EAD_ID"
+      label: "Source Collection"
+      limit: 5
+      helper_method: 'ead_id_title'
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
@@ -95,6 +100,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
   add_index_field:
     - field:
         - :creator

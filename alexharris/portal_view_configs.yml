@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - 'alexharris'
+    - alexharris
 showcase_images:
   local_ids:
     - ahpst002028
@@ -8,6 +8,7 @@ showcase_images:
     - ahpst001001
     - ahpst001017
   layout: landscape
+show_items: 0
 restrictions:
   max_download: 1200
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=alexharris
@@ -73,6 +74,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
   add_index_field:
     - field:
         - :creator
@@ -102,4 +108,3 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
       helper_method: "descendant_of"
-

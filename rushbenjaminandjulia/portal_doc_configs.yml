@@ -1,7 +1,7 @@
 collection_local_id:
-  'rushbenjaminandjulia':
+  rushbenjaminandjulia:
     controller: digital_collections
     collection: rushbenjaminandjulia
     item_id_field: local_id
     thumbnail_image:
-      local_id: "brpst008001"
+      local_id: brpst008001

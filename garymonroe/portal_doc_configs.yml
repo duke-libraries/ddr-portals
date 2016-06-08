@@ -1,7 +1,7 @@
 collection_local_id:
-  hmp:
+  garymonroe:
     controller: digital_collections
-    collection: hmp
+    collection: garymonroe
     item_id_field: local_id
     thumbnail_image:
-      local_id: hmpgp12314
+      local_id: gmpph040010050

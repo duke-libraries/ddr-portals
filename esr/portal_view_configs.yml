@@ -1,43 +1,33 @@
 includes:
-  admin_sets:
-    - dc
+  local_ids:
+    - esr
 showcase_images:
   local_ids:
-    - brpst008001
-    - brpst002001
-    - dscsi03269
-    - dscsi03271
-    - ahpst002028
-    - ahpst001024
-    - ahpst001005
-    - ahpst001015
-    - dscsi05004
-    - dscsi03033
-    - dscsi05008
+    - esrph020010580
+    - esrph080014320
+    - esrph080014720
+    - esrph080014880
+    - esrph090015610
+    - esrph090015910
+    - esrph100016700
   layout: landscape
 highlight_images:
   local_ids:
-    - brpst008001
-    - brpst002001
-    - dscsi03002
-    - dscsi03005
-    - dscsi03268
-    - dscsi03269
-    - dscsi03271
-    - ahpst002028
-    - ahpst001024
-    - ahpst001009
-    - ahpst002004
-    - ahpst002005
-    - ahpst002026
-    - dscsi02551
-    - dscsi03304
-featured_collections:
-  local_ids:
-    - wdukesons
-    - rushbenjaminandjulia
-    - alexharris
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
+    - esrph020010400
+    - esrph040011070
+    - esrph040011110
+    - esrph040011560
+    - esrph040012110
+    - esrph040012380
+    - esrph080013390
+    - esrph080013590
+    - esrph080014830
+    - esrph080014960
+    - esrph090015740
+    - esrph090015830
+    - esrph090015840
+    - esrsc120010550
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=esr
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::YEAR_FACET"
@@ -63,13 +53,10 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Creator
       limit: 5
-    - field: "Ddr::Index::Fields::COLLECTION_FACET"
-      label: 'Collection'
-      helper_method: 'collection_title'
+    - field: "Ddr::Index::Fields::EAD_ID"
+      label: "Source Collection"
       limit: 5
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-      label: Browse
-      show: false
+      helper_method: 'ead_id_title'
   add_index_field:
     - field:
         - :creator

@@ -1,7 +1,7 @@
 collection_local_id:
-  hmp:
+  stryker:
     controller: digital_collections
-    collection: hmp
+    collection: stryker
     item_id_field: local_id
     thumbnail_image:
-      local_id: hmpgp12314
+      local_id: 1092531-R1-E009
