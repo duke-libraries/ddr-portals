@@ -60,6 +60,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Creator"
+    - field:
+        - :dc_description
+        - :stored_searchable
+      separator: "; "
+      label: "Description"
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
@@ -119,7 +124,7 @@ configure_blacklight:
     - field:
         - :dc_format
         - :stored_searchable
-      separator: ";"
+      separator: "; "
       label: "Format"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
