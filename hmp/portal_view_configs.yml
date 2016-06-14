@@ -50,7 +50,7 @@ configure_blacklight:
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
-      label: "Descriptive Title"
+      label: "Title"
     - field:
         - :description
         - :stored_searchable
