@@ -107,7 +107,7 @@ configure_blacklight:
       separator: "; "
       label: "Title"
     - field:
-        - :dc_description
+        - :description
         - :stored_searchable
       separator: "; "
       label: "Description"
@@ -121,37 +121,37 @@ configure_blacklight:
       label: "Digital Collection"
       helper_method: descendant_of
     - field:
-        - :duketerms_series
+        - :series
         - :stored_searchable
       separator: "; "
       label: "Card Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :dc_format
+        - :format
         - :stored_searchable
       separator: "; "
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
-        - :dc_spatial
+        - :spatial
         - :stored_searchable
       separator: "; "
       label: "Location"
       link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
-        - :dc_publisher
+        - :publisher
         - :stored_searchable
       separator: "; "
       label: "Publisher"
       link_to_search: "Ddr::Index::Fields::PUBLISHER_FACET"
     - field:
-        - :dc_date
+        - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :dc_language
+        - :language
         - :stored_searchable
       separator: "; "
       label: "Language"
@@ -164,34 +164,34 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :duketerms_box_number
+        - :box_number
         - :stored_searchable
       separator: "; "
       label: "Box Number"
     - field:
-        - :dc_extent
+        - :extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
     - field:
-        - :dc_rights
+        - :rights
         - :stored_searchable
       separator: "; "
       label: Rights
   add_index_field:
     - field:
-        - :dc_creator
+        - :creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
     - field:
-        - :dc_date
+        - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :dc_format
+        - :format
         - :stored_searchable
       separator: "; "
       label: "Format"

@@ -112,7 +112,7 @@ defaults: &defaults
             label: "Collection"
             helper_method: descendant_of
           - field:
-            - :duketerms_series
+            - :series
             - :stored_searchable
             separator: "; "
             label: "Card Series"

@@ -29,13 +29,13 @@ configure_blacklight:
       label: "Permalink"
       helper_method: permalink
     - field:
-        - :dc_date
+        - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :dc_creator
+        - :creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
@@ -53,46 +53,46 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :dc_spatial
+        - :spatial
         - :stored_searchable
       separator: "; "
       label: "Location"
       link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
-        - :dc_subject
+        - :subject
         - :stored_searchable
       separator: "; "
       label: "Subject"
       link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
     - field:
-        - :dc_format
+        - :format
         - :stored_searchable
       separator: "; "
       label: "Format"
     - field:
-        - :dc_provenance
+        - :provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
     - field:
-        - :dc_rights
+        - :rights
         - :stored_searchable
       separator: "; "
       label: Rights
   add_index_field:
     - field:
-        - :dc_creator
+        - :creator
         - :stored_searchable
       separator: "; "
       label: "Creator"
     - field:
-        - :dc_date
+        - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :dc_format
+        - :format
         - :stored_searchable
       separator: "; "
       label: "Format"
