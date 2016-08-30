@@ -3,9 +3,16 @@ includes:
     - dvs
 configure_blacklight:
   add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
     - field: "Ddr::Index::Fields::COLLECTION_FACET"
       label: 'Collection'
       helper_method: 'collection_title'
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::TYPE_FACET"
+      label: Type
       limit: 5
       collapse: false
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
@@ -23,6 +30,3 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::TYPE_FACET"
-      label: Type
-      limit: 5
