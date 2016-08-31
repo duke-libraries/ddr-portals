@@ -1,0 +1,4 @@
+collection_admin_set:
+  dvs:
+    controller: portal
+    collection: dvs

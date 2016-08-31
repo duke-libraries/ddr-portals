@@ -129,7 +129,7 @@ configure_blacklight:
     - field:
         - :format
         - :stored_searchable
-      separator: ";"
+      separator: "; "
       label: "Format"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"

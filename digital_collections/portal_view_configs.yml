@@ -3,40 +3,75 @@ includes:
     - dc
 showcase_images:
   local_ids:
-    - brpst008001
-    - brpst002001
-    - dscsi03269
-    - dscsi03271
-    - ahpst002028
-    - ahpst001024
+    - 1092513-R4-E402
     - ahpst001005
     - ahpst001015
-    - dscsi05004
+    - ahpst001024
+    - ahpst002028
+    - brpst002001
+    - brpst008001
+    - csmep03156
     - dscsi03033
+    - dscsi05004
     - dscsi05008
+    - fcpst001001026
+    - gmpph010020020
+    - gmpph040010050
+    - hmpgp13344
+    - hmpgp19570
+    - kfpst0040070010
+    - kfpst0040190010
+    - rrpph05001002
+    - rrpph06002009
   layout: landscape
 highlight_images:
   local_ids:
+    - 1092513-R3-E311
+    - 1092531-R3-E448
+    - ahpst001024
+    - ahpst002005
+    - ahpst002026
+    - ahpst002028
     - brpst008001
-    - brpst002001
+    - csmep03116
+    - dscsi02551
     - dscsi03002
     - dscsi03005
     - dscsi03268
-    - dscsi03269
-    - dscsi03271
-    - ahpst002028
-    - ahpst001024
-    - ahpst001009
-    - ahpst002004
-    - ahpst002005
-    - ahpst002026
-    - dscsi02551
     - dscsi03304
+    - espst001002
+    - espst001004
+    - espst001016
+    - esrph080013590
+    - gmpph010020130
+    - gmpph010020150
+    - hmpgp12331
+    - hmpgp14408
+    - hmpgp21657
+    - hmpgp22673
+    - japph030030010
+    - japph030060010
+    - japph040280010
+    - kfpst0060050010
+    - kfpst0060070010
+    - mfb042
+    - mfb075
+    - mfb099
+    - mfb109
+    - rrpph01001017
+    - rrpph01002001
+    - rrpph02001014
+    - strst001001059
+    - strst001001110
+    - strst001001143
 featured_collections:
   local_ids:
     - wdukesons
     - rushbenjaminandjulia
     - alexharris
+    - dukechapel
+    - karales
+    - hmp
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
 configure_blacklight:
   add_facet_field:
@@ -85,7 +120,7 @@ configure_blacklight:
     - field:
         - :format
         - :stored_searchable
-      separator: ";"
+      separator: "; "
       label: "Format"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
