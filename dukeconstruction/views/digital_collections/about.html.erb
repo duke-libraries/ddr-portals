@@ -1,0 +1,41 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+  <div id="content" class="col-md-9 col-sm-8">
+
+    <h2>About the Digital Collection</h2>
+    <p>In 1925, the newly-established Duke University began a sizeable construction project, the largest undertaken in the South at that time. The project, with design work by the Horace Trumbauer architectural firm, added new buildings to the already-existing East Campus and shaped the Gothic West Campus from farmland and forest. With funding provided by the Duke Endowment, the cost of the building project, completed in 1932, totaled $21,254,833.69.</p>
+
+    <p>As part of their day-to-day oversight of the construction project, the Duke Construction Company was charged with taking professional photographs of the construction’s progress every few weeks. The resulting “progress pictures” (166 of East Campus and 439 of West Campus) systematically capture the stages of the vast project. In addition to providing a timeline for the construction of many of Duke University’s best-known buildings and landscapes, the progress pictures frequently capture the workers responsible for Duke’s construction, many of whom remain unidentified.</p>
+
+    <h2>Chronology</h2>
+    
+    <ul>
+      <li><strong>December 1924</strong>: The Board of Trustees of Trinity College accepts the provisions of The Duke Endowment. The state grants a charter to Duke University, and Trinity College becomes the University's undergraduate college.</li>
+      <li><strong>August 1925</strong>: Start of construction on East Campus.</li>
+      <li><strong>April 1927</strong>: Start of construction on West Campus.</li>
+      <li><strong>September 1927</strong>: Completion of major construction on East Campus.</li>
+      <li><strong>September 1930</strong>: Completion of most construction on West Campus. East Campus then becomes the Woman's College and West Campus becomes the home of Trinity College for men, as well as the graduate and professional schools.</li>
+      <li><strong>June 1932</strong>: Completion and the first use of Duke University Chapel marks the end of construction.</li>
+    </ul>
+
+    <h2>Resources for Additional Research</h2>
+  
+    <h3>Secondary Sources</h3>
+    <p>Blackburn, William. The Architecture of Duke University. Durham: Duke University Press, 1936. (<a href="http://search.library.duke.edu/search?id=DUKE001691116">library catalog record</a>)</p>
+    <p>Durden, Robert F. The Launching of Duke University. Durham: Duke University Press, 1993. (<a href="http://search.library.duke.edu/search?id=DUKE001064976">library catalog record</a>)</p>
+
+    <h3>Archival Collections</h3>
+  
+    <p>These University Archives collections are available at the <a href="http://library.duke.edu/rubenstein">David M. Rubenstein Rare Book &amp; Manuscript Library</a>. Learn more about researching at the Rubenstein Library <a href="http://library.duke.edu/rubenstein/research">here</a>.</p>
+
+    <ul>
+      <li>William Preston Few Records and Papers, 1814-1971 and undated (<a href="http://library.duke.edu/rubenstein/findingaids/uapresfew/">collection guide</a>)</li>
+      <li>Frank C. Brown Papers, 1899-1943 (<a href="http://library.duke.edu/rubenstein/findingaids/uabrownfc/">collection guide</a>)</li>
+      <li>Horace Trumbauer Architectural Drawings, 1924-1958 (<a href="http://library.duke.edu/rubenstein/findingaids/uatrumbauer/">collection guide</a>)</li>
+      <li>Operations and Maintenance Dept. Records, 1919-1957 (<a href="http://library.duke.edu/rubenstein/findingaids/uaopmain/">collection guide</a>)</li>
+    </ul>
+  </div>
+
+  <div id="sidebar" class="col-md-3 col-sm-4">
+    <%= render 'shared/about_sidebar' %>
+  </div>
+<% end %>

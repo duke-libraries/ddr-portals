@@ -4,7 +4,8 @@ includes:
 showcase_images:
   local_ids:
     - 1092513-R4-E402
-    - ahpst001005
+    - 19310417WC0422
+    - 19310417WC0424
     - ahpst001015
     - ahpst001024
     - ahpst002028
@@ -28,6 +29,9 @@ highlight_images:
   local_ids:
     - 1092513-R3-E311
     - 1092531-R3-E448
+    - 19290402WC0185
+    - 19300205WC0310
+    - 19310417WC0425
     - ahpst001024
     - ahpst002005
     - ahpst002026
