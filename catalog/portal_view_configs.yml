@@ -92,6 +92,11 @@ configure_blacklight:
       label: "Creator"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
+    - field:
         - :description
         - :stored_searchable
       separator: "; "
