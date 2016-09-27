@@ -33,6 +33,9 @@ configure_blacklight:
       label: Location
       limit: 5
   add_index_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field:
         - :creator
         - :stored_searchable
@@ -49,19 +52,27 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Format"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
-      helper_method: "permalink"
+      helper_method: permalink
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
-      helper_method: "descendant_of"
+      helper_method: descendant_of
     - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
       label: "Collection"
-      helper_method: "descendant_of"
+      helper_method: descendant_of
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
-      helper_method: "descendant_of"
+      helper_method: descendant_of
   add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
@@ -80,6 +91,11 @@ configure_blacklight:
       separator: "; "
       label: "Creator"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
     - field:
         - :description
         - :stored_searchable
