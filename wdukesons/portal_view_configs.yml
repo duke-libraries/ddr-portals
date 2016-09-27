@@ -72,7 +72,6 @@ highlight_images:
     - dscsi02176
   display: 8
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wdukesons
-alert: 'Welcome to the W. Duke & Sons collection - the first to appear in the next-generation platform we’re developing for Duke Digital Collections. <a href="http://blogs.library.duke.edu/bitstreams/2015/10/22/today-is-the-new-future-tripod3/">More about the project &raquo;</a>'
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"

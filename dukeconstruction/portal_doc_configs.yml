@@ -1,5 +1,5 @@
 collection_local_id:
-  frankespada:
+  dukeconstruction:
     controller: digital_collections
     collection: dukeconstruction
     item_id_field: local_id
