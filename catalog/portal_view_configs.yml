@@ -99,8 +99,8 @@ configure_blacklight:
     - field:
         - :description
         - :stored_searchable
-      separator: "; "
       label: Description
+      helper_method: separate_with_p
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
