@@ -1,0 +1,32 @@
+includes:
+  local_ids:
+    - mma
+showcase_images:
+  local_ids:
+    - MM0189
+    - MM0596
+    - MM0567
+    - MM0406
+    - MM0169
+    - MM0468
+    - MM0337
+    - MM0190
+    - MM0581
+  layout: portrait
+highlight_images:
+  local_ids:
+    - MM0444
+    - MM0298
+    - MM0462
+    - MM0700
+    - MM0617
+    - MM0447
+    - MM0483
+    - MM0169
+    - MM0731
+    - MM0673
+    - MM0571
+    - MM0238
+    - MM0720
+    - MM1134
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=mma

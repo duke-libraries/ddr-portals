@@ -1,0 +1,39 @@
+includes:
+  local_ids:
+    - jwtfordmotorads
+showcase_images:
+  local_ids:
+    - jwtad010020010
+    - jwtad440020170
+    - jwtad440090150
+    - jwtad530060020
+    - jwtad160060110
+    - jwtad230030070
+    - jwtad320070010
+    - jwtad370020010
+    - jwtad390040070
+    - jwtad020011070
+    - jwtad250130110
+  layout: portrait
+highlight_images:
+  local_ids:
+    - jwtad190030090
+    - jwtad370030010
+    - jwtad480020060
+    - jwtad550190030
+    - jwtad250050020
+    - jwtad300030050
+    - jwtad370030040
+    - jwtad010020030
+    - jwtad100040090
+    - jwtad390160210
+    - jwtad420010030
+    - jwtad480010150
+    - jwtad490010310
+    - jwtad060010160
+    - jwtad160020120
+    - jwtad320050080
+    - jwtad220010130
+    - jwtad350010960
+    - jwtad460010040
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=jwtfordmotorads
