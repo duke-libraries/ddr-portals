@@ -1,0 +1,38 @@
+includes:
+  local_ids:
+    - eaa
+showcase_images:
+  local_ids:
+    - A0128
+    - CK0029
+    - CK0036
+    - CK0067
+    - D0308
+    - D0369
+    - J0013
+    - J0102
+    - K0076
+    - K0266
+    - P0093
+  layout: portrait
+highlight_images:
+  local_ids:
+    - A0163
+    - A0324
+    - A0426
+    - A0449
+    - A0499
+    - A0677
+    - B0172
+    - CK0010
+    - CK0047
+    - CK0048
+    - J0049
+    - K0207
+    - M0138
+    - P0048
+    - P0091
+    - Q0012
+    - Q0047
+    - Q0050
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=eaa

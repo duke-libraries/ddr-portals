@@ -1,0 +1,43 @@
+includes:
+  local_ids:
+    - adaccess
+showcase_images:
+  local_ids:
+    - BH0769
+    - BH0904
+    - BH1124
+    - BH1939
+    - R0573
+    - R0594
+    - T2415
+    - T2611
+    - TV0630
+    - W0285
+    - W0286
+  layout: portrait
+highlight_images:
+  local_ids:
+    - BH0235
+    - BH0799
+    - BH0840
+    - BH0996
+    - BH1056
+    - BH1191
+    - BH1218
+    - BH1249
+    - BH1439
+    - BH1444
+    - BH1447
+    - BH1466
+    - BH1475
+    - BH1608
+    - BH2242
+    - BH2311
+    - T2300
+    - T2502
+    - T2550
+    - T2871
+    - W0004
+    - W0078
+    - W0089
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=adaccess
