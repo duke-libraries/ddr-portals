@@ -115,6 +115,12 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
+        - :relation
+        - :stored_searchable
+      label: "Relation"
+      separator: "; "
+      helper_method: "auto_link_values"
+    - field:
         - :spatial
         - :stored_searchable
       separator: "; "
