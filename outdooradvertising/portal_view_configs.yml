@@ -48,3 +48,196 @@ highlight_images:
     - XXX4230
     - XXX4264
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=outdooradvertising
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::COMPANY_FACET"
+      label: Company
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::PLACEMENT_COMPANY_FACET"
+      label: Placement Company
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::PRODUCT_FACET"
+      label: Product
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+    - field: "Ddr::Index::Fields::SETTING_FACET"
+      label: Setting
+      limit: 5
+    - field: "Ddr::Index::Fields::MEDIUM_FACET"
+      label: Medium
+      limit: 5
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
+      limit: 5
+    - field: "Ddr::Index::Fields::TONE_FACET"
+      label: Tone
+      limit: 5
+    - field: "Ddr::Index::Fields::EAD_ID"
+      label: "Source Collection"
+      limit: 5
+      helper_method: 'ead_id_title'
+
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :headline
+        - :stored_searchable
+      label: "Headline"
+      helper_method: separate_with_p
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :description
+        - :stored_searchable
+      label: "Description"
+      helper_method: separate_with_p
+    - field:
+        - :company
+        - :stored_searchable
+      separator: "; "
+      label: "Company"
+      link_to_search: "Ddr::Index::Fields::COMPANY_FACET"
+    - field:
+        - :placement_company
+        - :stored_searchable
+      separator: "; "
+      label: "Placement Company"
+      link_to_search: "Ddr::Index::Fields::PLACEMENT_COMPANY_FACET"
+    - field:
+        - :product
+        - :stored_searchable
+      separator: "; "
+      label: "Product"
+      link_to_search: "Ddr::Index::Fields::PRODUCT_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Setting"
+      link_to_search: "Ddr::Index::Fields::SETTING_FACET"
+    - field:
+        - :medium
+        - :stored_searchable
+      separator: "; "
+      label: "Medium"
+      link_to_search: "Ddr::Index::Fields::MEDIUM_FACET"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+    - field:
+        - :type
+        - :stored_searchable
+      separator: "; "
+      label: "Type"
+      link_to_search: "Ddr::Index::Fields::TYPE_FACET"
+    - field:
+        - :tone
+        - :stored_searchable
+      separator: "; "
+      label: "Tone"
+      link_to_search: "Ddr::Index::Fields::TONE_FACET"
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+
+  add_index_field:
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :company
+        - :stored_searchable
+      separator: "; "
+      label: "Company"
+      link_to_search: "Ddr::Index::Fields::COMPANY_FACET"
+    - field:
+        - :product
+        - :stored_searchable
+      separator: "; "
+      label: "Product"
+      link_to_search: "Ddr::Index::Fields::PRODUCT_FACET"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
