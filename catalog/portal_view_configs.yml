@@ -32,6 +32,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
       limit: 5
+
   add_index_field:
     - field: "Ddr::Index::Fields::MEDIA_TYPE"
       label: "File"
@@ -52,14 +53,6 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Format"
-    - field:
-        - :type
-        - :stored_searchable
-      separator: "; "
-      label: "Type"
-    - field: "Ddr::Index::Fields::PERMANENT_URL"
-      label: "Permalink"
-      helper_method: permalink
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: descendant_of
@@ -69,6 +62,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
       helper_method: descendant_of
+
   add_show_field:
     - field: "Ddr::Index::Fields::MEDIA_TYPE"
       label: "File"
