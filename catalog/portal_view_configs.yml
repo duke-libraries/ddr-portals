@@ -3,12 +3,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::ADMIN_SET_TITLE"
       label: Collection Group
       collapse: false
-      limit: 4
-    - field: "Ddr::Index::Fields::COLLECTION_FACET"
+      limit: 5
+    - field: "Ddr::Index::Fields::COLLECTION_TITLE"
       label: Collection
-      helper_method: collection_title
       collapse: false
-      limit: 4
+      limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
