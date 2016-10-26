@@ -39,9 +39,6 @@ highlight_images:
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=jwtfordmotorads
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-      label: Browse
-      show: false
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -66,6 +63,19 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SETTING_FACET"
       label: Setting
       limit: 5
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+      label: "Box Number"
+      show: false
+    - field: "Ddr::Index::Fields::TYPE_FACET"
+      label: Type
+      show: false
+    - field: "Ddr::Index::Fields::FOLDER_FACET"
+      label: Folder
+      show: false
+
 
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
