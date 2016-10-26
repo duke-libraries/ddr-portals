@@ -1,0 +1,21 @@
+<% cache("about_the_collection#{params[:collection]}", expires_in: 7.days) do %>
+  <div id="content" class="col-md-9 col-sm-8">
+    <h2>About ROAD 2.0</h2>
+    <p>The Resource of Outdoor Advertising Descriptions 2.0 (ROAD 2.0) project comprises images related to outdoor advertising from the twentieth century. It originated as a <a href="http://library.duke.edu/rubenstein/findingdb/road/">metadata-only database</a> in 2003, funded by an grant from the <a href="http://www.neh.gov/">National Endowment for the Humanities</a>. Later, using a grant from the <a href="http://www.archives.gov/nhprc/">National Historical Publications and Records Commission (NHPRC)</a>, Duke University Libraries digitized many of the images described in the original database.</p>
+
+    <p>The digitized version of the collection launched in spring 2011 with over 22,000 items selected from four archival collections: the Outdoor Advertising Association of America (OAAA) Archives, the OAAA Slide Library, and the papers of prominent outdoor advertising figures John Paver and John Brennan. A fifth collection, the R.C. Maxwell Company Records, was digitized as a complement to the NHPRC grant-funded collection, and was added to the ROAD installation later in summer 2011. ROAD2.0 is now a portal to over 31,000 outdoor advertising images.</p>
+
+    <h3>About the ROAD 2.0 digitization project</h3>
+    <p>ROAD 2.0 was an NHPRC-funded project (2009-2012) to scan approximately 24,000 images and merge them with descriptive metadata from the ROAD (Resource of Outdoor Advertising Description) database, in order to create an improved online resource for researching advertising history. Ultimately, 27,515 digitized images were produced by this project, at an average cost of $3.54 per image. Publication of these images with the original ROAD database metadata required cleaning of the metadata to correct errors and to enable item-level searching of images, along with mapping of the existing descriptive values to a more generic and discoverable schema based in Dublin Core (called AdCore). Description of this project and its outcomes are found in the project report and additional documentation, linked below.</p>
+    <ul>
+    	<li>ROAD 2.0 Project - Final Report:&nbsp;<a href="http://blogs.library.duke.edu/digital-collections/files/2011/04/NARA-FinalReport1.pdf">NARA-FinalReport</a></li>
+    	<li>AdCore Metadata Schema:&nbsp;<a href="http://blogs.library.duke.edu/digital-collections/files/2011/04/AdCoreSCHEMA.pdf">AdCoreSCHEMA</a></li>
+    	<li>Digitization Processes: <a href="http://blogs.library.duke.edu/digital-collections/files/2011/04/ROAD2-DigProcess.pdf">ROAD2-DigProcess</a></li>
+    </ul>
+
+  </div>
+
+  <div id="sidebar" class="col-md-3 col-sm-4">
+    <%= render 'shared/about_sidebar' %>
+  </div>
+<% end %>

@@ -50,8 +50,8 @@ configure_blacklight:
     - field:
         - :description
         - :stored_searchable
-      separator: "; "
       label: "Description"
+      helper_method: separate_with_p
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink

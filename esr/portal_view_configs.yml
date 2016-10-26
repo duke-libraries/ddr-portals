@@ -57,6 +57,12 @@ configure_blacklight:
       label: "Source Collection"
       limit: 5
       helper_method: 'ead_id_title'
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+      label: "Box Number"
+      show: false
   add_index_field:
     - field:
         - :creator
@@ -108,8 +114,8 @@ configure_blacklight:
     - field:
         - :description
         - :stored_searchable
-      separator: "; "
       label: Description
+      helper_method: separate_with_p
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"

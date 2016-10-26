@@ -1,0 +1,7 @@
+collection_local_id:
+  outdooradvertising:
+    controller: digital_collections
+    collection: outdooradvertising
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: AAA8469c
