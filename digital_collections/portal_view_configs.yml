@@ -102,9 +102,8 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Creator
       limit: 5
-    - field: "Ddr::Index::Fields::COLLECTION_FACET"
+    - field: "Ddr::Index::Fields::COLLECTION_TITLE"
       label: 'Collection'
-      helper_method: 'collection_title'
       limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
