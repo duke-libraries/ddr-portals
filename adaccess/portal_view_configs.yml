@@ -43,9 +43,6 @@ highlight_images:
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=adaccess
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
-      label: Browse
-      show: false
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -77,6 +74,12 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::FORMAT_FACET"
       label: Format
       limit: 5
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::TYPE_FACET"
+      label: Type
+      show: false
 
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
