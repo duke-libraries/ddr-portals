@@ -72,6 +72,10 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::TYPE_FACET"
       label: Type
       show: false
+    - field: "Ddr::Index::Fields::FOLDER_FACET"
+      label: Folder
+      show: false
+
 
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
