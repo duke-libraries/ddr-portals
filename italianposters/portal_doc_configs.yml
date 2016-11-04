@@ -1,0 +1,7 @@
+collection_local_id:
+  italianposters:
+    controller: digital_collections
+    collection: italianposters
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: itaps03109

@@ -1,0 +1,26 @@
+includes:
+  local_ids:
+    - italianposters
+showcase_images:
+  local_ids:
+    - itaps01029
+    - itaps01030
+    - itaps01041
+    - itaps01077
+    - itaps02090
+    - itaps02102
+    - itaps03109
+  layout: portrait
+highlight_images:
+  local_ids:
+    - itaps01001
+    - itaps01010
+    - itaps01031
+    - itaps01056
+    - itaps01062
+    - itaps02088
+    - itaps02098
+    - itaps02100
+    - itaps02103
+    - itaps02104
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=italianposters

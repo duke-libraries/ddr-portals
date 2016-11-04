@@ -1,0 +1,36 @@
+includes:
+  local_ids:
+    - broadsides
+showcase_images:
+  local_ids:
+    - bdsla30650
+    - bdsmd10885
+    - bdsmd30949
+    - bdsmd61032
+    - bdsnc102157
+    - bdsny91589
+    - bdsny91590
+    - bdspa032455
+    - bdspa064073
+    - bdsva043304
+  layout: portrait
+highlight_images:
+  local_ids:
+    - bdsnc031696
+    - bdsnc041722
+    - bdsnc071910
+    - bdsnc112283
+    - bdsny21299
+    - bdsny41364
+    - bdsny71532
+    - bdspa012408
+    - bdspa032509
+    - bdspa064069
+    - bdssc012598
+    - bdssc022655
+    - bdssc022708
+    - bdsva063444
+    - bdsva093636
+    - bdsva103703
+    - bdsva103716
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=broadsides
