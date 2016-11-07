@@ -1,0 +1,24 @@
+includes:
+  local_ids:
+    - museedeshorreurs
+showcase_images:
+  local_ids:
+    - mdhps010010100
+    - mdhps010010120
+    - mdhps010010190
+    - mdhps010010200
+    - mdhps010010380
+    - mdhps010010500
+  layout: portrait
+highlight_images:
+  local_ids:
+    - mdhps010010070
+    - mdhps010010130
+    - mdhps010010250
+    - mdhps010010330
+    - mdhps010010340
+    - mdhps010010400
+    - mdhps010010480
+    - mdhps010010540
+    - mdhps010010550
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=museedeshorreurs

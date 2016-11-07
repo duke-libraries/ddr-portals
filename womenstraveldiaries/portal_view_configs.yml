@@ -1,0 +1,25 @@
+includes:
+  local_ids:
+    - womenstraveldiaries
+showcase_images:
+  local_ids:
+    - biims04001
+    - wtddy01082
+    - wtddy02023
+    - wtddy02026
+    - wtddy02028
+    - wtddy02029
+    - wtddy02043
+  layout: portrait
+highlight_images:
+  local_ids:
+    - wtddy01007
+    - wtddy01030
+    - wtddy01072
+    - wtddy02011
+    - wtddy02035
+    - wtddy02038
+    - wtddy11001
+    - wtddy13001
+    - wtddy14001
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=womenstraveldiaries

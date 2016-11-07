@@ -1,0 +1,27 @@
+includes:
+  local_ids:
+    - protfam
+showcase_images:
+  local_ids:
+    - prfad01053
+    - prfad01056
+    - prfad02131
+    - prfad02161
+    - prfad02229
+    - prfad02298
+  layout: portrait
+highlight_images:
+  local_ids:
+    - prfad01024
+    - prfad01067
+    - prfad01077
+    - prfad02007
+    - prfad02044
+    - prfad02094
+    - prfad02110
+    - prfad02177
+    - prfad02253
+    - prfad02267
+    - prfad02283
+    - prfad02319
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=protfam
