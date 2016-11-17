@@ -149,7 +149,7 @@ configure_blacklight:
       label: "Location"
       link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
-        - :spatial
+        - :setting
         - :stored_searchable
       separator: "; "
       label: "Setting"
