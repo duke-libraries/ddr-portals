@@ -1,0 +1,7 @@
+collection_local_id:
+  womenstraveldiaries:
+    controller: digital_collections
+    collection: womenstraveldiaries
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: wtddy02023

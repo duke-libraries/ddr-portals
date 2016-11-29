@@ -1,0 +1,28 @@
+includes:
+  local_ids:
+    - meyermarshall
+showcase_images:
+  local_ids:
+    - meypw01125
+    - meypw02004
+    - meypw03111
+    - meypw04175
+    - meypw05129
+    - meypw05136
+  layout: portrait
+highlight_images:
+  local_ids:
+    - meypw01082
+    - meypw02125
+    - meypw02126
+    - meypw03094
+    - meypw03130
+    - meypw04118
+    - meypw04140
+    - meypw04213
+    - meypw04216
+    - meypw04225
+    - meypw04228
+    - meypw04230
+    - meypw05026
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=meyermarshall

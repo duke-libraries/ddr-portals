@@ -3,14 +3,12 @@ includes:
     - dvs
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::ADMIN_SET_FACET"
+    - field: "Ddr::Index::Fields::ADMIN_SET_TITLE"
       label: Collection Group
-      helper_method: admin_set_full_name
       collapse: false
       limit: 5
-    - field: "Ddr::Index::Fields::COLLECTION_FACET"
+    - field: "Ddr::Index::Fields::COLLECTION_TITLE"
       label: 'Collection'
-      helper_method: 'collection_title'
       limit: 5
       collapse: false
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
