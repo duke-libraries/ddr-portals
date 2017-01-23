@@ -95,10 +95,6 @@ configure_blacklight:
       label: Series
       limit: 5
       collapse: false
-    - field: "Ddr::Index::Fields::SUBSERIES_FACET"
-      label: Subseries
-      limit: 5
-      collapse: false
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -232,12 +228,6 @@ configure_blacklight:
       separator: "; "
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-    - field:
-        - :subseries
-        - :stored_searchable
-      separator: "; "
-      label: "Subseries"
-      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
     - field:
         - :sub_series
         - :stored_searchable
