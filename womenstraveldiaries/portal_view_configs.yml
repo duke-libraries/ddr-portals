@@ -23,3 +23,32 @@ highlight_images:
     - wtddy13001
     - wtddy14001
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=womenstraveldiaries
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Creator
+      limit: 5
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+    - field: "Ddr::Index::Fields::EAD_ID"
+      label: "Source Collection"
+      limit: 5
+      helper_method: 'ead_id_title'
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
