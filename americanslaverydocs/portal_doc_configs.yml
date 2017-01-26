@@ -1,0 +1,7 @@
+collection_local_id:
+  americanslaverydocs:
+    controller: digital_collections
+    collection: americanslaverydocs
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: asdsi002036

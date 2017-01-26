@@ -11,6 +11,7 @@ showcase_images:
     - ahpst002028
     - brpst002001
     - brpst008001
+    - CK0029
     - csmep03156
     - dscsi03033
     - dscsi05004
@@ -22,6 +23,8 @@ showcase_images:
     - hmpgp19570
     - kfpst0040070010
     - kfpst0040190010
+    - MM1134
+    - Q0012
     - rrpph05001002
     - rrpph06002009
   layout: landscape
@@ -32,12 +35,18 @@ highlight_images:
     - 19290402WC0185
     - 19300205WC0310
     - 19310417WC0425
+    - A0128
+    - A0324
     - ahpst001024
     - ahpst002005
     - ahpst002026
     - ahpst002028
+    - BH0904
+    - BH1939
     - brpst008001
+    - CK0036
     - csmep03116
+    - D0308
     - dscsi02551
     - dscsi03002
     - dscsi03005
@@ -62,20 +71,23 @@ highlight_images:
     - mfb075
     - mfb099
     - mfb109
+    - MM0190
+    - MM0298
     - rrpph01001017
     - rrpph01002001
     - rrpph02001014
     - strst001001059
     - strst001001110
     - strst001001143
+    - T2415
 featured_collections:
   local_ids:
-    - wdukesons
+    - adaccess
     - rushbenjaminandjulia
     - alexharris
     - dukechapel
     - karales
-    - hmp
+    - eaa
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
 configure_blacklight:
   add_facet_field:
@@ -110,6 +122,10 @@ configure_blacklight:
       show: false
     - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
       label: "Box Number"
+      show: false
+    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+      label: Contributor
+      limit: 5
       show: false
   add_index_field:
     - field:
@@ -159,6 +175,12 @@ configure_blacklight:
       separator: "; "
       label: "Creator"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :contributor
+        - :stored_searchable
+      separator: "; "
+      label: "Contributor"
+      link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
     - field:
         - :description
         - :stored_searchable

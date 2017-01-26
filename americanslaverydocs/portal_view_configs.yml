@@ -1,0 +1,9 @@
+includes:
+  local_ids:
+    - americanslaverydocs
+showcase_images:
+  local_ids:
+    - asdsi002036
+    - asdsi001034
+  layout: portrait
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=americanslaverydocs
