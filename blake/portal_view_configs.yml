@@ -109,6 +109,12 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: Rights
+    - field:
+        - :sponsor
+        - :stored_searchable
+      separator: "; "
+      label: "Sponsor"
+
   add_index_field:
     - field:
         - :creator
