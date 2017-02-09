@@ -195,6 +195,12 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
+    - field:
+        - :sponsor
+        - :stored_searchable
+      separator: "; "
+      label: "Sponsor"
+
   add_index_field:
     - field:
         - :date
