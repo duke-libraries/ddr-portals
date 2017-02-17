@@ -1,6 +1,6 @@
 includes:
   local_ids:
-    - dukefootballprograms
+    - dfp
 showcase_images:
   local_ids:
     - dspfb02083
@@ -30,7 +30,7 @@ highlight_images:
     - dspfb13368
     - dspfb15393
     - dspfb15402
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dukefootballprograms
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dfp
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::YEAR_FACET"
