@@ -1,0 +1,24 @@
+includes:
+  local_ids:
+    - russianposters
+showcase_images:
+  local_ids:
+    - rpcps01004
+    - rpcps01005
+    - rpcps02012
+    - rpcps02014
+    - rpcps03028
+    - rpcps03029
+  layout: portrait
+highlight_images:
+  local_ids:
+    - rpcps01007
+    - rpcps02011
+    - rpcps02017
+    - rpcps03021
+    - rpcps03024
+    - rpcps04012
+    - rpcps05006
+    - rpcps06004
+    - rpcps06009
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=russianposters
