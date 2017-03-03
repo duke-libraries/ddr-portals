@@ -114,8 +114,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Creator
       limit: 5
+    - field: "Ddr::Index::Fields::PUBLICATION_FACET"
+      label: Publication
+      limit: 5
     - field: "Ddr::Index::Fields::COLLECTION_TITLE"
-      label: 'Collection'
+      label: Collection
       limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
@@ -160,9 +163,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
-    - field: "Ddr::Index::Fields::PERMANENT_URL"
-      label: "Permalink"
-      helper_method: permalink
+    - field:
+        - :alternative
+        - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
     - field:
         - :date
         - :stored_searchable
@@ -186,19 +191,6 @@ configure_blacklight:
         - :stored_searchable
       helper_method: separate_with_p
       label: Description
-    - field: "Ddr::Index::Fields::LOCAL_ID"
-      separator: "; "
-      label: "Identifier"
-    - field: "Ddr::Index::Fields::IS_PART_OF"
-      label: "Part of"
-      helper_method: descendant_of
-    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-      label: "Digital Collection"
-      helper_method: descendant_of
-    - field: "Ddr::Index::Fields::EAD_ID"
-      separator: "; "
-      label: "Source Collection"
-      helper_method: source_collection
     - field:
         - :spatial
         - :stored_searchable
@@ -223,10 +215,26 @@ configure_blacklight:
       separator: "; "
       label: "Publisher"
     - field:
+        - :publication
+        - :stored_searchable
+      separator: "; "
+      label: "Publication"
+      link_to_search: "Ddr::Index::Fields::PUBLICATION_FACET"
+    - field:
         - :extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
     - field:
         - :series
         - :stored_searchable
@@ -234,10 +242,10 @@ configure_blacklight:
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :sub_series
+        - :subseries
         - :stored_searchable
       separator: "; "
-      label: "Sub Series"
+      label: "Subseries"
     - field:
         - :box_number
         - :stored_searchable
@@ -264,6 +272,12 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: Rights
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"
