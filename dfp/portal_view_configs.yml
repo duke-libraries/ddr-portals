@@ -3,33 +3,33 @@ includes:
     - dfp
 showcase_images:
   local_ids:
-    - dspfb02083
-    - dspfb03102
-    - dspfb03106
-    - dspfb03111
-    - dspfb10279
-    - dspfb12337
-    - dspfb14375
-    - dspfb14385
-    - dspfb15395
-    - dspfb15400
-    - dspfb15403
-    - dspfb15405
+    - dspfb020830010
+    - dspfb031020010
+    - dspfb031060010
+    - dspfb031110010
+    - dspfb102790010
+    - dspfb123370010
+    - dspfb143750010
+    - dspfb143850010
+    - dspfb153950010
+    - dspfb154000010
+    - dspfb154030010
+    - dspfb154050010
   layout: portrait
 highlight_images:
   local_ids:
-    - dspfb01031
-    - dspfb02053
-    - dspfb03100
-    - dspfb03101
-    - dspfb04130
-    - dspfb05153
-    - dspfb07211
-    - dspfb09260
-    - dspfb13351
-    - dspfb13368
-    - dspfb15393
-    - dspfb15402
+    - dspfb010310010
+    - dspfb020530010
+    - dspfb031000010
+    - dspfb031010010
+    - dspfb041300010
+    - dspfb051530010
+    - dspfb072110010
+    - dspfb092600010
+    - dspfb133510010
+    - dspfb133680010
+    - dspfb153930010
+    - dspfb154020010
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dfp
 configure_blacklight:
   add_facet_field:
