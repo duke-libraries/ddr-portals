@@ -1,0 +1,7 @@
+collection_local_id:
+  homartifacts:
+    controller: digital_collections
+    collection: homartifacts
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: homst03008
