@@ -221,6 +221,12 @@ configure_blacklight:
       label: "Publication"
       link_to_search: "Ddr::Index::Fields::PUBLICATION_FACET"
     - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
         - :extent
         - :stored_searchable
       separator: "; "

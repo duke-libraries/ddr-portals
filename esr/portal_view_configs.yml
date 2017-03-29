@@ -148,6 +148,12 @@ configure_blacklight:
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
         - :extent
         - :stored_searchable
       separator: "; "

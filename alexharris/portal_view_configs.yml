@@ -70,6 +70,12 @@ configure_blacklight:
       separator: "; "
       label: "Format"
     - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
         - :provenance
         - :stored_searchable
       separator: "; "
