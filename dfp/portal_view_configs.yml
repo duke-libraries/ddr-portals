@@ -85,6 +85,12 @@ configure_blacklight:
         - :stored_searchable
       helper_method: separate_with_p
       label: Description
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
