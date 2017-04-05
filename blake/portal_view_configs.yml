@@ -90,6 +90,12 @@ configure_blacklight:
       label: "Subject"
       link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
     - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
         - :extent
         - :stored_searchable
       separator: "; "

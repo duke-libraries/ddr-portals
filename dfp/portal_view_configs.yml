@@ -1,0 +1,119 @@
+includes:
+  local_ids:
+    - dfp
+showcase_images:
+  local_ids:
+    - dspfb020830010
+    - dspfb031020010
+    - dspfb031060010
+    - dspfb031110010
+    - dspfb102790010
+    - dspfb123370010
+    - dspfb143750010
+    - dspfb143850010
+    - dspfb153950010
+    - dspfb154000010
+    - dspfb154030010
+    - dspfb154050010
+  layout: portrait
+highlight_images:
+  local_ids:
+    - dspfb010310010
+    - dspfb020530010
+    - dspfb031000010
+    - dspfb031010010
+    - dspfb041300010
+    - dspfb051530010
+    - dspfb072110010
+    - dspfb092600010
+    - dspfb133510010
+    - dspfb133680010
+    - dspfb153930010
+    - dspfb154020010
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dfp
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: Opponent
+      limit: 5
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+  add_index_field:
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: Opponent
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      separator: "; "
+      label: Opponent
+    - field:
+        - :description
+        - :stored_searchable
+      helper_method: separate_with_p
+      label: Description
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
+    - field: 'sponsor_display'
+      separator: "; "
+      label: "Sponsor"
+      accessor: 'sponsor_display'
+      helper_method: collection_sponsor

@@ -1,0 +1,47 @@
+includes:
+  local_ids:
+    - homartifacts
+showcase_images:
+  local_ids:
+    - homst03008
+    - homst03077
+    - homst04028
+    - homst04045
+    - homst13001
+    - homst52008
+    - homst52025
+    - homst52033
+    - homst54033
+    - homst54081
+  layout: landscape
+highlight_images:
+  local_ids:
+    - homst03004
+    - homst03010
+    - homst03062
+    - homst03063
+    - homst04001
+    - homst04011
+    - homst04020
+    - homst04034
+    - homst04043
+    - homst04049
+    - homst31001
+    - homst31006
+    - homst38002
+    - homst45003
+    - homst52001
+    - homst52003
+    - homst52009
+    - homst52017
+    - homst52018
+    - homst52020
+    - homst52035
+    - homst54006
+    - homst54022
+    - homst54026
+    - homst54038
+    - homst54046
+    - homst54050
+    - homst54072
+    - homst54075

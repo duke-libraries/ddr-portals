@@ -1,7 +1,7 @@
 collection_local_id:
-  museedeshorreurs:
+  dfp:
     controller: digital_collections
-    collection: museedeshorreurs
+    collection: dfp
     item_id_field: local_id
     thumbnail_image:
-      local_id: mdhps01001010
+      local_id: dspfb153950010
