@@ -89,7 +89,6 @@ configure_blacklight:
         - :headline
         - :stored_searchable
       label: "Headline"
-      helper_method: separate_with_p
     - field:
         - :date
         - :stored_searchable
@@ -100,7 +99,6 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: "Description"
-      helper_method: separate_with_p
     - field:
         - :company
         - :stored_searchable
