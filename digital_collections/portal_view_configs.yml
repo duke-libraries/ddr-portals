@@ -189,7 +189,6 @@ configure_blacklight:
     - field:
         - :description
         - :stored_searchable
-      helper_method: separate_with_p
       label: Description
     - field:
         - :spatial
