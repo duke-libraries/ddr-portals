@@ -71,6 +71,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
+    - field: "Ddr::Index::Fields::DOI"
+      label: "DOI"
+      helper_method: link_to_doi
     - field:
         - :date
         - :stored_searchable
