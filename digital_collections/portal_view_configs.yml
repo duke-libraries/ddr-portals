@@ -251,6 +251,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Subseries"
+      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
     - field:
         - :box_number
         - :stored_searchable
