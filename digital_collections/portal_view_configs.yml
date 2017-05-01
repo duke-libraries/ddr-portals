@@ -130,6 +130,10 @@ configure_blacklight:
       label: Contributor
       limit: 5
       show: false
+    - field: "Ddr::Index::Fields::ASPACE_ID"
+      label: ArchivesSpace ID
+      show: false
+
   add_index_field:
     - field:
         - :creator
