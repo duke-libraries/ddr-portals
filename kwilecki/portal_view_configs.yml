@@ -29,3 +29,180 @@ highlight_images:
 restrictions:
   max_download: 1200
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=kwilecki
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Creator
+      limit: 5
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Series
+      limit: 5
+    - field: "Ddr::Index::Fields::SUBSERIES_FACET"
+      label: Subseries
+      limit: 5
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+      label: "Box Number"
+      show: false
+    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+      label: Contributor
+      limit: 5
+      show: false
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :description
+        - :stored_searchable
+      label: Description
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+    - field:
+        - :language
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      helper_method: language_display
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :series
+        - :stored_searchable
+      separator: "; "
+      label: "Series"
+      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+    - field:
+        - :subseries
+        - :stored_searchable
+      separator: "; "
+      label: "Subseries"
+      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
+    - field:
+        - :box_number
+        - :stored_searchable
+      separator: "; "
+      label: "Box Number"
+      link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+    - field:
+        - :folder
+        - :stored_searchable
+      separator: "; "
+      label: "Folder"
+    - field:
+        - :print_number
+        - :stored_searchable
+      separator: "; "
+      label: "Print Number"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field: 'sponsor_display'
+      separator: "; "
+      label: "Sponsor"
+      accessor: 'sponsor_display'
+      helper_method: collection_sponsor

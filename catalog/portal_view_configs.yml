@@ -30,6 +30,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
       limit: 5
+    - field: "Ddr::Index::Fields::ASPACE_ID"
+      label: ArchivesSpace ID
+      show: false
 
   add_index_field:
     - field: "Ddr::Index::Fields::MEDIA_TYPE"
@@ -71,6 +74,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
+    - field: "Ddr::Index::Fields::DOI"
+      label: "DOI"
+      helper_method: link_to_doi
     - field:
         - :date
         - :stored_searchable
@@ -92,7 +98,6 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: Description
-      helper_method: separate_with_p
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"

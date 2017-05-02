@@ -77,14 +77,26 @@ configure_blacklight:
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
-    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+        - :category
+        - :stored_searchable
       separator: "; "
-      label: Opponent
+      label: "Opponent"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
     - field:
         - :description
         - :stored_searchable
-      helper_method: separate_with_p
       label: Description
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
     - field:
         - :language
         - :stored_searchable
@@ -97,6 +109,16 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: descendant_of
