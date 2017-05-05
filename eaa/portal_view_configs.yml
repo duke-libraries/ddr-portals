@@ -177,6 +177,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: Rights
+    - field:
+        - :rights_note
+        - :stored_searchable
+      separator: "; "
+      label: "Rights Note"
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: descendant_of
