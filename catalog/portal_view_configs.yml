@@ -76,7 +76,6 @@ configure_blacklight:
       helper_method: permalink
     - field: "Ddr::Index::Fields::DOI"
       label: "DOI"
-      helper_method: link_to_doi
     - field:
         - :date
         - :stored_searchable
@@ -140,6 +139,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: Rights
+    - field:
+        - :rights_note
+        - :stored_searchable
+      separator: "; "
+      label: "Rights Note"
     - field:
         - :sponsor
         - :stored_searchable
