@@ -83,6 +83,11 @@ configure_blacklight:
       label: "Date"
       helper_method: display_edtf_date
     - field:
+        - :temporal
+        - :stored_searchable
+      separator: "; "
+      label: "Temporal"
+    - field:
         - :creator
         - :stored_searchable
       separator: "; "
