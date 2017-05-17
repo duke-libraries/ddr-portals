@@ -150,6 +150,11 @@ configure_blacklight:
       separator: "; "
       label: "Rights Note"
     - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
+    - field:
         - :sponsor
         - :stored_searchable
       separator: "; "
