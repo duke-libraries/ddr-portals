@@ -97,11 +97,10 @@ configure_blacklight:
       label: "Digital Collection"
       helper_method: descendant_of
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
