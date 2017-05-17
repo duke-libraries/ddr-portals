@@ -79,11 +79,10 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field:
         - :spatial
         - :stored_searchable

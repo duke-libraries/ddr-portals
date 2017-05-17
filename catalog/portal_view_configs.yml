@@ -27,6 +27,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: Language
+      limit: 5
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
       limit: 5
@@ -139,6 +142,12 @@ configure_blacklight:
       separator: "; "
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+    - field:
+        - :language_name
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
     - field:
         - :rights
         - :stored_searchable
