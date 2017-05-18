@@ -173,11 +173,6 @@ configure_blacklight:
       separator: "; "
       label: "Provenance"
     - field:
-        - :rights
-        - :stored_searchable
-      separator: "; "
-      label: Rights
-    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "

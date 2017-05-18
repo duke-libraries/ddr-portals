@@ -130,11 +130,6 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
-        - :rights
-        - :stored_searchable
-      separator: "; "
-      label: Rights
-    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
