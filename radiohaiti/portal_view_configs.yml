@@ -1,0 +1,161 @@
+includes:
+  local_ids:
+    - radiohaiti
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=radiohaiti
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: "Program Name"
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: "Speaker"
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: "Program Type"
+      limit: 5
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: "Subject"
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: "Location"
+      limit: 5
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: "Language"
+      limit: 5
+
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+      - :alternative
+      - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
+    - field:
+      - :category
+      - :stored_searchable
+      separator: "; "
+      label: "Program Name"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+      - :creator
+      - :stored_searchable
+      separator: "; "
+      label: "Speaker"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :description
+        - :stored_searchable
+      label: "Description"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Program Type"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :language_name
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
+    - field:
+        - :isPartOf
+        - :symbol
+      separator: "; "
+      label: "Tape ID"
+      link_to_search: "Ddr::Index::Fields::DC_IS_PART_OF"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
+    - field:
+        - :rights_note
+        - :stored_searchable
+      separator: "; "
+      label: "Rights Note"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
+    - field: 'sponsor_display'
+      separator: "; "
+      label: "Sponsor"
+      accessor: 'sponsor_display'
+      helper_method: collection_sponsor
+
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Speaker"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Program Type"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
