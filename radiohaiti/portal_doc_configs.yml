@@ -1,0 +1,5 @@
+collection_local_id:
+  radiohaiti:
+    controller: digital_collections
+    collection: radiohaiti
+    item_id_field: local_id
