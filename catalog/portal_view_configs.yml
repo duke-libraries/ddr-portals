@@ -21,6 +21,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Creator
       limit: 5
+    - field: "Ddr::Index::Fields::AFFILIATION"
+      label: Affiliation
+      limit: 5
     - field: "Ddr::Index::Fields::FORMAT_FACET"
       label: Format
       limit: 5
@@ -96,6 +99,12 @@ configure_blacklight:
       separator: "; "
       label: "Creator"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :affiliation
+        - :stored_searchable
+      separator: "; "
+      label: "Affiliation"
+      link_to_search: "Ddr::Index::Fields::AFFILIATION"
     - field:
         - :type
         - :stored_searchable
