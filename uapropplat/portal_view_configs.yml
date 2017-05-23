@@ -1,0 +1,119 @@
+includes:
+  local_ids:
+    - uapropplat
+showcase_images:
+  local_ids:
+    - dppsi01001003
+    - dppsi010010100
+  layout: portrait
+item_relators:
+  - name: "Key Map"
+    field:
+      - :isPartOf
+      - :symbol
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=uapropplat
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::FOLDER_FACET"
+      label: Folder
+      limit: 5
+      collapse: false
+  add_show_field:
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+    - field:
+        - :folder
+        - :stored_searchable
+      separator: "; "
+      label: "Folder"
+    - field: "Ddr::Index::Fields::LOCAL_ID"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: Rights
+    - field:
+        - :rights_note
+        - :stored_searchable
+      separator: "; "
+      label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
+    - field: 'sponsor_display'
+      separator: "; "
+      label: "Sponsor"
+      accessor: 'sponsor_display'
+      helper_method: collection_sponsor
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+
