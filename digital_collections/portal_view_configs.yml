@@ -284,7 +284,8 @@ configure_blacklight:
         - :rights
         - :stored_searchable
       separator: "; "
-      label: Rights
+      label: "Rights"
+      helper_method: "rights_display"
     - field:
         - :rights_note
         - :stored_searchable
