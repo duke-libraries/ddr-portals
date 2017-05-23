@@ -1,0 +1,7 @@
+collection_local_id:
+  uapropplat:
+    controller: digital_collections
+    collection: uapropplat
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: dppsi01001003
