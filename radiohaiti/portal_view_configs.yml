@@ -1,6 +1,20 @@
 includes:
   local_ids:
     - radiohaiti
+showcase_images:
+  custom_images:
+    - radiohaiti-1995.jpg
+    - radiohaiti-airport-008.jpg
+    - radiohaiti-exile.jpg
+    - radiohaiti-jean-airport.jpg
+    - radiohaiti-jld-mm.jpg
+    - radiohaiti-march-1986.jpg
+    - radiohaiti-reels.jpg
+    - radiohaiti-saut-deau.jpg
+    - radiohaiti-station.jpg
+    - radiohaiti-tapes.jpg
+  layout: landscape
+show_items: 0
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=radiohaiti
 item_relators:
   - name: "Related Items"
