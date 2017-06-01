@@ -156,6 +156,11 @@ configure_blacklight:
       label: "Language"
       link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
     - field:
+        - :publisher
+        - :stored_searchable
+      separator: "; "
+      label: "Publisher"
+    - field:
         - :rights
         - :stored_searchable
       separator: "; "
