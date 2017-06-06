@@ -19,8 +19,8 @@ blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slu
 item_relators:
   - name: "Related Items"
     field:
-      - :isPartOf
-      - :symbol
+      - :relation
+      - :stored_searchable
     id_field:
       - :permanent_id
       - :stored_sortable
@@ -28,6 +28,13 @@ item_relators:
     field:
       - :isFormatOf
       - :symbol
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Other Versions"
+    field:
+      - :hasFormat
+      - :stored_searchable
     id_field:
       - :permanent_id
       - :stored_sortable
