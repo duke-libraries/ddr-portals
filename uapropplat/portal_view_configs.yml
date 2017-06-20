@@ -4,7 +4,7 @@ includes:
 showcase_images:
   local_ids:
     - dppsi01001003
-    - dppsi010010100
+    - dppsi01001010
   layout: portrait
 item_relators:
   - name: "Key Map"
