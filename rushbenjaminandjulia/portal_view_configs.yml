@@ -92,11 +92,10 @@ configure_blacklight:
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field:
         - :extent
         - :stored_searchable
@@ -125,10 +124,21 @@ configure_blacklight:
       separator: "; "
       label: "Provenance"
     - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

@@ -104,21 +104,31 @@ configure_blacklight:
       separator: "; "
       label: "Format"
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field:
         - :provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
     - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

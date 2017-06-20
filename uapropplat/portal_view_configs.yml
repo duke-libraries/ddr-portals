@@ -1,54 +1,38 @@
 includes:
   local_ids:
-    - blake
+    - uapropplat
 showcase_images:
   local_ids:
-    - mfb001
-    - mfb015
-    - mfb017
-    - mfb042
-    - mfb043
-    - mfb075
-    - mfb080
-    - mfb091
-    - mfb099
-    - mfb102
-    - mfb109
+    - dppsi01001003
+    - dppsi010010100
   layout: portrait
-highlight_images:
-  local_ids:
-    - mfb002
-    - mfb010
-    - mfb018
-    - mfb030
-    - mfb038
-    - mfb041
-    - mfb044
-    - mfb049
-    - mfb061
-    - mfb083
-    - mfb084
-    - mfb088
-    - mfb095
-    - mfb101
-    - mfb106
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=blake
+item_relators:
+  - name: "Key Map"
+    field:
+      - :isPartOf
+      - :symbol
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=uapropplat
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
-    - field: "Ddr::Index::Fields::SUBJECT_FACET"
-      label: Subject
+    - field: "Ddr::Index::Fields::FOLDER_FACET"
+      label: Folder
       limit: 5
       collapse: false
   add_show_field:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
-    - field: "Ddr::Index::Fields::PERMANENT_URL"
-      label: "Permalink"
-      helper_method: permalink
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
     - field:
         - :date
         - :stored_searchable
@@ -56,15 +40,20 @@ configure_blacklight:
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :creator
+        - :format
         - :stored_searchable
       separator: "; "
-      label: "Creator"
+      label: "Format"
     - field:
-        - :description
+        - :spatial
         - :stored_searchable
       separator: "; "
-      label: "Description"
+      label: "Location"
+    - field:
+        - :folder
+        - :stored_searchable
+      separator: "; "
+      label: "Folder"
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
@@ -78,37 +67,6 @@ configure_blacklight:
       separator: "; "
       label: "Source Collection"
       helper_method: source_collection
-    - field:
-        - :spatial
-        - :stored_searchable
-      separator: "; "
-      label: "Location"
-    - field:
-        - :subject
-        - :stored_searchable
-      separator: "; "
-      label: "Subject"
-      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
-    - field:
-        - :language_name
-        - :stored_searchable
-      separator: "; "
-      label: "Language"
-    - field:
-        - :extent
-        - :stored_searchable
-      separator: "; "
-      label: "Extent"
-    - field:
-        - :format
-        - :stored_searchable
-      separator: "; "
-      label: "Format"
-    - field:
-        - :provenance
-        - :stored_searchable
-      separator: "; "
-      label: "Provenance"
     - field:
         - :rights
         - :stored_searchable
@@ -130,7 +88,6 @@ configure_blacklight:
       label: "Sponsor"
       accessor: 'sponsor_display'
       helper_method: collection_sponsor
-
   add_index_field:
     - field:
         - :creator
@@ -143,11 +100,6 @@ configure_blacklight:
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
-    - field:
-        - :format
-        - :stored_searchable
-      separator: "; "
-      label: "Format"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: "permalink"
@@ -160,3 +112,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
       helper_method: "descendant_of"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+

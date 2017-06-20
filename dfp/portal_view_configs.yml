@@ -98,11 +98,10 @@ configure_blacklight:
       separator: "; "
       label: "Subject"
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
@@ -130,10 +129,21 @@ configure_blacklight:
       label: "Source Collection"
       helper_method: source_collection
     - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

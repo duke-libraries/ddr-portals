@@ -136,10 +136,21 @@ configure_blacklight:
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field:
         - :sponsor
         - :stored_searchable

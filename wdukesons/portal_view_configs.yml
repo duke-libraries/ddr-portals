@@ -149,11 +149,10 @@ configure_blacklight:
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
@@ -172,10 +171,21 @@ configure_blacklight:
       separator: "; "
       label: "Extent"
     - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
         - :rights_note
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

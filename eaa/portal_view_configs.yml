@@ -157,11 +157,10 @@ configure_blacklight:
       separator: "; "
       label: "Artist"
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
     - field:
         - :extent
         - :stored_searchable
@@ -172,6 +171,12 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
     - field:
         - :rights_note
         - :stored_searchable
@@ -193,6 +198,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

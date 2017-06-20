@@ -62,6 +62,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::SETTING_FACET"
       label: Setting
       limit: 5
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: Language
+      limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
@@ -133,16 +136,22 @@ configure_blacklight:
       label: "Type"
       link_to_search: "Ddr::Index::Fields::TYPE_FACET"
     - field:
-        - :language
+        - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
-      helper_method: language_display
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
     - field:
         - :provenance
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
     - field:
         - :rights_note
         - :stored_searchable
@@ -176,6 +185,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
     - field: 'sponsor_display'
       separator: "; "
       label: "Sponsor"

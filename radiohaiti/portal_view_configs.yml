@@ -1,37 +1,53 @@
 includes:
   local_ids:
-    - mma
+    - radiohaiti
 showcase_images:
-  local_ids:
-    - MM0189
-    - MM0596
-    - MM0567
-    - MM0406
-    - MM0169
-    - MM0468
-    - MM0337
-    - MM0190
-    - MM0581
-  layout: portrait
-highlight_images:
-  local_ids:
-    - MM0444
-    - MM0298
-    - MM0462
-    - MM0700
-    - MM0617
-    - MM0447
-    - MM0483
-    - MM0169
-    - MM0731
-    - MM0673
-    - MM0571
-    - MM0238
-    - MM0720
-    - MM1134
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=mma
+  custom_images:
+    - radiohaiti-1995.jpg
+    - radiohaiti-airport-008.jpg
+    - radiohaiti-exile.jpg
+    - radiohaiti-jean-airport.jpg
+    - radiohaiti-jld-mm.jpg
+    - radiohaiti-march-1986.jpg
+    - radiohaiti-reels.jpg
+    - radiohaiti-saut-deau.jpg
+    - radiohaiti-station.jpg
+    - radiohaiti-tapes.jpg
+  layout: landscape
+show_items: 0
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=radiohaiti
+item_relators:
+  - name: "Related Items"
+    field:
+      - :relation
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Other Versions"
+    field:
+      - :isFormatOf
+      - :symbol
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Other Versions"
+    field:
+      - :hasFormat
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
 configure_blacklight:
   add_facet_field:
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: "Program Name"
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: "Speaker"
+      collapse: false
+      limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -39,31 +55,23 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::COMPANY_FACET"
-      label: Company
-      limit: 5
-      collapse: false
-    - field: "Ddr::Index::Fields::PRODUCT_FACET"
-      label: Product
-      collapse: false
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: "Program Type"
       limit: 5
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
-      label: Subject
+      label: "Subject"
       limit: 5
-    - field: "Ddr::Index::Fields::PUBLICATION_FACET"
-      label: Publication
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: "Location"
       limit: 5
-    - field: "Ddr::Index::Fields::MEDIUM_FACET"
-      label: Medium
-      limit: 5
-    - field: "Ddr::Index::Fields::FORMAT_FACET"
-      label: Format
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: "Language"
       limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
-    - field: "Ddr::Index::Fields::TYPE_FACET"
-      label: Type
+    - field: "Ddr::Index::Fields::DC_IS_PART_OF"
+      label: "Tape ID"
       show: false
 
   add_show_field:
@@ -71,9 +79,22 @@ configure_blacklight:
       separator: "; "
       label: "Title"
     - field:
-        - :headline
-        - :stored_searchable
-      label: "Headline"
+      - :alternative
+      - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
+    - field:
+      - :category
+      - :stored_searchable
+      separator: "; "
+      label: "Program Name"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+      - :creator
+      - :stored_searchable
+      separator: "; "
+      label: "Speaker"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
         - :date
         - :stored_searchable
@@ -85,17 +106,11 @@ configure_blacklight:
         - :stored_searchable
       label: "Description"
     - field:
-        - :company
+        - :format
         - :stored_searchable
       separator: "; "
-      label: "Company"
-      link_to_search: "Ddr::Index::Fields::COMPANY_FACET"
-    - field:
-        - :product
-        - :stored_searchable
-      separator: "; "
-      label: "Product"
-      link_to_search: "Ddr::Index::Fields::PRODUCT_FACET"
+      label: "Program Type"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
         - :subject
         - :stored_searchable
@@ -103,49 +118,23 @@ configure_blacklight:
       label: "Subject"
       link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
     - field:
-        - :publication
+        - :spatial
         - :stored_searchable
       separator: "; "
-      label: "Publication"
-      link_to_search: "Ddr::Index::Fields::PUBLICATION_FACET"
-    - field:
-        - :medium
-        - :stored_searchable
-      separator: "; "
-      label: "Medium"
-      link_to_search: "Ddr::Index::Fields::MEDIUM_FACET"
-    - field:
-        - :format
-        - :stored_searchable
-      separator: "; "
-      label: "Format"
-      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
-    - field:
-        - :type
-        - :stored_searchable
-      separator: "; "
-      label: "Type"
-      link_to_search: "Ddr::Index::Fields::TYPE_FACET"
-    - field:
-        - :artist
-        - :stored_searchable
-      separator: "; "
-      label: "Artist"
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
     - field:
         - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
     - field:
-        - :extent
-        - :stored_searchable
+        - :isPartOf
+        - :symbol
       separator: "; "
-      label: "Extent"
-    - field:
-        - :provenance
-        - :stored_searchable
-      separator: "; "
-      label: "Provenance"
+      label: "Tape ID"
+      link_to_search: "Ddr::Index::Fields::DC_IS_PART_OF"
     - field:
         - :rights
         - :stored_searchable
@@ -186,23 +175,24 @@ configure_blacklight:
 
   add_index_field:
     - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Speaker"
+    - field:
         - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
-        - :company
+        - :format
         - :stored_searchable
       separator: "; "
-      label: "Company"
-      link_to_search: "Ddr::Index::Fields::COMPANY_FACET"
-    - field:
-        - :product
-        - :stored_searchable
-      separator: "; "
-      label: "Product"
-      link_to_search: "Ddr::Index::Fields::PRODUCT_FACET"
+      label: "Program Type"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: "descendant_of"
