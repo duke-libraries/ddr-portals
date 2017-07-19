@@ -291,6 +291,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Rights Note"
+      helper_method: :auto_link_values
     - field: "Ddr::Index::Fields::LOCAL_ID"
       separator: "; "
       label: "Identifier"
