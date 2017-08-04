@@ -42,6 +42,9 @@ configure_blacklight:
       limit: 5
       helper_method: 'ead_id_title'
   add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
