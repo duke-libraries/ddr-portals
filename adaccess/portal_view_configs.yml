@@ -192,7 +192,7 @@ configure_blacklight:
       separator: "; "
       label: "Source Collection"
       helper_method: source_collection
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::PERMANENT_URL"

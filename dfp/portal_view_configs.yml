@@ -108,7 +108,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field:

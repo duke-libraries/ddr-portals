@@ -156,7 +156,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Language"
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::EAD_ID"
