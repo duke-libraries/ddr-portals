@@ -117,7 +117,7 @@ configure_blacklight:
       label: Description
     - field: "Ddr::Index::Fields::NESTED_PATH"
       label: "File Path"
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::IS_PART_OF"

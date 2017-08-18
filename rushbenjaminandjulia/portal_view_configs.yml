@@ -75,7 +75,7 @@ configure_blacklight:
       separator: "; "
       label: "Recipient"
       link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::IS_PART_OF"
