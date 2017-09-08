@@ -3,6 +3,10 @@ includes:
     - broadsides
 showcase_images:
   local_ids:
+    - bdsbr14004
+    - bdsfr02013
+    - bdsge20040
+    - bdsit06028
     - bdsla30650
     - bdsmd10885
     - bdsmd30949
@@ -12,10 +16,18 @@ showcase_images:
     - bdsny91590
     - bdspa032455
     - bdspa064073
+    - bdssp25008
     - bdsva043304
   layout: portrait
 highlight_images:
   local_ids:
+    - bdsbi15018
+    - bdsbi15073
+    - bdseg19143
+    - bdsge20048
+    - bdsit05013
+    - bdsit07040
+    - bdsit08027
     - bdsnc031696
     - bdsnc041722
     - bdsnc071910

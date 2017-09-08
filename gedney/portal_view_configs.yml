@@ -1,6 +1,65 @@
 includes:
   local_ids:
     - gedney
+
+showcase_images:
+  local_ids:
+    - gedst008007009
+  layout: landscape
+
+highlight_images:
+  local_ids:
+    - gedst001011008
+    - gedst001012004
+    - gedst002002003
+    - gedst002009007
+    - gedst002010010
+    - gedst003003009
+    - gedst003004006
+    - gedst003007002
+    - gedst003009001
+    - gedst005014006
+    - gedst005014007
+    - gedst005015001
+    - gedst005015004
+    - gedst005015008
+    - gedst006003007
+    - gedst006012007
+    - gedst006014003
+    - gedst007008008
+    - gedst007009007
+    - gedst007010001
+    - gedst008003001
+    - gedst008006005
+    - gedst008007004
+    - gedst008007006
+    - gedst008007008
+    - gedst008007009
+    - gedst008009002
+    - gedst008009005
+    - gedst009001009
+    - gedst009001011
+    - gedst009002004
+    - gedst009003002
+    - gedst009004010
+    - gedst009007003
+    - gedst009008004
+    - gedst009011002
+    - gedst010004004
+    - gedst010006002
+    - gedst010006005
+    - gedst012005002
+    - gedst013004001
+    - gedst013006002
+    - gedst014006002
+    - gedst016011001
+    - gedst017006001
+    - gedst017006006
+
+restrictions:
+  max_download: 1200
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=gedney
+
 item_relators:
   - name: "Related Print"
     field:
