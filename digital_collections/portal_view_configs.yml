@@ -167,6 +167,9 @@ configure_blacklight:
       label: "Collection"
       helper_method: "descendant_of"
   add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
@@ -292,7 +295,13 @@ configure_blacklight:
       separator: "; "
       label: "Rights Note"
       helper_method: :auto_link_values
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field:
+        - :hasVersion
+        - :stored_searchable
+      separator: "; "
+      label: "Other Version"
+      helper_method: :auto_link_values
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::PERMANENT_URL"

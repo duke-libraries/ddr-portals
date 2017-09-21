@@ -68,6 +68,9 @@ configure_blacklight:
       label: "Collection"
       helper_method: "descendant_of"
   add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
@@ -105,7 +108,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field:

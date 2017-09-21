@@ -1,36 +1,90 @@
 includes:
   local_ids:
-    - kwilecki
+    - gedney
+
 showcase_images:
   local_ids:
-    - kwlph030010270
-    - kwlph040010500
-    - kwlph050010060
-    - kwlph060010020
-    - kwlph090010450
-    - kwlph110010140
+    - gedst008007009
   layout: landscape
+
 highlight_images:
   local_ids:
-    - kwlph010010010
-    - kwlph010010290
-    - kwlph020010170
-    - kwlph030010530
-    - kwlph040010160
-    - kwlph040010400
-    - kwlph060010220
-    - kwlph060010320
-    - kwlph070010140
-    - kwlph070010170
-    - kwlph080010060
-    - kwlph090010370
-    - kwlph100010550
-    - kwlph110010390
+    - gedst001011008
+    - gedst001012004
+    - gedst002002003
+    - gedst002009007
+    - gedst002010010
+    - gedst003003009
+    - gedst003004006
+    - gedst003007002
+    - gedst003009001
+    - gedst005014006
+    - gedst005014007
+    - gedst005015001
+    - gedst005015004
+    - gedst005015008
+    - gedst006003007
+    - gedst006012007
+    - gedst006014003
+    - gedst007008008
+    - gedst007009007
+    - gedst007010001
+    - gedst008003001
+    - gedst008006005
+    - gedst008007004
+    - gedst008007006
+    - gedst008007008
+    - gedst008007009
+    - gedst008009002
+    - gedst008009005
+    - gedst009001009
+    - gedst009001011
+    - gedst009002004
+    - gedst009003002
+    - gedst009004010
+    - gedst009007003
+    - gedst009008004
+    - gedst009011002
+    - gedst010004004
+    - gedst010006002
+    - gedst010006005
+    - gedst012005002
+    - gedst013004001
+    - gedst013006002
+    - gedst014006002
+    - gedst016011001
+    - gedst017006001
+    - gedst017006006
+
 restrictions:
   max_download: 1200
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=kwilecki
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=gedney
+
+item_relators:
+  - name: "Related Print"
+    field:
+      - :hasPart
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Contact Sheet"
+    field:
+      - :isPartOf
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+
 configure_blacklight:
   add_facet_field:
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Series
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -38,37 +92,19 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::FORMAT_FACET"
-      label: Format
-      limit: 5
-      collapse: false
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
-      collapse: false
-    - field: "Ddr::Index::Fields::SPATIAL_FACET"
-      label: Location
-      limit: 5
-      collapse: false
-    - field: "Ddr::Index::Fields::CREATOR_FACET"
-      label: Creator
-      limit: 5
-    - field: "Ddr::Index::Fields::SERIES_FACET"
-      label: Series
-      limit: 5
-    - field: "Ddr::Index::Fields::SUBSERIES_FACET"
-      label: Subseries
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
       limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
-    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
-      label: "Box Number"
+    - field: "Ddr::Index::Fields::ASPACE_ID"
+      label: ArchivesSpace ID
       show: false
-    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
-      label: Contributor
-      limit: 5
-      show: false
+
   add_index_field:
     - field:
         - :creator
@@ -98,10 +134,8 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::COLLECTION_URI"
       label: "Collection"
       helper_method: "descendant_of"
+
   add_show_field:
-    - field: "Ddr::Index::Fields::MEDIA_TYPE"
-      label: "File"
-      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
@@ -116,7 +150,12 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Creator"
-      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :series
+        - :stored_searchable
+      separator: "; "
+      label: "Series"
+      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
         - :description
         - :stored_searchable
@@ -140,15 +179,13 @@ configure_blacklight:
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
-        - :language_name
-        - :stored_searchable
-      separator: "; "
-      label: "Language"
-    - field:
         - :extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
+      separator: "; "
+      label: "Identifier"
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: descendant_of
@@ -159,39 +196,6 @@ configure_blacklight:
       separator: "; "
       label: "Source Collection"
       helper_method: source_collection
-    - field:
-        - :series
-        - :stored_searchable
-      separator: "; "
-      label: "Series"
-      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
-    - field:
-        - :subseries
-        - :stored_searchable
-      separator: "; "
-      label: "Subseries"
-      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
-    - field:
-        - :box_number
-        - :stored_searchable
-      separator: "; "
-      label: "Box Number"
-      link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
-    - field:
-        - :folder
-        - :stored_searchable
-      separator: "; "
-      label: "Folder"
-    - field:
-        - :print_number
-        - :stored_searchable
-      separator: "; "
-      label: "Print Number"
-    - field:
-        - :provenance
-        - :stored_searchable
-      separator: "; "
-      label: "Provenance"
     - field:
         - :rights
         - :stored_searchable
@@ -204,9 +208,6 @@ configure_blacklight:
       separator: "; "
       label: "Rights Note"
       helper_method: :auto_link_values
-    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
-      separator: "; "
-      label: "Identifier"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink

@@ -12,7 +12,7 @@ derivative_url_prefixes:
 show_items: 0
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dukechapel
 item_relators:
-  - name: "Related Items"
+  - name: "Related Item"
     field:
       - :series_facet
       - :facetable
@@ -42,6 +42,9 @@ configure_blacklight:
       limit: 5
       helper_method: 'ead_id_title'
   add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
@@ -65,7 +68,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Contributor"
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::IS_PART_OF"

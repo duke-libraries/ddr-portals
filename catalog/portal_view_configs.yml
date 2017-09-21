@@ -60,6 +60,8 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Format"
+    - field: "Ddr::Index::Fields::NESTED_PATH"
+      label: "File Path"
     - field: "Ddr::Index::Fields::IS_PART_OF"
       label: "Part of"
       helper_method: descendant_of
@@ -113,7 +115,9 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: Description
-    - field: "Ddr::Index::Fields::LOCAL_ID"
+    - field: "Ddr::Index::Fields::NESTED_PATH"
+      label: "File Path"
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
     - field: "Ddr::Index::Fields::IS_PART_OF"
