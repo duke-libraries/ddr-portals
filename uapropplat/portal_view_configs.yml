@@ -43,6 +43,11 @@ configure_blacklight:
       label: "Date"
       helper_method: display_edtf_date
     - field:
+        - :description
+        - :stored_searchable
+      label: "Description"
+      helper_method: simple_format_values
+    - field:
         - :format
         - :stored_searchable
       separator: "; "
