@@ -167,6 +167,11 @@ configure_blacklight:
       separator: "; "
       label: "Publisher"
     - field:
+        - :provenance
+        - :stored_searchable
+      separator: '; '
+      label: 'Provenance'
+    - field:
         - :rights
         - :stored_searchable
       separator: "; "
