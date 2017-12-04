@@ -1,0 +1,7 @@
+collection_local_id:
+  trumpet:
+    controller: digital_collections
+    collection: trumpet
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: trumpet-thumb-toc01029.jpg

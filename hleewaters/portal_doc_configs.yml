@@ -1,0 +1,7 @@
+collection_local_id:
+  hleewaters:
+    controller: digital_collections
+    collection: hleewaters
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: hleewaters-thumb-rl10075umatic0003010.jpg

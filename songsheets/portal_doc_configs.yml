@@ -1,0 +1,7 @@
+collection_local_id:
+  songsheets:
+    controller: digital_collections
+    collection: songsheets
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: songsheets-thumb-bsvg301042.jpg

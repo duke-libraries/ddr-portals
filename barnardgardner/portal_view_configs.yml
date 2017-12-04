@@ -1,0 +1,4 @@
+includes:
+  local_ids:
+    - barnardgardner
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=barnardgardner

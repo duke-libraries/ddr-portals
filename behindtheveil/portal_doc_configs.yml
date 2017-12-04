@@ -1,0 +1,7 @@
+collection_local_id:
+  behindtheveil:
+    controller: digital_collections
+    collection: behindtheveil
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: behindtheveil-thumb-01-0744-005-UN.jpg

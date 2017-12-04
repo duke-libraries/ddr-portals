@@ -1,0 +1,7 @@
+collection_local_id:
+  greenhow:
+    controller: digital_collections
+    collection: greenhow
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: greenhow-thumb-1863-07-16.jpg
