@@ -1,0 +1,8 @@
+includes:
+  local_ids:
+    - memoryproject
+showcase_images:
+  custom_images:
+    - memoryproject-showcase
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=memoryproject

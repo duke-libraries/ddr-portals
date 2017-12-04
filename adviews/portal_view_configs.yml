@@ -1,0 +1,8 @@
+includes:
+  local_ids:
+    - adviews
+showcase_images:
+  custom_images:
+    - adviews-showcase.jpg
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=adviews

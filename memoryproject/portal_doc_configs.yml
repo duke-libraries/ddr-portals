@@ -1,0 +1,7 @@
+collection_local_id:
+  memoryproject:
+    controller: digital_collections
+    collection: memoryproject
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: memoryproject-thumb.jpg

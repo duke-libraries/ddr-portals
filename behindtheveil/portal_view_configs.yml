@@ -1,0 +1,8 @@
+includes:
+  local_ids:
+    - behindtheveil
+showcase_images:
+  custom_images:
+    - behindtheveil-showcase-01-0744-005-UN.jpg
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=behindtheveil

@@ -1,0 +1,7 @@
+collection_local_id:
+  thompson:
+    controller: digital_collections
+    collection: thompson
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: thompson-thumb-1859-11-13.jpg

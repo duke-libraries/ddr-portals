@@ -1,0 +1,7 @@
+collection_local_id:
+  papyrus:
+    controller: digital_collections
+    collection: papyrus
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: papyrus-thumb-521v.jpg
