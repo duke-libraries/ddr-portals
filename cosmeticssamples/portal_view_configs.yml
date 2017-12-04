@@ -1,0 +1,10 @@
+includes:
+  local_ids:
+    - cosmeticssamples
+showcase_images:
+  local_ids:
+    - ctsst001029
+    - ctsst001024
+  layout: portrait
+
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=cosmeticssamples
