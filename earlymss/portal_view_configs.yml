@@ -1,0 +1,245 @@
+includes:
+  local_ids:
+    - earlymss
+showcase_images:
+  local_ids:
+    - emsgk01005
+    - emsgk01065
+  layout: portrait
+highlight_images:
+  local_ids:
+    - emsgk01006
+    - emsar01001
+    - emsgk01094
+    - emsgk01039
+    - emsar01013
+    - emsgk01002
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=earlymss
+configure_blacklight:
+  add_facet_field:
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: Language
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::YEAR_FACET"
+      label: Year
+      limit: 9999
+      collapse: false
+      range:
+        num_segments: 6
+        segments: true
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      limit: 5
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
+      limit: 5
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Creator
+      limit: 5
+      show: false
+    - field: "Ddr::Index::Fields::PUBLICATION_FACET"
+      label: Publication
+      limit: 5
+    - field: "Ddr::Index::Fields::COLLECTION_TITLE"
+      label: Collection
+      limit: 5
+      show: false
+    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+      label: Browse
+      show: false
+    - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+      label: "Box Number"
+      show: false
+    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+      label: Contributor
+      limit: 5
+      show: false
+    - field: "Ddr::Index::Fields::ASPACE_ID"
+      label: ArchivesSpace ID
+      show: false
+
+  add_index_field:
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: "permalink"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Collection"
+      helper_method: "descendant_of"
+    - field: "Ddr::Index::Fields::COLLECTION_URI"
+      label: "Collection"
+      helper_method: "descendant_of"
+  add_show_field:
+    - field: "Ddr::Index::Fields::MEDIA_TYPE"
+      label: "File"
+      helper_method: file_info
+    - field: "Ddr::Index::Fields::TITLE"
+      separator: "; "
+      label: "Title"
+    - field:
+        - :alternative
+        - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
+    - field:
+        - :date
+        - :stored_searchable
+      separator: "; "
+      label: "Date"
+      helper_method: display_edtf_date
+    - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Creator"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :contributor
+        - :stored_searchable
+      separator: "; "
+      label: "Contributor"
+      link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+    - field:
+        - :description
+        - :stored_searchable
+      label: Description
+      helper_method: simple_format_values
+    - field:
+        - :spatial
+        - :stored_searchable
+      separator: "; "
+      label: "Location"
+      link_to_search: "Ddr::Index::Fields::SPATIAL_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      separator: "; "
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
+        - :format
+        - :stored_searchable
+      separator: "; "
+      label: "Format"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
+    - field:
+        - :publisher
+        - :stored_searchable
+      separator: "; "
+      label: "Publisher"
+    - field:
+        - :publication
+        - :stored_searchable
+      separator: "; "
+      label: "Publication"
+      link_to_search: "Ddr::Index::Fields::PUBLICATION_FACET"
+    - field:
+        - :language_name
+        - :stored_searchable
+      separator: "; "
+      label: "Language"
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
+    - field:
+        - :series
+        - :stored_searchable
+      separator: "; "
+      label: "Series"
+      link_to_search: "Ddr::Index::Fields::SERIES_FACET"
+    - field:
+        - :subseries
+        - :stored_searchable
+      separator: "; "
+      label: "Subseries"
+      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
+    - field:
+        - :box_number
+        - :stored_searchable
+      separator: "; "
+      label: "Box Number"
+      link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+    - field:
+        - :folder
+        - :stored_searchable
+      separator: "; "
+      label: "Folder"
+    - field:
+        - :print_number
+        - :stored_searchable
+      separator: "; "
+      label: "Print Number"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: "; "
+      label: "Provenance"
+    - field:
+        - :rights
+        - :stored_searchable
+      separator: "; "
+      label: "Rights"
+      helper_method: "rights_display"
+    - field:
+        - :rights_note
+        - :stored_searchable
+      separator: "; "
+      label: "Rights Note"
+      helper_method: :auto_link_values
+    - field:
+        - :hasVersion
+        - :stored_searchable
+      separator: "; "
+      label: "Other Version"
+      helper_method: :auto_link_values
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field:
+        - :bibliographicCitation
+        - :stored_searchable
+      separator: "; "
+      label: "Citation"
+    - field: 'sponsor_display'
+      separator: "; "
+      label: "Sponsor"
+      accessor: 'sponsor_display'
+      helper_method: collection_sponsor
