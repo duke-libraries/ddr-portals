@@ -122,6 +122,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+      helper_method: :auto_link_values
     - field:
         - :rights
         - :stored_searchable
