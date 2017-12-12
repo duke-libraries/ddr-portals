@@ -1,7 +1,7 @@
 collection_local_id:
-  bryant:
+  earlymss:
     controller: digital_collections
-    collection: bryant
+    collection: earlymss
     item_id_field: local_id
     thumbnail_image:
-      custom_image: bryant-thumb-1873-08-16-p01.jpg
+      local_id: emsgk01005

@@ -1,98 +1,24 @@
 includes:
-  admin_sets:
-    - dc
+  local_ids:
+    - earlymss
 showcase_images:
   local_ids:
-    - 1092513-R4-E402
-    - 19310417WC0422
-    - 19310417WC0424
-    - ahpst001015
-    - ahpst001024
-    - ahpst002028
-    - brpst002001
-    - brpst008001
-    - CK0029
-    - csmep03156
-    - dscsi03033
-    - dscsi05004
-    - dscsi05008
-    - fcpst001001026
-    - gmpph010020020
-    - gmpph040010050
-    - hmpgp13344
-    - hmpgp19570
-    - kfpst0040070010
-    - kfpst0040190010
-    - MM1134
-    - Q0012
-    - rrpph05001002
-    - rrpph06002009
-  layout: landscape
+    - emsgk01005
+    - emsgk01065
+  layout: portrait
 highlight_images:
   local_ids:
-    - 1092513-R3-E311
-    - 1092531-R3-E448
-    - 19290402WC0185
-    - 19300205WC0310
-    - 19310417WC0425
-    - A0128
-    - A0324
-    - ahpst001024
-    - ahpst002005
-    - ahpst002026
-    - ahpst002028
-    - BH0904
-    - BH1939
-    - brpst008001
-    - CK0036
-    - csmep03116
-    - D0308
-    - dscsi02551
-    - dscsi03002
-    - dscsi03005
-    - dscsi03268
-    - dscsi03304
-    - espst001002
-    - espst001004
-    - espst001016
-    - esrph080013590
-    - gmpph010020130
-    - gmpph010020150
-    - hmpgp12331
-    - hmpgp14408
-    - hmpgp21657
-    - hmpgp22673
-    - japph030030010
-    - japph030060010
-    - japph040280010
-    - kfpst0060050010
-    - kfpst0060070010
-    - mfb042
-    - mfb075
-    - mfb099
-    - mfb109
-    - MM0190
-    - MM0298
-    - rrpph01001017
-    - rrpph01002001
-    - rrpph02001014
-    - strst001001059
-    - strst001001110
-    - strst001001143
-    - T2415
-featured_collections:
-  local_ids:
-    - adaccess
-    - rushbenjaminandjulia
-    - alexharris
-    - dukechapel
-    - karales
-    - eaa
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
+    - emsgk01006
+    - emsar01001
+    - emsgk01094
+    - emsgk01039
+    - emsar01013
+    - emsgk01002
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=earlymss
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::SERIES_FACET"
-      label: Series
+    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
+      label: Language
       limit: 5
       collapse: false
     - field: "Ddr::Index::Fields::YEAR_FACET"
@@ -102,14 +28,11 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::FORMAT_FACET"
-      label: Format
-      limit: 5
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
-    - field: "Ddr::Index::Fields::LANGUAGE_FACET"
-      label: Language
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
       limit: 5
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
@@ -117,12 +40,14 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
       label: Creator
       limit: 5
+      show: false
     - field: "Ddr::Index::Fields::PUBLICATION_FACET"
       label: Publication
       limit: 5
     - field: "Ddr::Index::Fields::COLLECTION_TITLE"
       label: Collection
       limit: 5
+      show: false
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false

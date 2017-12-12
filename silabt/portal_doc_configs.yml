@@ -1,7 +1,7 @@
 collection_local_id:
-  campbell:
+  silabt:
     controller: digital_collections
-    collection: campbell
+    collection: radiohaiti
     item_id_field: local_id
     thumbnail_image:
-      custom_image: campbell-thumb-1837-11-01-p1.jpg
+      custom_image: silabt-thumb-UAPC-054-015-001.jpg
