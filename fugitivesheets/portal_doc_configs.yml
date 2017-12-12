@@ -1,0 +1,7 @@
+collection_local_id:
+  fugitivesheets:
+    controller: digital_collections
+    collection: fugitivesheets
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: fugitivesheets-thumb-fgsms01003.jpg

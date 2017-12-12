@@ -115,6 +115,7 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: Description
+      helper_method: simple_format_values
     - field: "Ddr::Index::Fields::NESTED_PATH"
       label: "File Path"
     - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
@@ -165,6 +166,11 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Publisher"
+    - field:
+        - :provenance
+        - :stored_searchable
+      separator: '; '
+      label: 'Provenance'
     - field:
         - :rights
         - :stored_searchable

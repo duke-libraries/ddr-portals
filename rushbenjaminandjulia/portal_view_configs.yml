@@ -54,6 +54,7 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: "Description"
+      helper_method: simple_format_values
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
@@ -126,6 +127,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: "Provenance"
+      helper_method: :auto_link_values
     - field:
         - :rights
         - :stored_searchable

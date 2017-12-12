@@ -1,0 +1,10 @@
+includes:
+  local_ids:
+    - silabt
+showcase_images:
+  custom_images:
+    - silabt-showcase-UAPC-054-015-001.jpg
+    - silabt-showcase-UAPC-054-021-003.jpg
+  layout: portrait
+show_items: 0
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=silabt

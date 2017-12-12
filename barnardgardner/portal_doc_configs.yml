@@ -1,0 +1,7 @@
+collection_local_id:
+  barnardgardner:
+    controller: digital_collections
+    collection: barnardgardner
+    item_id_field: local_id
+    thumbnail_image:
+      custom_image: barnardgardner-thumb-barsi01001.jpg

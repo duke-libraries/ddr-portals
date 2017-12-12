@@ -90,6 +90,7 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: Description
+      helper_method: simple_format_values
     - field:
         - :creator
         - :stored_searchable
