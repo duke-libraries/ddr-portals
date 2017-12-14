@@ -4,6 +4,7 @@ includes:
 showcase_images:
   local_ids:
     - 1092513-R4-E402
+    - 19290601WC0205
     - 19310417WC0422
     - 19310417WC0424
     - ahpst001015
@@ -17,12 +18,15 @@ showcase_images:
     - dscsi05004
     - dscsi05008
     - fcpst001001026
+    - gedst005015008
+    - gedst012005002
     - gmpph010020020
     - gmpph040010050
+    - homst03008
     - hmpgp13344
     - hmpgp19570
-    - kfpst0040070010
     - kfpst0040190010
+    - kfpst0060070010
     - MM1134
     - Q0012
     - rrpph05001002
@@ -34,6 +38,7 @@ highlight_images:
     - 1092531-R3-E448
     - 19290402WC0185
     - 19300205WC0310
+    - 19310417WC0423
     - 19310417WC0425
     - A0128
     - A0324
@@ -42,11 +47,18 @@ highlight_images:
     - ahpst002026
     - ahpst002028
     - BH0904
+    - BH1191
+    - BH1608
     - BH1939
+    - bdsbr14004
+    - bdssp25008
     - brpst008001
+    - brpst009001
     - CK0036
+    - cnhms03007
     - csmep03116
     - D0308
+    - dppsi01001010
     - dscsi02551
     - dscsi03002
     - dscsi03005
@@ -80,14 +92,15 @@ highlight_images:
     - strst001001110
     - strst001001143
     - T2415
+    - T2611
 featured_collections:
   local_ids:
-    - adaccess
-    - rushbenjaminandjulia
-    - alexharris
-    - dukechapel
-    - karales
-    - eaa
+    - womenstraveldiaries
+    - radiohaiti
+    - earlymss
+    - americanslaverydocs
+    - gedney
+    - silabt
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_posts/
 configure_blacklight:
   add_facet_field:
