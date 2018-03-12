@@ -1,0 +1,7 @@
+collection_local_id:
+  goldmanemma:
+    controller: digital_collections
+    collection: goldmanemma
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: egpst024001
