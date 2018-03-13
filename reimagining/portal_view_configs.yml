@@ -1,0 +1,8 @@
+includes:
+  local_ids:
+    - reimagining
+showcase_images:
+  custom_images:
+    - reimagining-logo.jpg
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=reimagining
