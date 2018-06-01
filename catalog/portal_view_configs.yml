@@ -79,6 +79,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
+    - field:
+        - :alternative
+        - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
@@ -106,6 +111,12 @@ configure_blacklight:
       separator: "; "
       label: "Affiliation"
       link_to_search: "Ddr::Index::Fields::AFFILIATION_FACET"
+    - field:
+        - :contributor
+        - :stored_searchable
+      separator: "; "
+      label: "Contributor"
+      link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
     - field:
         - :type
         - :stored_searchable
@@ -161,6 +172,11 @@ configure_blacklight:
       separator: "; "
       label: "Language"
       link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
+    - field:
+        - :extent
+        - :stored_searchable
+      separator: "; "
+      label: "Extent"
     - field:
         - :publisher
         - :stored_searchable
