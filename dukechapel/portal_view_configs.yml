@@ -26,6 +26,25 @@ configure_blacklight:
       sort: index
       collapse: false
       limit: 5
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: "Liturgical Calendar"
+      sort: index
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::BIBLICAL_BOOK_FACET"
+      label: "Biblical Book"
+      sort: index
+      collapse: false
+      limit: 5
+    - field: "Ddr::Index::Fields::CHAPTER_AND_VERSE_FACET"
+      label: "Chapter and Verse"
+      sort: index
+      collapse: true
+      limit: 5
+    - field: "Ddr::Index::Fields::SUBJECT_FACET"
+      label: Subject
+      collapse: false
+      limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -41,6 +60,7 @@ configure_blacklight:
       label: "Source Collection"
       limit: 5
       helper_method: 'ead_id_title'
+
   add_show_field:
     - field: "Ddr::Index::Fields::MEDIA_TYPE"
       label: "File"
@@ -48,6 +68,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
+    - field:
+        - :description
+        - :stored_searchable
+      label: Description
+      helper_method: simple_format_values
     - field: "Ddr::Index::Fields::PERMANENT_URL"
       label: "Permalink"
       helper_method: permalink
@@ -64,15 +89,30 @@ configure_blacklight:
       label: "Speaker"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
     - field:
+        - :category
+        - :stored_searchable
+      label: "Liturgical Calendar"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+        - :biblical_book
+        - :stored_searchable
+      label: "Biblical Book"
+      link_to_search: "Ddr::Index::Fields::BIBLICAL_BOOK_FACET"
+    - field:
+        - :chapter_and_verse
+        - :stored_searchable
+      label: "Chapter and Verse"
+      link_to_search: "Ddr::Index::Fields::CHAPTER_AND_VERSE_FACET"
+    - field:
+        - :subject
+        - :stored_searchable
+      label: "Subject"
+      link_to_search: "Ddr::Index::Fields::SUBJECT_FACET"
+    - field:
         - :contributor
         - :stored_searchable
       separator: "; "
       label: "Contributor"
-    - field:
-        - :description
-        - :stored_searchable
-      label: Description
-      helper_method: simple_format_values
     - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"
@@ -94,12 +134,10 @@ configure_blacklight:
     - field:
         - :spatial
         - :stored_searchable
-      separator: "; "
       label: "Location"
     - field:
         - :format
         - :stored_searchable
-      separator: "; "
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
@@ -133,30 +171,36 @@ configure_blacklight:
 
   add_index_field:
     - field:
-        - :creator
-        - :stored_searchable
-      separator: "; "
-      label: "Creator"
-    - field:
         - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
     - field:
+        - :creator
+        - :stored_searchable
+      separator: "; "
+      label: "Speaker"
+      link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :category
+        - :stored_searchable
+      separator: "; "
+      label: "Liturgical Calendar"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+        - :biblical_book
+        - :stored_searchable
+      separator: "; "
+      label: "Biblical Book"
+      link_to_search: "Ddr::Index::Fields::BIBLICAL_BOOK_FACET"
+    - field:
+        - :chapter_and_verse
+        - :stored_searchable
+      label: "Chapter and Verse"
+    - field:
         - :format
         - :stored_searchable
       separator: "; "
       label: "Format"
-    - field: "Ddr::Index::Fields::PERMANENT_URL"
-      label: "Permalink"
-      helper_method: "permalink"
-    - field: "Ddr::Index::Fields::IS_PART_OF"
-      label: "Part of"
-      helper_method: "descendant_of"
-    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-      label: "Collection"
-      helper_method: "descendant_of"
-    - field: "Ddr::Index::Fields::COLLECTION_URI"
-      label: "Collection"
-      helper_method: "descendant_of"
+      link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
