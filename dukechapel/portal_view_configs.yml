@@ -43,6 +43,7 @@ configure_blacklight:
       limit: 5
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
+      sort: index
       collapse: false
       limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
