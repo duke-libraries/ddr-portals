@@ -98,7 +98,7 @@ configure_blacklight:
         - :stored_searchable
       separator: "; "
       label: Description
-      helper_method: simple_format_values
+      helper_method: simple_format_and_auto_link_values
     - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
       separator: "; "
       label: "Identifier"

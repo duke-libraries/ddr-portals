@@ -67,7 +67,7 @@ configure_blacklight:
         - :description
         - :stored_searchable
       label: "Description"
-      helper_method: simple_format_values
+      helper_method: simple_format_and_auto_link_values
     - field:
         - :date
         - :stored_searchable
