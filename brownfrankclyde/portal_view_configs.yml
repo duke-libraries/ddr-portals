@@ -1,35 +1,45 @@
 includes:
   local_ids:
-    - esr
+    - brownfrankclyde
 showcase_images:
-  local_ids:
-    - esrph020010580
-    - esrph080014320
-    - esrph080014720
-    - esrph080014880
-    - esrph090015610
-    - esrph090015910
-    - esrph100016700
+  custom_images:
+    - brownfrankclyde-showcase-car-1.jpg
+    - brownfrankclyde-showcase-car-2.jpg
+    - brownfrankclyde-showcase-clareleighton-all-day-singing-0201.jpg
+    - brownfrankclyde-showcase-clareleighton-cypress-knees-0303_409.jpg
+    - brownfrankclyde-showcase-clareleighton-hatteras-wreck-0205_660.jpg
+    - brownfrankclyde-showcase-clareleighton-the-baptizing-0103_226.jpg
+    - brownfrankclyde-showcase-clareleighton-wind-and-pine-0204_432.jpg
+    - brownfrankclyde-showcase-porch.jpg
   layout: landscape
-highlight_images:
-  local_ids:
-    - esrph020010400
-    - esrph040011070
-    - esrph040011110
-    - esrph040011560
-    - esrph040012110
-    - esrph040012380
-    - esrph080013390
-    - esrph080013590
-    - esrph080014830
-    - esrph080014960
-    - esrph090015740
-    - esrph090015830
-    - esrph090015840
-    - esrsc120010550
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=esr
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=brownfrankclyde
+
+item_relators:
+  - name: "Recordings contained on object"
+    field:
+      - :hasPart
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Complete phonorecording"
+    field:
+      - :isPartOf
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+
 configure_blacklight:
   add_facet_field:
+    - field: "Ddr::Index::Fields::CREATOR_FACET"
+      label: Performer
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: Instrumentation
+      collapse: false
+      limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -37,44 +47,53 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
+    - field: "Ddr::Index::Fields::SPATIAL_FACET"
+      label: Location
+      limit: 5
+      collapse: false
     - field: "Ddr::Index::Fields::FORMAT_FACET"
       label: Format
       limit: 5
-      collapse: false
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
     - field: "Ddr::Index::Fields::SERIES_FACET"
       label: Series
       limit: 5
-    - field: "Ddr::Index::Fields::SPATIAL_FACET"
-      label: Location
+    - field: "Ddr::Index::Fields::PUBLICATION_FACET"
+      label: Publication
       limit: 5
-    - field: "Ddr::Index::Fields::CREATOR_FACET"
-      label: Creator
-      limit: 5
-    - field: "Ddr::Index::Fields::EAD_ID"
-      label: "Source Collection"
-      limit: 5
-      helper_method: 'ead_id_title'
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
     - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
       label: "Box Number"
       show: false
+    - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
+      label: Contributor
+      limit: 5
+      show: false
+    - field: "Ddr::Index::Fields::ASPACE_ID"
+      label: ArchivesSpace ID
+      show: false
+
   add_index_field:
     - field:
         - :creator
         - :stored_searchable
       separator: "; "
-      label: "Creator"
+      label: "Performer"
     - field:
         - :date
         - :stored_searchable
       separator: "; "
       label: "Date"
       helper_method: display_edtf_date
+    - field:
+        - :temporal
+        - :stored_searchable
+      separator: "; "
+      label: "Temporal"
     - field:
         - :format
         - :stored_searchable
@@ -99,9 +118,11 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::TITLE"
       separator: "; "
       label: "Title"
-    - field: "Ddr::Index::Fields::PERMANENT_URL"
-      label: "Permalink"
-      helper_method: permalink
+    - field:
+        - :alternative
+        - :stored_searchable
+      separator: "; "
+      label: "Alternative Title"
     - field:
         - :date
         - :stored_searchable
@@ -112,26 +133,25 @@ configure_blacklight:
         - :creator
         - :stored_searchable
       separator: "; "
-      label: "Creator"
+      label: "Performer"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :category
+        - :stored_searchable
+      separator: "; "
+      label: "Instrumentation"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
+    - field:
+        - :contributor
+        - :stored_searchable
+      separator: "; "
+      label: "Contributor"
+      link_to_search: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
     - field:
         - :description
         - :stored_searchable
       label: Description
       helper_method: simple_format_and_auto_link_values
-    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
-      separator: "; "
-      label: "Identifier"
-    - field: "Ddr::Index::Fields::IS_PART_OF"
-      label: "Part of"
-      helper_method: descendant_of
-    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
-      label: "Digital Collection"
-      helper_method: descendant_of
-    - field: "Ddr::Index::Fields::EAD_ID"
-      separator: "; "
-      label: "Source Collection"
-      helper_method: source_collection
     - field:
         - :spatial
         - :stored_searchable
@@ -151,15 +171,37 @@ configure_blacklight:
       label: "Format"
       link_to_search: "Ddr::Index::Fields::FORMAT_FACET"
     - field:
+        - :publisher
+        - :stored_searchable
+      separator: "; "
+      label: "Publisher"
+    - field:
+        - :publication
+        - :stored_searchable
+      separator: "; "
+      label: "Publication"
+      link_to_search: "Ddr::Index::Fields::PUBLICATION_FACET"
+    - field:
         - :language_name
         - :stored_searchable
       separator: "; "
       label: "Language"
+      link_to_search: "Ddr::Index::Fields::LANGUAGE_FACET"
     - field:
         - :extent
         - :stored_searchable
       separator: "; "
       label: "Extent"
+    - field: "Ddr::Index::Fields::IS_PART_OF"
+      label: "Part of"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::IS_MEMBER_OF_COLLECTION"
+      label: "Digital Collection"
+      helper_method: descendant_of
+    - field: "Ddr::Index::Fields::EAD_ID"
+      separator: "; "
+      label: "Source Collection"
+      helper_method: source_collection
     - field:
         - :series
         - :stored_searchable
@@ -167,10 +209,11 @@ configure_blacklight:
       label: "Series"
       link_to_search: "Ddr::Index::Fields::SERIES_FACET"
     - field:
-        - :sub_series
+        - :subseries
         - :stored_searchable
       separator: "; "
-      label: "Sub Series"
+      label: "Subseries"
+      link_to_search: "Ddr::Index::Fields::SUBSERIES_FACET"
     - field:
         - :box_number
         - :stored_searchable
@@ -205,6 +248,21 @@ configure_blacklight:
       separator: "; "
       label: "Rights Note"
       helper_method: :auto_link_values
+    - field:
+        - :hasVersion
+        - :stored_searchable
+      separator: "; "
+      label: "Other Version"
+      helper_method: :auto_link_values
+    - field: "Ddr::Index::Fields::IDENTIFIER_ALL"
+      separator: "; "
+      label: "Identifier"
+    - field: "Ddr::Index::Fields::PERMANENT_URL"
+      label: "Permalink"
+      helper_method: permalink
+    - field: "Ddr::Index::Fields::DOI"
+      label: "DOI"
+      helper_method: link_to_doi
     - field:
         - :bibliographicCitation
         - :stored_searchable
