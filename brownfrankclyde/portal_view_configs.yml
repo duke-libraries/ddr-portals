@@ -1,24 +1,45 @@
 includes:
   local_ids:
-    - wlmpc
+    - brownfrankclyde
 showcase_images:
-  local_ids:
-    - maddc01004
-    - wlmms01009
-    - maddc07059
-    - maddc07060
-    - maddc07061
-    - maddc07062
-    - maddc07063
-  layout: portrait
+  custom_images:
+    - brownfrankclyde-showcase-car-1.jpg
+    - brownfrankclyde-showcase-car-2.jpg
+    - brownfrankclyde-showcase-clareleighton-all-day-singing-0201.jpg
+    - brownfrankclyde-showcase-clareleighton-cypress-knees-0303_409.jpg
+    - brownfrankclyde-showcase-clareleighton-hatteras-wreck-0205_660.jpg
+    - brownfrankclyde-showcase-clareleighton-the-baptizing-0103_226.jpg
+    - brownfrankclyde-showcase-clareleighton-wind-and-pine-0204_432.jpg
+    - brownfrankclyde-showcase-porch.jpg
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=brownfrankclyde
 
-blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=wlmpc
+item_relators:
+  - name: "Recordings contained on object"
+    field:
+      - :hasPart
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Complete phonorecording"
+    field:
+      - :isPartOf
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::CREATOR_FACET"
-      label: Creator
+      label: Performer
       limit: 5
       collapse: false
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: Instrumentation
+      collapse: false
+      limit: 5
     - field: "Ddr::Index::Fields::YEAR_FACET"
       label: Year
       limit: 9999
@@ -26,22 +47,22 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::FORMAT_FACET"
-      label: Format
-      limit: 5
-    - field: "Ddr::Index::Fields::SERIES_FACET"
-      label: Series
-      limit: 5
     - field: "Ddr::Index::Fields::SPATIAL_FACET"
       label: Location
+      limit: 5
+      collapse: false
+    - field: "Ddr::Index::Fields::FORMAT_FACET"
+      label: Format
       limit: 5
     - field: "Ddr::Index::Fields::SUBJECT_FACET"
       label: Subject
       limit: 5
-    - field: "Ddr::Index::Fields::EAD_ID"
-      label: "Source Collection"
+    - field: "Ddr::Index::Fields::SERIES_FACET"
+      label: Series
       limit: 5
-      helper_method: 'ead_id_title'
+    - field: "Ddr::Index::Fields::PUBLICATION_FACET"
+      label: Publication
+      limit: 5
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
       label: Browse
       show: false
@@ -61,7 +82,7 @@ configure_blacklight:
         - :creator
         - :stored_searchable
       separator: "; "
-      label: "Creator"
+      label: "Performer"
     - field:
         - :date
         - :stored_searchable
@@ -112,8 +133,14 @@ configure_blacklight:
         - :creator
         - :stored_searchable
       separator: "; "
-      label: "Creator"
+      label: "Performer"
       link_to_search: "Ddr::Index::Fields::CREATOR_FACET"
+    - field:
+        - :category
+        - :stored_searchable
+      separator: "; "
+      label: "Instrumentation"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
     - field:
         - :contributor
         - :stored_searchable
