@@ -1,0 +1,7 @@
+collection_local_id:
+  womantheworldover:
+    controller: digital_collections
+    collection: womantheworldover
+    item_id_field: local_id
+    thumbnail_image:
+      local_id: wwost001038
