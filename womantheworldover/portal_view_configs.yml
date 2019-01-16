@@ -1,0 +1,11 @@
+includes:
+  local_ids:
+    - womantheworldover
+showcase_images:
+  local_ids:
+    - wwost001016
+    - wwost001038
+    - wwost001034
+    - wwost001014
+  layout: portrait
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=womantheworldover
