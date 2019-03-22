@@ -1,0 +1,10 @@
+includes:
+  local_ids:
+    - uamensbasketballposters
+showcase_images:
+  local_ids:
+    - dbpst001001
+    - dbpst002001
+    - dbpst003001
+  layout: landscape
+blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=uamensbasketballposters
