@@ -39,6 +39,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::ASPACE_ID"
       label: ArchivesSpace ID
       show: false
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
+      label: Category
+      show: false
 
   add_index_field:
     - field: "Ddr::Index::Fields::MEDIA_TYPE"
