@@ -4,4 +4,4 @@ collection_local_id:
     collection: gamble
     item_id_field: local_id
     thumbnail_image:
-      custom_image: gamble-thumb-512-2962.jpg
+      local_id: gamble_512A_2962
