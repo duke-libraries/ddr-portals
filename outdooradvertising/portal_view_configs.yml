@@ -1,7 +1,51 @@
 includes:
   local_ids:
     - outdooradvertising
-
+showcase_images:
+  local_ids:
+    - AAA8469c
+    - AAA7674
+    - AAA7529
+    - AAA6335
+    - AAA6001
+    - AAA4479
+    - AAA2781
+    - XXX1771
+    - XXX2194
+  layout: landscape
+highlight_images:
+  local_ids:
+    - AAA8607
+    - AAA2277
+    - AAA7971
+    - AAA0358
+    - AAA8278b
+    - AAA1762
+    - AAA4086
+    - AAA4497
+    - AAA7458
+    - AAA1645
+    - AAA1351
+    - AAA7337
+    - AAA0050
+    - AAA1979
+    - AAA0618
+    - AAA3028
+    - AAA7325
+    - AAA0629
+    - AAA3284
+    - AAA4888
+    - AAA4981
+    - AAA6763
+    - XXH0891
+    - XXX1497
+    - XXH1454
+    - XXX1324
+    - XXX1816
+    - XXX1936
+    - XXX3068
+    - XXX4230
+    - XXX4264
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=outdooradvertising
 configure_blacklight:
   add_facet_field:
