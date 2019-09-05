@@ -6,9 +6,6 @@ showcase_images:
     - dukechapel-causeway.jpg
     - dukechapel-grainy.jpg
   layout: landscape
-derivative_url_prefixes:
-  video: http://library.duke.edu/digitalcollections/media/mp4/dukechapel/
-  audio: http://library.duke.edu/digitalcollections/media/mp3/dukechapel/
 show_items: 0
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=dukechapel
 item_relators:
