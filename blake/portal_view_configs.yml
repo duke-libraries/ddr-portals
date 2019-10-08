@@ -35,7 +35,7 @@ highlight_images:
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=blake
 configure_blacklight:
   add_facet_field:
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+    - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
       label: Browse
       show: false
     - field: "Ddr::Index::Fields::SUBJECT_FACET"

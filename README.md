@@ -92,7 +92,7 @@ defaults: &defaults
     # The blacklight configurations that should be applied to the controller for this collection.
     configure_blacklight:
         add_facet_field:
-          - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+          - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
             label: Browse
             show: false
           - field: "Ddr::Index::Fields::YEAR_FACET"

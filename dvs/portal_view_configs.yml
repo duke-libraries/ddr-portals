@@ -26,7 +26,7 @@ configure_blacklight:
       range:
         num_segments: 6
         segments: true
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+    - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
       label: Browse
       show: false
   add_index_field:

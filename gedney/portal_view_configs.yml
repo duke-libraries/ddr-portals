@@ -98,7 +98,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::FORMAT_FACET"
       label: Format
       limit: 5
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+    - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
       label: Browse
       show: false
     - field: "Ddr::Index::Fields::ASPACE_ID"

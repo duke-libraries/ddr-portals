@@ -53,7 +53,7 @@ configure_blacklight:
       label: Series
       limit: 5
       show: false
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+    - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
       label: Browse
       show: false
   add_show_field:

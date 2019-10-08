@@ -43,7 +43,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::CATEGORY_FACET"
       label: Opponent
       limit: 5
-    - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
+    - field: "Ddr::Index::Fields::COMMON_MODEL_NAME"
       label: Browse
       show: false
   add_index_field:
