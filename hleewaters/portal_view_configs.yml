@@ -1,4 +1,37 @@
 includes:
   local_ids:
     - hleewaters
+
+showcase_images:
+  custom_images:
+    - rl10075dbcam0002040.jpg
+    - rl10075dbcam0011010.jpg
+    - rl10075dvd0017010.jpg
+    - rl10075dvd0018020.jpg
+    - rl10075dvd0019010.jpg
+    - rl10075dvd0024010.jpg
+    - rl10075dvd0028010.jpg
+    - rl10075dvd0040010.jpg
+    - rl10075dvd0040020.jpg
+    - rl10075film160033010.jpg
+    - rl10075umatic0025010.jpg
+    - rl10075umatic0027010.jpg
+  layout: landscape
+
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hleewaters
+
+item_relators:
+  - name: "Related Items"
+    field:
+      - :hasPart
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
+  - name: "Related Item"
+    field:
+      - :isPartOf
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
