@@ -21,7 +21,7 @@ showcase_images:
 blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slug=hleewaters
 
 item_relators:
-  - name: "Related Items"
+  - name: "Related Item"
     field:
       - :hasPart
       - :stored_searchable
