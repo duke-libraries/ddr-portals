@@ -111,6 +111,9 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
       label: "Box Number"
       show: false
+    - field: "Ddr::Index::Fields::ROLL_NUMBER_FACET"
+      label: "Roll Number"
+      show: false
     - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
       label: Contributor
       limit: 5
@@ -259,6 +262,12 @@ configure_blacklight:
       separator: "; "
       label: "Box Number"
       link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
+    - field:
+        - :roll_number
+        - :stored_searchable
+      separator: "; "
+      label: "Roll Number"
+      link_to_search: "Ddr::Index::Fields::ROLL_NUMBER_FACET"
     - field:
         - :folder
         - :stored_searchable
