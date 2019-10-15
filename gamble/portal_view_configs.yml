@@ -111,7 +111,7 @@ configure_blacklight:
     - field: "Ddr::Index::Fields::BOX_NUMBER_FACET"
       label: "Box Number"
       show: false
-    - field: "Ddr::Index::Fields::ROLL_NUMBER_FACET"
+    - field: "Ddr::Index::Fields::CATEGORY_FACET"
       label: "Roll Number"
       show: false
     - field: "Ddr::Index::Fields::CONTRIBUTOR_FACET"
@@ -120,9 +120,6 @@ configure_blacklight:
       show: false
     - field: "Ddr::Index::Fields::ASPACE_ID"
       label: ArchivesSpace ID
-      show: false
-    - field: "Ddr::Index::Fields::CATEGORY_FACET"
-      label: Category
       show: false
 
   add_index_field:
@@ -263,11 +260,11 @@ configure_blacklight:
       label: "Box Number"
       link_to_search: "Ddr::Index::Fields::BOX_NUMBER_FACET"
     - field:
-        - :roll_number
+        - :category
         - :stored_searchable
       separator: "; "
       label: "Roll Number"
-      link_to_search: "Ddr::Index::Fields::ROLL_NUMBER_FACET"
+      link_to_search: "Ddr::Index::Fields::CATEGORY_FACET"
     - field:
         - :folder
         - :stored_searchable
