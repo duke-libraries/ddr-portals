@@ -11,8 +11,11 @@ blog_posts: https://blogs.library.duke.edu/bitstreams/api/get_tag_posts/?tag_slu
 item_relators:
   - name: "Related Item"
     field:
-      - :series_facet
-      - :facetable
+      - :relation
+      - :stored_searchable
+    id_field:
+      - :permanent_id
+      - :stored_sortable
 configure_blacklight:
   add_facet_field:
     - field: "Ddr::Index::Fields::ACTIVE_FEDORA_MODEL"
